@@ -1248,6 +1248,46 @@ FEEDBACK: [explanation focusing on content accuracy]`;
     }
   });
 
+  // Narration generation endpoint  
+  app.post("/api/generate-narration", async (req, res) => {
+    try {
+      const user = await getCurrentUser(req);
+      
+      if (!user) {
+        return res.status(401).json({ error: "Not authenticated" });
+      }
+
+      const { selectedText, voice } = req.body;
+
+      if (!selectedText || !selectedText.trim()) {
+        return res.status(400).json({ error: "Selected text is required" });
+      }
+
+      // Check if user has enough credits (unless admin)
+      if (!isAdmin(user) && !canAccessFeature(user)) {
+        return res.status(403).json({ error: "Insufficient credits for narration generation" });
+      }
+
+      // Generate TTS narration
+      const { generateTTS } = await import("./services/tts-service");
+      
+      const audioUrl = await generateTTS({
+        text: selectedText,
+        voice: voice || "alloy"
+      });
+
+      // Deduct credits for non-admin users
+      if (!isAdmin(user)) {
+        await storage.updateUserCredits(user.id, user.credits - 3); // 3 credits for narration
+      }
+
+      res.json({ audioUrl });
+    } catch (error) {
+      console.error("Narration generation error:", error);
+      res.status(500).json({ error: error instanceof Error ? error.message : "Failed to generate narration" });
+    }
+  });
+
   // Serve audio files
   app.use('/audio', express.static(join(process.cwd(), 'dist', 'audio')));
 

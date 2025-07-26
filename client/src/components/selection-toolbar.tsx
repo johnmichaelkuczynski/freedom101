@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Highlighter, X, MessageSquare, Edit3, FileText, BookOpen, GraduationCap, Volume2 } from "lucide-react";
+import { MessageCircle, Highlighter, X, MessageSquare, Edit3, FileText, BookOpen, GraduationCap, Volume2, Volume1 } from "lucide-react";
 import { useState } from "react";
 
 interface SelectionToolbarProps {
@@ -10,7 +10,7 @@ interface SelectionToolbarProps {
   onCreateStudyGuide: (text: string) => void;
   onTestMe: (text: string) => void;
   onGeneratePodcast: (text: string) => void;
-
+  onNarrateText: (text: string) => void;
   onHighlight: () => void;
   onClear: () => void;
   position?: { x: number; y: number };
@@ -24,6 +24,7 @@ export default function SelectionToolbar({
   onCreateStudyGuide,
   onTestMe,
   onGeneratePodcast,
+  onNarrateText,
   onHighlight, 
   onClear, 
   position 
@@ -61,6 +62,11 @@ export default function SelectionToolbar({
 
   const handleGeneratePodcast = () => {
     onGeneratePodcast(selectedText);
+    // Keep toolbar visible so user can try other actions
+  };
+
+  const handleNarrateText = () => {
+    onNarrateText(selectedText);
     // Keep toolbar visible so user can try other actions
   };
 
@@ -163,6 +169,16 @@ export default function SelectionToolbar({
       >
         <Volume2 className="w-3 h-3" />
         <span className="text-xs">Podcast</span>
+      </Button>
+
+      <Button
+        size="sm"
+        variant="outline"
+        onClick={handleNarrateText}
+        className="flex items-center space-x-1 text-teal-600 border-teal-200 hover:bg-teal-50"
+      >
+        <Volume1 className="w-3 h-3" />
+        <span className="text-xs">Narrate</span>
       </Button>
 
       

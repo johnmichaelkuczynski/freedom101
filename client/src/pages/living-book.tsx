@@ -13,6 +13,7 @@ import QuizModal from "@/components/quiz-modal";
 import StudyGuideModal from "@/components/study-guide-modal";
 import StudentTestModal from "@/components/student-test-modal";
 import PodcastModal from "@/components/podcast-modal";
+import NarrationModal from "@/components/narration-modal";
 
 
 import ChunkingModal from "@/components/chunking-modal";
@@ -47,6 +48,8 @@ export default function LivingBook() {
   const [studentTestChunkIndex, setStudentTestChunkIndex] = useState<number | null>(null);
   const [podcastModalOpen, setPodcastModalOpen] = useState(false);
   const [selectedTextForPodcast, setSelectedTextForPodcast] = useState<string>("");
+  const [narrationModalOpen, setNarrationModalOpen] = useState(false);
+  const [selectedTextForNarration, setSelectedTextForNarration] = useState<string>("");
 
 
   const [chunkingModalOpen, setChunkingModalOpen] = useState(false);
@@ -172,6 +175,16 @@ export default function LivingBook() {
   const handlePodcastModalClose = () => {
     setPodcastModalOpen(false);
     setSelectedTextForPodcast("");
+  };
+
+  const handleNarrateTextFromSelection = (text: string) => {
+    setSelectedTextForNarration(text);
+    setNarrationModalOpen(true);
+  };
+
+  const handleNarrationModalClose = () => {
+    setNarrationModalOpen(false);
+    setSelectedTextForNarration("");
   };
 
 
@@ -338,7 +351,7 @@ export default function LivingBook() {
             onCreateStudyGuide={handleCreateStudyGuideFromSelection}
             onTestMe={handleTestMeFromSelection}
             onGeneratePodcast={handleGeneratePodcastFromSelection}
-
+            onNarrateText={handleNarrateTextFromSelection}
           />
         </main>
 
@@ -407,6 +420,14 @@ export default function LivingBook() {
         isOpen={podcastModalOpen}
         onClose={handlePodcastModalClose}
         selectedText={selectedTextForPodcast}
+        defaultModel={selectedModel}
+      />
+
+      {/* Narration Modal */}
+      <NarrationModal
+        isOpen={narrationModalOpen}
+        onClose={handleNarrationModalClose}
+        selectedText={selectedTextForNarration}
         defaultModel={selectedModel}
       />
 
