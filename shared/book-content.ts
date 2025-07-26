@@ -1,2648 +1,1339 @@
 export interface BookContent {
   title: string;
   author: string;
-  sections: {
+  sections: Array<{
     id: string;
     title: string;
     content: string;
-  }[];
-}
-
-export function getFullDocumentContent(): string {
-  return bookContent.sections.map(section => `${section.title}\n\n${section.content}`).join('\n\n');
+  }>;
 }
 
 export const bookContent: BookContent = {
-  title: "Human Freedom",
-  author: "J.-M. Kuczynski",
+  title: "Analytic Philosophy as Logical Analysis",
+  author: "Zhi Systems",
   sections: [
     {
       id: "section-1",
       title: "Section 1",
-      content: `Lecture 1: Determinism
+      content: `Philosophy as the analysis of the categories in terms of which understand the world
 
-Determinism is the doctrine that nothing is uncaused - that all events follow necessarily from prior events according to natural laws. In a deterministic universe, the state of the world at any given moment fully determines its state at all future moments.
+We understand the world in terms of certain categories (e.g., person, statement, fact, impossibility, existence). Philosophy studies these categories. It delineates their structures. This is its sole function. Thus, philosophy is the discipline that delineates the structures of the categories in terms of which we think about the world.
 
-To understand determinism, consider a simple example: When you flip a light switch, the light turns on because there is a deterministic mechanism linking these events. The wiring and electrical systems form a causal chain where one event necessarily leads to the next. Determinism suggests that ALL events work this way - that there are no truly random or uncaused occurrences.
+We've already identified some of these categories. By stating a few of our most basic beliefs, we can identify some more (they're the ones denoted by the italicized expressions):
 
-This raises profound questions about human choice and action. If determinism is true, then all our thoughts, decisions, and actions were inevitable consequences of prior events - even events that occurred before we were born. Every choice you make today was, in principle, predictable from the state of the universe millions of years ago.
+The world isn't homogeneous. It is articulated into events bearing various causal and, more generally, spatiotemporal relations to one another. Many of these events involve more or less persistent things (rocks, trees, etc.). Some of these things have minds. Most animate (mind- having) beings have sense-perceptions; i.e., they see things, hear things, etc. Most percipient (perception-having) creatures have beliefs. Some of these beliefs are true; others are false. Some of the true ones are cases of knowledge. Some percipient creatures communicate with one another through the use of language. Mastery of a language makes it easier for one to communicate one's beliefs to others, and it also enhances one's ability to reason. Rational (reason-capable) creatures tend to make value-judgments. They judge one another's actions, and sometimes their own, to be good or bad. Creatures that make such judgments tend to regulate their behavior towards one another by means of systems of law, the supposed purpose of which is to ensure that such behavior satisfy the requirements of justice.
 
-However, this does not necessarily mean our choices aren't "real" or meaningful. Consider: A clock's movements are deterministic, but they serve a genuine function. Similarly, our decision-making processes, though potentially deterministic, may still play a crucial role in shaping outcomes.
+Knowledge vs. meta-knowledge
 
-Key implications of determinism:
+Event, space, time, cause, persistence, thing, mind, perception, belief, knowledge, language, truth, value-judgment, law, justice. Whatever we know, we know it through these categories (and others like them-the list is not complete). But even though we cannot think without them, they are seldom the objects of thought. The result is that, although we're adept at using them, we know little about them.
 
-1. The future is, in principle, predictable from the present (though practical prediction may be impossible)
+For example, we are excellent at distinguishing linguistic from non-linguistic behavior, which suggests that, at some level, we know what conditions a creature's behavior must meet if it is to embody knowledge of a language. But when asked to make these conditions explicit, we find we can do so only with great difficulty and only with partial success. So even though we are good at knowing who knows a language and who does not, we don't know what it is that we know by virtue of knowing this.
 
-2. No events are truly random or uncaused
+The same thing mutatis mutandis is true of each one of these categories. We're excellent at distinguishing between moral and immoral behavior. We know that rape is immoral and that donating money to charity (for selfless reasons) is moral. But when asked to identify the principles embodied in these pedestrian and uncontroversial judgments, we have trouble producing theories that don't distort them.
 
-3. Each moment necessarily follows from prior moments according to natural laws
+In general, it's hard to identify the principles that guide our thoughts. Self-understanding isn't the mind's primary function. Nor could it be. The idea of a mind that thinks about nothing other than itself is an incoherent one. Thus, any case of self-awareness, and therefore of self-understanding, is necessarily derivative of, and for that reason of lesser quality than, some other more fundamental sort of understanding.
 
-4. Human decisions and actions are part of this causal chain
+Being the discipline whose purpose is to delineate the structures of these categories, philosophy has the very non-trivial job of identifying, in as clear and explicit a manner as possible, the conditions that a given thing must satisfy if it is to fall into a given one of these categories. So far as philosophy succeeds in this endeavor, it makes it clear what it is that we are doing when we are doing anything cognitive, be it making an observation or engaging in an extended piece of abstract reasoning. Philosophy is the analysis of the preconditions of all knowledge. It is the analysis of analysis, the logic of logic, the science of science.
 
-The truth or falsity of determinism has major implications for how we think about free will, moral responsibility, and human agency. These implications are complex and hotly debated by philosophers.
+The relationship of philosophy to other disciplines
 
-Would you like me to continue with the next Lectureon predictability? I can also adjust the length or style of these lectures based on your preferences.
+The philosopher is interested in the laws governing the laws. He doesn't want to know what in fact holds. He wants to know what it would even make sense to claim to hold. He wants to know the laws that the laws can't break.
 
-Here's the accompanying material for the determinism micro-lecture:
+Philosophical knowledge is metaknowledge-knowledge about knowledge. The non-philosopher wants to know specifics. What happened? When did it happen? What did it cause? How did it cause it? The philosopher is interested in these questions only to the extent that knowing the answers to them helps him understand the categories (cause, place, time, etc.) underlying such knowledge.
 
-SHORT ANSWER QUESTIONS
+The stranded motorist wants his car to work. He doesn't care what will get it to do so. The engineer is interested in this. But the engineer is not entirely innocent of the motorist's epistemic parochialism. The engineer has no interest in what the laws of physics are except in so far as he must know them to create the right mechanisms. But the physicist wants knowledge of the mechanisms only to the extent it will give him knowledge of the laws embodied therein.
 
-1. Explain how the light switch example illustrates determinism.
+The philosopher is to the physicist what the physicist is to the engineer and, therefore, what the engineer is to the stranded motorist. The philosopher wants to know what causes what and what mechanisms were involved only to the extent that knowing this helps him understand what it is for one thing to cause another- only, that is to say, in so far as it helps him know what it is that one knows in knowing that one thing made another happen.
 
-2. What does it mean to say that determinism doesn't necessarily negate the meaningfulness of our choices?
+How is analytic philosophy different from non-analytic philosophy?
 
-3. How does determinism relate to events that occurred before a person was born?
+John Stuart Mill (1806-1873), the great philosopher and economist, said that he was an expert in but one science, that being the science of science. What he meant was obviously similar to what we've been saying. And it was similar, therefore, to what Gottlob Frege (1848-1925), the great philosopher and mathematical logician, meant when he said that logic studies not the laws of nature but the "laws of the laws of nature." Whether Frege was right depends on what exactly one means by "logic." But if, by "logic," he meant "philosophy," then Frege's dictum was spot-on.
 
-4. Why might practical prediction be impossible even in a deterministic universe?
+Frege is often described as the first analytic philosopher. Michael Dummett (1925-), an exceptionally capable contemporary philosopher of language, said that "analytic philosophy is post- Fregean philosophy." What does Dummett mean?
 
-5. Explain the relationship between causation and determinism.
+With some exceptions, pre-Fregean philosophers thought they were studying the most general features of the actual world. They thought that, like the botanist, they were in the business of saying how the world is, the only difference between their work and the botanist's being that theirs is concerned with more general features of reality than the botanist's.
 
-MULTIPLE CHOICE QUESTIONS
+Frege showed that this is wrong. Any interest that botanists have in plants that might exist, but don't, is subordinate to their interest in what plants actually exist. Like all scientists, they are interested in what there could be only to the extent that it helps them figure out what there is. But with philosophers, it's the other way around. Any interest they have in the actual is subordinate to their interest in the possible.
 
-1. According to determinism:
+Unlike non-analytic philosophers, analytic philosophers figure out what there could be by analyzing statements. Statements that make sense are those that an be true, and statements that don't are those that can't. Therefore, statements that make sense describe possible realities and those that don't don't.
 
- a) Some events are uncaused
+But what exactly did Frege do?
 
- b) Nothing is uncaused
+Frege's key insight: Logical form ≠grammatical form
 
- c) Only human choices are uncaused
-
- d) Most events are partially caused
-
-2. In a deterministic universe:
-
- a) The future cannot be known
-
- b) Only the present matters
-
- c) The present state fully determines all future states
-
- d) Past states are irrelevant
-
-3. The clock example in the lecture demonstrates that:
-
- a) Determinism means our choices are meaningless
-
- b) Something can be both deterministic and functional
-
- c) Time is an illusion
-
- d) Free will exists
-
-4. According to the lecture, determinism implies that:
-
- a) Prediction is always practically possible
-
- b) Prediction is impossible
-
- c) Prediction is theoretically possible but may be practically impossible
-
- d) Only short-term prediction is possible
-
-5. The lecture suggests that determinism:
-
- a) Definitively proves we have no free will
-
- b) Has complex implications for free will that are debated
-
- c) Is incompatible with moral responsibility
-
- d) Only applies to physical events, not mental ones
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. The light switch example shows how one event (flipping the switch) necessarily leads to another event (light turning on) through a clear causal mechanism. This illustrates determinism by showing how events follow necessarily from prior events according to natural laws.
-
-2. Even in a deterministic system, processes can serve real functions and produce meaningful outcomes. Just as a clock's deterministic mechanisms serve the genuine function of keeping time, our deterministic decision-making processes can still be meaningful in shaping outcomes.
-
-3. If determinism is true, then all current events (including our choices) were inevitable consequences of the universe's state before our birth. Our present actions follow necessarily from that earlier state through a chain of cause and effect.
-
-4. While determinism means events are in principle predictable, practical prediction may be impossible due to the complexity of causal chains, the number of variables involved, and our inability to know the exact state of all relevant factors.
-
-5. Determinism posits that all events have causes and nothing is uncaused. The relationship is one of universal causation - every event must have sufficient prior causes that necessitate its occurrence according to natural laws.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. c
-
-3. b
-
-4. c
-
-5. b
-
-KEY TERMS DICTIONARY
-
-Determinism: The doctrine that nothing is uncaused and all events follow necessarily from prior events according to natural laws.
-
-Causation: The relationship between events where one event necessarily leads to or produces another event.
-
-Natural Laws: The consistent rules or principles according to which events in the universe occur and interact.
-
-Causal Chain: A sequence of events where each event is caused by previous events and causes subsequent events.
-
-Practical Prediction: The actual ability to forecast future events, as opposed to theoretical predictability.
-
-Agency: The capacity to act and make decisions, though these may be deterministic.
-
-Lecture 2: Predictability
-
-Predictability is closely related to, but distinct from, determinism. A system can be deterministic without being practically predictable. This crucial distinction helps us understand both the scope and limits of human knowledge about future events.
-
-Consider knowledge of the future: If we know that X's always cause Y's, and we know that an X currently exists, we can predict that a Y will occur. This kind of predictive knowledge shapes our daily lives - from knowing an elevator will come when we push the button to anticipating someone's reaction to an insult.
-
-However, even in a fully deterministic universe, perfect prediction faces several challenges:
-
-1. Complexity: The number of variables involved in most real-world events makes tracking all relevant causes practically impossible.
-
-2. Interference Effects: To predict an event, we must know both the causal laws and the current state of all relevant variables. Because of interference effects, our knowledge of current conditions is only approximate, and this necessarily limits the accuracy of our predictions.
-
-3. Knowledge-growth inherently unpredictable: We cannot predict what we will know in the future. (If we predict that we will know it, then we already know it, in which case it is not knowledge that we are predicting that we will have.) This by itself makes it impossible to predict all future events. Moreover, because what we know affects what we do and therefore affects the course of events, it means that we cannot know how our future knowledge will affect the course of events.
-
-Interestingly, the same principles used in prediction apply to retrodiction. When we see footprints in sand, we can "retrodict" that someone walked there - working backward from effect to cause. This suggests that prediction and retrodiction rely on the same basic understanding of causal relationships.`
+Frege's legacy to philosophy can be summed up thus:`
     },
     {
       id: "section-2",
       title: "Section 2",
-      content: `The relationship between predictability and determinism tells us something important about knowledge: While the future may be fixed in a deterministic universe, our ability to know that future remains limited by practical constraints.
+      content: `(FL) When people have an obviously correct belief that seems to have an absurd consequence, they should ask themselves whether that absurdity really is a consequence of that belief. But they frequently don't. Instead they accept the absurdity and, in order to make this mistake of theirs work, they develop ad hoc hypotheses as to the nature of reality that undermine the integrity of their own belief system.
 
-SHORT ANSWER QUESTIONS
+Consider the statement: (SC) nothing is a square circle.
 
-1. Explain the key difference between determinism and predictability.
+SC is true. Everybody knows this. But what does SC say? Judging by its grammatical similarity to "Smith is a very capable lawyer," which attributes a certain property (that of being a capable lawyer) to a certain individual (Smith), SC would seem to say that a certain entity has the property of being a square circle. Presumably, the entity in question is some non-entity. If this presumption is correct, SC says that:
 
-2. How does the elevator button example illustrate predictive knowledge?
+(SC) some non-entity, some featureless un-thing, is a circle.
 
-3. Why might a deterministic system still be unpredictable in practice?
+But SC is doubly incoherent. If anything is a square circle, then SC is false-it being irrelevant how much of a cipher the entity in question is. Second, the very idea of a non-entity is an absurd one. But it's hard to find a layperson or scholar who, when asked what SC means, comes up with anything substantively different from SC.
 
-4. What is retrodiction and how does it relate to prediction?
+Given what a rank absurdity SC is, we can't accept it, even though it seems to be an obvious consequence of SC. But we can't reject SC, since it's an obvious truth.
 
-5. Explain how the act of prediction might affect the system being predicted.
+To get out of this jam, we need only reflect a bit on what our words mean. If you say that nobody likes Larry, you're not saying that some un-person likes Larry. You're saying that if you gathered together all the people who liked Larry and put them in an otherwise empty room, that room would remain empty. Which is the same as saying that, if you put all the people in existence in an otherwise empty room, there would be no things that liked Larry in that room.
 
-MULTIPLE CHOICE QUESTIONS
+Thus, what "nobody likes Larry" means is not that some un-person likes Larry, and is instead that the set of people who like Larry is empty or, alternatively, that the set of people doesn't overlap with the set of things that like Larry.
 
-1. The relationship between determinism and predictability is:
+SC is to be understood along similar lines. If you put all the square circles in existence in an otherwise empty room, that room would remain empty. This is another way of saying that, if you put all the square things in an otherwise empty room, there would be no circles in that room. So SC says, not some un-thing is a circle, but that
 
- a) They are identical concepts
+the set of things that are both circular and square is an empty one or, alternatively, that
 
- b) Determinism guarantees practical predictability
+the set of circles doesn't overlap with the set of squares.
 
- c) A system can be deterministic without being practically predictable
+is a way of saying that any given thing lacks the property of being both a circle and a square.
 
- d) Predictability implies determinism
+Alternatively, it's a way of saying this property doesn't have any instances-that it's uninstantiated.
 
-2. Knowledge of future events requires:
+is a way of saying that anything having the property of being a square lacks the property of being a circle. Alternatively, it's a way of saying that these two properties don't have any instances in common-that they are not coinstantiated.
 
- a) Only knowledge of causal laws
+(i) and (ii) thus attribute properties to properties. They say, respectively, that the property of being both a square and a circle is uninstantiated and that the properties of being a square and of being a circle are not coinstantiated.
 
- b) Only knowledge of current conditions
+Since (i) and (ii) are just different ways of saying what SC says, the latter doesn't make the absurd statement that some non-entity is a circle, and it instead makes the innocuous statement that the set of squares doesn't overlap with the set of circles or, alternatively, that the property of being a square circle is uninstantiated.
 
- c) Both causal laws and current conditions
+What this shows is that, in at least some cases, philosophical insight is acquired, not by doing parascience, but by analyzing meanings-not by positing entities, but by clarifying statements.
 
- d) Neither causal laws nor current conditions
+Analytic philosophy is philosophy that is driven by accep-tance of FL. Let us now expand on FL
 
-3. Retrodiction is:
+and make it clear why it's true.
 
- a) Predicting random events
+The wrong way to react to grammatical surface-structure
 
- b) Working backward from effects to causes
+In respect of its grammatical form,
 
- c) Working forward from causes to effects
+(JS) "John smokes"
 
- d) Making short-term predictions
+is comparable to
 
-4. According to the lecture, prediction is limited by:
+(MS) "Mary smokes."
 
- a) Only system complexity
+JS attributes the property of being a smoker to John; MS attributes that property to Mary.
 
- b) Only knowledge requirements
+In respect of its grammatical form, each of JS and MS is comparable to:
 
- c) Only intervention effects
+(LJ) "Larry juggles"
 
- d) All of the above
+and also to
 
-5. The footprints in sand example demonstrates:
+(JJ) "Jane jogs."
 
- a) That the past is more predictable than the future
+Each of these sentences says of some individual that he or she has a certain property. The obvious inference to make is that any sentence grammatically comparable to any one of those of four sentences says of some individual that he or she (or it) has some property.
 
- b) That retrodiction uses causal reasoning similar to prediction
+In light of these points, consider the sentence: (SS) Someone smokes.
 
- c) That all events are easily predictable
+Given what we just said, the obvious thing to say about it is that it attributes the property of smoking to some individual. But which individual could that be? Which individual does "someone" pick out?
 
- d) That determinism is false
+"It picks out an ambiguous person," said one logician. But this answer is no good. Words are ambiguous, not people. "Bank" is ambiguous, since it has two meanings. But I'm not ambiguous, and neither are you. And if per impossibile there did exist some ambiguous person-some blank, featureless shell of a person who was picked out by "someone"-SS would unambiguously say of that person that he or she smoked. But there clearly
 
-ANSWER KEY
+isn't any one person to whom SS attributes the property of smoking. This is easily shown. If Smith
 
-Short Answer Model Responses:
+smokes, the sentence: "someone smokes but Smith does not"
 
-1. While determinism means events necessarily follow from prior causes, predictability refers to our practical ability to forecast these events. A system can be fully deterministic yet still be unpredictable due to practical limitations.
+will be false. But it won't be self-contradictory; it won't be like "Smith smokes but Smith does not smoke." (For a statement to be self-contradictory is for it to bear two mutually opposed meanings.) Of course, there isn't anything special about the name "Smith," what we just said could have been said in connection with Jones or Brown or any other expression that refers to some individual. Thus, there is no individual N such that it is self-contradictory to say that someone smokes but N does not. Therefore "someone" doesn't refer to anyone.
 
-2. The elevator example shows how knowledge of causal relationships (pressing button causes elevator to come) allows us to make reliable predictions about future events based on current actions.
+"But you've misunderstood my thesis" it will be said. "The word "someone" doesn't unambiguously pick out an ambiguous person. It is itself ambiguous. It refers to Fred and Ethel and Mary. It refers to all people indifferently."
 
-3. Even deterministic systems may be unpredictable due to complexity (too many variables), incomplete knowledge of initial conditions, and the potential effects of measurement/observation on the system.
+That's false. "Someone" isn't ambiguous; it isn't like the word "dumb." SS has one meaning, unlike "John is dumb," which could mean either "John is unintelligent" or "John is mute." Also, if "someone" were ambiguous between "John" and "Ethel" and so on, then, depending on the circumstances, it would be synonymous with "John smokes" or "Ethel smokes." And in that case, "someone smokes, but John does not" would sometimes have the same meaning as "John smokes but John does not smoke," in which case it would be self-contradictory. But, as we just saw, "someone smokes, but John does not" is not self-contradictory under any circumstances. If John does smoke, it will be false, but it won't be self-contradictory.
 
-4. Retrodiction is inferring past causes from present effects. It relates to prediction because both processes rely on understanding causal relationships, just in different temporal directions.
+Also, it isn't clear what it means to say that "someone" picks out everyone "indifferently." But if, as is surely the case, picking out everyone indifferently involves picking out everyone, then it's just wrong to say that "someone" picks out everyone "indifferently" (or in any other way). For if it did, it would have the same meaning as "everyone," which it doesn't.
 
-5. The act of gathering information to make predictions may alter the system's state, thereby changing the very future we're trying to predict. This creates a fundamental limitation on predictability.
-
-Multiple Choice Correct Answers:
-
-1. c
-
-2. c
-
-3. b
-
-4. d
-
-5. b
-
-KEY TERMS DICTIONARY
-
-Predictability: The practical ability to forecast future events based on knowledge of causes and current conditions.
-
-Retrodiction: The process of inferring past causes from present effects.
-
-Causal Laws: The consistent relationships between causes and effects that allow for prediction.
-
-Intervention Effects: Changes to a system caused by the act of observing or measuring it for predictive purposes.
-
-System Complexity: The number and interaction of variables that must be known to make accurate predictions.
-
-Initial Conditions: The state of all relevant variables at the starting point of prediction.
-
-Lecture 3: Compatibilism
-
-Compatibilism holds that free will and determinism can coexist - that our actions can be both determined and free. This view offers a sophisticated resolution to the apparent conflict between causation and freedom by reconceptualizing what freedom means.
-
-According to compatibilism, freedom isn't about being uncaused, but rather about being caused in the right way. Consider two scenarios: In the first, you decide to raise your hand because you choose to. In the second, someone physically forces your hand up. Though both hand movements were caused, compatibilists argue the first was free while the second wasn't. The key difference lies in the source and nature of causation.
-
-A key compatibilist insight is that freedom requires determinism. For our decisions to reliably lead to intended outcomes, we need deterministic mechanisms. If the connection between intention and action were indeterministic, we'd be less free, not more - like someone with a neurological disorder who can't control their movements.
-
-Modern compatibilism, especially as developed by philosophers like Harry Frankfurt, emphasizes the importance of our capacity for second-order desires - desires about our desires. On this view, freedom isn't just about doing what we want, but about being able to want what we want to want. An addict might want to take drugs (first-order desire) while wanting not to want drugs (second-order desire).
-
-This suggests that freedom isn't about escaping causation, but about developing the right kind of psychological structure - one where our actions flow from our values and considered judgments rather than from external forces or internal compulsions.
-
-SHORT ANSWER QUESTIONS
-
-1. How does compatibilism resolve the apparent conflict between determinism and free will?
-
-2. Explain the distinction between the two hand-raising scenarios and why it matters for compatibilism.
-
-3. Why do compatibilists argue that determinism is necessary for freedom?
-
-4. What are second-order desires and why are they important for compatibilist theories?
-
-5. How does addiction illustrate the distinction between first and second-order desires?
-
-MULTIPLE CHOICE QUESTIONS
-
-1. According to compatibilism:
-
- a) Free will and determinism cannot coexist
-
- b) Free will and determinism can coexist
-
- c) Neither free will nor determinism exists
-
- d) Only partial free will can exist
-
-2. Compatibilists argue that freedom requires:
-
- a) The absence of all causation
-
- b) Random, uncaused events
-
- c) The right kind of causation
-
- d) Supernatural intervention
-
-3. Second-order desires are:
-
- a) Stronger than first-order desires
-
- b) Weaker than first-order desires
-
- c) Desires about our desires
-
- d) Purely instinctual desires
-
-4. In the compatibilist view, determinism is:
-
- a) An obstacle to freedom
-
- b) Necessary for freedom
-
- c) Irrelevant to freedom
-
- d) Partially opposed to freedom
-
-5. The addict example illustrates:
-
- a) That free will doesn't exist
-
- b) The conflict between different orders of desires
-
- c) That determinism is false
-
- d) That all choices are equally free
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. Compatibilism resolves the conflict by redefining freedom not as the absence of causation, but as being caused in the right way - through our own values, judgments, and psychological structure rather than external force or compulsion.
-
-2. In the forced hand-raising, external causation bypasses the person's decision-making process. In voluntary hand-raising, the action flows from internal causes (decisions, intentions). This shows that the source and nature of causation, not its presence or absence, determines freedom.
-
-3. Determinism provides the reliable mechanisms needed to translate our intentions into actions. Without deterministic connections between choices and outcomes, we couldn't effectively implement our decisions, making genuine freedom impossible.
-
-4. Second-order desires are desires about what desires we want to have. They represent our capacity for self-reflection and self-direction, allowing us to evaluate and shape our motivations rather than simply acting on immediate impulses.
-
-5. An addict may have a first-order desire for drugs while simultaneously having a second-order desire not to want drugs. This illustrates how our higher-order evaluative capacities can conflict with our immediate desires, showing the complexity of human volition.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. c
-
-3. c
-
-4. b
-
-5. b
-
-KEY TERMS DICTIONARY`
+The right way to react to grammatical surface-structure`
     },
     {
       id: "section-3",
       title: "Section 3",
-      content: `Compatibilism: The view that free will and determinism are compatible, defining freedom in terms of the right kind of causation.
+      content: `What all this shows is that "someone" isn't in the same category as "John" and "Ethel." It doesn't function in the same way, even though, given its grammatical function, one would expect it to. SS is obviously true. The wrong way to react to that fact is to twist reality to make it conform to our assumption that "someone," being grammatically comparable to "John," must refer to something. If we take that path, we must say that it refers to an "ambiguous" or "non-specific" person, or some such, given that it obviously doesn't refer to anyone specific. But then we're then stuck with the absurd thesis that there is some non-specific entity in the world- that there exists something that isn't identical with any particular thing and therefore isn't identical with anything.
 
-First-order Desires: Immediate desires for objects or actions (e.g., wanting to eat).
+The right way to react to it is to think more deeply about what SS is really saying. Frege did this, and he solved the puzzle. SS's logical form diverges from its grammatical form. In terms of what its grammar suggests that it is saying, SS is indistinguishable from sentences that attribute the property of smoking to specific objects. In terms of what it really is saying, it is evidently very different from such sentences.
 
-Second-order Desires: Desires about our desires (e.g., wanting to want to eat healthier).
+What SS is saying, as Frege made clear, is that the characteristic-or as analytic philosophers put it, the property-of being a smoker is instantiated. SS is making a statement, not about some non- specific individual, but about a very specific property, and it's saying of this property that it's instantiated. (For a property to be instantiated is for there to be an instance of it. An instance of a property is something that has it. You are an instance of, and therefore instantiate, the property of being human since, being human, you have that property. )
 
-External Causation: Causes that bypass or override an agent's decision-making process.
+There are properties that nothing has. Nobody has run a three-minute mile. Given any individual, x, it is false to attribute the property of being a person who has run a three-minute mile. Thus, there are no instances of that property. It is uninstantiated. The grammatical form of ("TM" can be thought of as short for "three minutes"):
 
-Internal Causation: Causes that work through an agent's own psychological mechanisms and choices.
+(TM) "nobody has run a three-minute mile"
 
-Psychological Structure: The organized system of values, judgments, and decision-making capacities that constitute an agent's will.
+is just like that of
 
-Lecture 4: Incompatibilism
+(JTM) "John has run a three-minute mile."
 
-Incompatibilism is the view that free will and determinism cannot coexist. According to incompatibilists, if determinism is true - if all our actions are the inevitable consequences of prior events - then we cannot be truly free. This seems intuitively compelling: how can a choice be free if it was inevitable from the moment of the Big Bang?
+JTM clearly attributes that property to an individual. That isn't what TM does. TM says of that property that it can't be attributed to anyone. So TM says that ("UP" is short for "uninstantiated property"):
 
-The core incompatibilist argument is straightforward: If determinism is true, then given the state of the universe a billion years ago, your current actions were inevitable. You have no control over what happened a billion years ago. Therefore, you have no real control over your current actions, as they are merely playing out a script written long before your birth.
+(UP) the property of being a person who has run a three-minute mile is uninstantiated.
 
-However, incompatibilists face a serious dilemma. If our actions aren't determined, they must be either random or uncaused. But random or uncaused actions seem even less free than determined ones. A choice that comes "out of nowhere," disconnected from our personality, values, and reasons, looks more like a seizure than a free decision.
+Notice that UP's grammatical form is the opposite of TM's. The grammatical subject of TM is "nobody"; the grammatical predicate is "has run a three-minute mile." By contrast, the grammatical subject of UP is "the property of being a person who has run a three-minute mile," which corresponds to "has run a three-minute mile," and the grammatical predicate of UP is uninstantiated, which corresponds to "nobody."
 
-Consider someone who suddenly decides to become a pilot despite having no interest in flying, no relevant skills, and strong reasons against it. If this decision isn't caused by anything about the person - their character, values, or circumstances - it seems more like a compulsion than a free choice.
+If one were to take TM at face value, and were thus to assume that its meaning paralleled that of JTM, one would have to say that it attributed the property of being a person who has run a three- minute mile to some un-person, or some such. But if this is what it said, then in order to be true, somebody-namely, this unperson- would have had to run a three-minute mile, in which case TM would be false. When we align TM's real meaning with its grammar, we don't have to swallow this rank absurdity. For UP says of some very much existent property (that of being a person who has run a three-minute mile) that it has a certain very much existent property (that of being uninstantiated). So we get the right result if we do linguistic analysis. We get the wrong result if we do para-science-if, that is, we posit new entities in order to account for the datum that TM is true.
 
-This creates a paradox: determined actions aren't free because they're inevitable, but undetermined actions aren't free because they're arbitrary. This leads some philosophers to conclude that free will might be logically impossible - an incoherent concept like a square circle.
+The same thing is true of:
 
-Lecture 5: Determinism and Moral Responsibility
+(NS) "nothing smokes."
 
-If determinism is true and all our actions are inevitable consequences of prior causes, can we be morally responsible for our actions? This question cuts to the heart of our practices of praise, blame, punishment, and reward.
+Pre-Fregeans said that NS says of some non-thing-some blank entity-that it smokes. So, supposing that in 500 years nobody smokes, and that NS is therefore true, it will be in virtue of the fact that some blank entity is around that is smoking.
 
-Consider Stalin's actions. In a deterministic universe, the state of things before Stalin's birth made his later actions inevitable. But there are two ways to interpret this: Either (1) the universe made Stalin do those things, or (2) the universe made it inevitable that Stalin would come into existence and, once existing, freely do those things.
+But if there is such a thing, and it's smoking, then NS is false. As long as one thing smokes, NS is
 
-This distinction matters deeply. The first interpretation suggests Stalin was merely a puppet of prior causes. The second suggests that while Stalin's existence was determined, his actions genuinely flowed from his own character and decisions - they were "of him" even if ultimately caused by prior events.
+false. It doesn't matter how blank or otherwise deficient that thing is.
 
-What makes an action attributable to an agent isn't that it's uncaused, but that it flows appropriately from that agent's own psychological mechanisms. If someone forces my hand to pull a trigger, that action isn't "mine" even though caused. If I choose to pull the trigger based on my own reasons and values, that action is "mine" even if those reasons and values were themselves caused by prior events.
+Frege straightened this all out. By obvious extensions of what we just said, NS's real meaning is:
 
-This suggests that moral responsibility doesn't require ultimate, uncaused self-creation. Rather, it requires that our actions flow from our own decision-making processes, values, and character - even if those mental states were themselves caused by factors outside our control.
+(NS2) the property of being a smoker is instantiated.
 
-SHORT ANSWER QUESTIONS
+NS2's grammatical subject (the italicized expression) corresponds to NS's grammatical predicate; and NS2's grammatical predicate (the bold-faced expression) corresponds to NS's grammatical subject. So when we align NS's logical form (what it actually says) with its grammatical form (what, given its grammar, it appears to say), we no longer have to say, completely absurdly, that NS attributes to some non-specific individual.
 
-1. How does the Stalin example illustrate two different ways of understanding determinism's relationship to responsibility?
+Similar remarks hold with respect to SC. That statement says of two properties that they aren't coinstantiated. It doesn't say of some non-entity that it is both a square and a circle.
 
-2. Explain the difference between an action being "of" an agent versus merely happening to them.
+Philosophical puzzles are solved by making it clear what statements mean. This is the basic tenet of analytic philosophy. Philosophy explains by clarifying statements. Science explains by positing entities. Science posits entities that are not themselves directly encountered but that, if assumed to exist, would account for phenomena that are directly encountered.
 
-3. Why might determinism be compatible with moral responsibility even if we don't have ultimate self-creation?
+It used to be thought that philosophical explanation was to be understood in the same way-that philosophical progress was to be made by positing entities that are not themselves directly known but that, if assumed to exist, explain what is directly known. This is not the case. Philosophy isn't para- science. Philosophy is conceptual analysis. To make a philosophical discovery is not to discover a new entity; it is to make explicit a previously unrecognized implication of an existing belief. Philosophy is explication; it is the clarification of the statements that we accept but whose depths we haven't yet fully fathomed.
 
-4. How does the forced trigger-pulling example differ from voluntary trigger-pulling in terms of moral responsibility?
+Analysis vs. ontogenesis
 
-5. What role do psychological mechanisms play in determining moral responsibility?
+In the works of analytic philosophers, one sometimes comes across the word "ontology," which, etymologically, means "the study of being" ("ontos"= "being," "logos"= "study"). These days the word "ontology" is usually used to refer to a given philosopher's beliefs as to what exists. Some philosophers don't believe in nonspatiotemporal entities. So such entities don't belong to their "ontology." Since I do believe in them, they do belong to my "ontology."
 
-MULTIPLE CHOICE QUESTIONS
+Analytic philosophers are, almost by definition, ontologically very conservative. In other words, they don't want to grant existence to anything whose existence hasn't been demonstrated beyond a shadow of a doubt.
 
-1. According to the lecture, moral responsibility requires:
+Pre-analytic, pre-Fregean philosophers were ontologically very liberal. Consider the statement: (TP) no person is over 20-feet tall.
 
- a) Complete absence of causation
+Pre-Fregean philosophers took TP to say that there existed some non-person who was over 20-feet tall, and they engaged in a great deal of spurious "ontologizing" to validate this analysis. Frege showed that this ontologizing, in addition to being futile, is unnecessary. TP says that a certain property (that of being a person who is over 20-feet tall) has another property (that of not being instantiated). No 20-foot tall (un)person need be postulated. No ontologizing need be done. By contrast, non-analytic (pre-Fregean) philosophers often countenanced bizarre and even logically impossible entities to cover up deficits in their analyses.
 
- b) Actions flowing from one's own psychological mechanisms
-
- c) Ultimate self-creation
-
- d) Random actions
-
-2. The Stalin example suggests:
-
- a) Determinism eliminates all responsibility
-
- b) Only partial responsibility is possible
-
- c) Determined actions can still be "free" in the relevant sense
-
- d) Responsibility requires indeterminism
-
-3. An action is "mine" when:
-
- a) It has no causes
-
- b) It flows from my own decision-making processes
-
- c) Someone else causes it
-
- d) It's completely random
-
-4. The lecture suggests that moral responsibility:
-
- a) Requires ultimate self-creation
-
- b) Is impossible under determinism
-
- c) Doesn't require ultimate self-creation
-
- d) Requires randomness
-
-5. Psychological mechanisms are relevant because:
-
- a) They eliminate responsibility
-
- b) They make actions random
-
- c) They connect actions to the agent's own character
-
- d) They prove indeterminism
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. The Stalin example shows we can either view determinism as directly causing actions, making the agent a mere puppet, or as creating an agent who then acts from their own character and decisions, preserving responsibility.
-
-2. An action is "of" an agent when it flows from their own decision-making processes, values, and character. It merely happens to them when external forces bypass these psychological mechanisms.
-
-3. While determinism means our character and values were caused by prior events, our actions can still meaningfully flow from who we are. Responsibility requires this connection to our psychology, not ultimate self-creation.
-
-4. Forced trigger-pulling bypasses the agent's decision-making processes, making it not truly their action. Voluntary trigger-pulling expresses the agent's own choices and values, making it attributable to them.
-
-5. Psychological mechanisms connect actions to an agent's character and values, making them genuinely expressions of who that person is rather than mere events that happen to them.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. c
-
-3. b
-
-4. c
-
-5. c
-
-KEY TERMS DICTIONARY
-
-Moral Responsibility: The condition of being properly subject to praise or blame for one's actions.
-
-Attribution: The relationship between an action and an agent that makes the action properly "theirs."
-
-Psychological Mechanisms: The mental processes through which an agent's character and values produce actions.
-
-Ultimate Self-Creation: The impossible condition of being the uncaused cause of one's own character.
-
-External Forces: Causes that bypass an agent's decision-making processes.
-
-Character: The stable set of values, dispositions, and decision-making tendencies that constitute who someone is.
-
-Lecture 6: Predictability and Moral Responsibility
-
-If our actions are predictable, does this undermine moral responsibility? Some argue that if God or a supercomputer could predict our actions with certainty, we couldn't be truly responsible for them. However, this argument confuses predictability with compulsion.
-
-Consider: If you know your friend well, you might predict their reaction to certain situations with high accuracy. This predictability doesn't mean they're not responsible for their actions. Rather, it reflects the stability and coherence of their character - the very things that make moral responsibility possible.`
+When is it appropriate to ontologize?`
     },
     {
       id: "section-4",
       title: "Section 4",
-      content: `Predictability actually requires psychological mechanisms that support, rather than undermine, responsibility. For our actions to be predictable, they must flow reliably from our character, values, and reasoning. Without such reliable connections between who we are and what we do, our actions would be random and unpredictable - and thereby less attributable to us as agents.
+      content: `As a general rule, analytic philosophers do not try to solve philosophical problems by "ontologizing"-that is, by positing an entity, or class of entities, not previously believed to exist. They try to solve them by clarifying statements. In some cases, the results of a successfully clarified statement do demand that we grant existence to something to which we'd otherwise deny existence. But, whenever this happens, the "entity" being posted is never a denizen of the spatiotemporal world; the thing that's posited is never a person or a table or a mountain or a monster. It's always an abstract object of some kind, and it's posited only because, were it not to exist, it would be impossible to account for the truth of obviously true statements.
 
-The key insight is that predictability implies causation, but not all causation negates responsibility. What matters is not whether our actions can be predicted, but whether they flow appropriately from our own psychological mechanisms. A predicted action that genuinely expresses our character is more attributable to us than an unpredictable action disconnected from who we are.
+For example, given the premise that Bob and Sally are both humans who are intelligent, it follows that there exist characteristics-or, to use the word preferred by analytic philosophers, properties- that Bob and Sally have in common, and from this it follows that properties exist.
 
-This suggests that perfect predictability of our actions would actually confirm, rather than undermine, our status as responsible agents - as long as those predictions were based on understanding our character and reasoning rather than external manipulation.
+Given that properties exist, are they identical with spatiotemporal entities (i.e., with things that have locations in space and time)? Obviously, instances of properties at least sometimes exist in space-time. Bob and Sally, both instances of many properties, exist in space and time. But although you may encounter many instances of intelligence, you'll never encounter intelligence per se and it would make no sense to assign any spatiotemporal location to it. Attempts to rebut this argument are doomed to fail, as we'll see in Chapter 2. Thus, to validate the rather rudimentary inference from "Bob and Sally are both intelligent and kind," it is necessary to grant the existence of non- spatiotemporal entities and thus to do a bit of ontologizing.
 
-SHORT ANSWER QUESTIONS
+So even though analytic philosophers do ontologize, they do it only when there is no other way of demonstrating the legitimacy of some indisputably correct form of inference, and they never posit anything nonspatiotemporal in the process.
 
-1. Why does merely being able to predict someone's actions not undermine their moral responsibility?
+Brentano and Meinong: the non-analytic method epitomized
 
-2. Explain how a person can be predictable yet still morally responsible using the distinction between prediction and compulsion.
+According to Franz Brentano (1838-1917), the essence of the mental is intentionality. In this context, the word "intentionality" refers, not to the property of being done deliberately, but to the property of being representational. So, in Brentano's view, for something to be a mental entity is for it to be representational, and for something to fail to be a mental entity is for it to be non-representational.
 
-3. How does predictability actually support rather than threaten moral agency?
+To be sure, there are non-mental things (e.g., deposits of ink or pain) that are representational. Utterances and ink deposits are representational, even though they aren't mental. But this isn't a threat to Brentano's position. Utterances (etc.) are representational only in a derivative sense. It's because we endow it with meaning that an utterance of "snow is white" is meaningful; in a world devoid of sentient beings, it would just be another noise. So Brentano's thesis is that for something to be mental is for it to be non-derivatively representational.
 
-4. Explain how knowing someone's character well enough to predict their actions differs from controlling their actions.
+There is an apparent problem with Brentano's thesis. To be representational is presumably to represent something. Hallucinations are mental entities. But what does a hallucination of a pink elephant represent? A pink elephant? No-pink elephants don't exist. More formally, there is nothing x such that x is a pink elephant. A fortiori there is nothing x such that x is a pink elephant that is represented by some hallucination. Still, there is clearly a sense in which hallucinations of pink elephants and other non-entities are representational. How is this to be explained?
 
-5. Why is psychological predictability compatible with genuine decision-making?
+The solution to this problem lies in the fact that perception is description. If you're looking at an actual elephant, which we'll call "Larry," the information encoded in your visual perception isn't the effect that:
 
-MULTIPLE CHOICE QUESTIONS
+(LP) Larry is standing over there, next to that tree, looking ill [etc.].
 
-1. According to the lecture, predictability implies:
+When you look at an elephant, or a person, or a rock, you don't just see that object. Seeing Larry involves seeing a thing having various properties-having a certain color, shape, size, position (relative to you), etc. So seeing Larry involves seeing that various properties are instantiated-that there is an instance, in a certain place, of a certain morphology, color, etc.
 
-a) A lack of free will
+Perceptions of things aren't like sentences about them. In the sentence:
 
-b) That actions are compelled by external forces
+(LS) "Larry is standing over there, next to that tree, looking ill [etc.]"
 
-c) The presence of reliable causal mechanisms
+Larry is represented by a single, semantically simple symbol (namely, "Larry"). But in no sense- perception of Larry is he represented by some simple, homogenous, non-composite cipher. So far as he is perceived, Larry is represented as having these or those properties. This means that seeing him involves seeing that these or those properties are instantiated.
 
-d) That choices are random
+It's not as though in addition to seeing an instance of a certain morphology, color, etc., you also, separately from that, see Larry. No, your seeing Larry consists in your seeing those property- instances-in your seeing that such and such properties are instantiated. Thus, the content of your perception of Larry is given by some existence-claim similar to the following:
 
-2. If God can predict all our actions, this means:
+(LC) there exists, over in that place at the present time, instances of such and such properties.
 
-a) We are not responsible for our choices
+An existence-claim is any claim to the effect that some property is instantiated. Thus, "there are prime numbers" is an existence-claim, and sufficient since it says that the property of being a prime number has at least one instance.
 
-b) Our choices are inevitable given who we are
+Given any existence claim, anything having the requisite properties is said to satisfy it. So the number seven satisfies the just-mentioned existence-claim. The number two uniquely satisfies "there is an even prime," since (a) it satisfies it and (b) nothing else does.
 
-c) We are being externally controlled
+When you look at Larry, your eyes are giving you an existence-claim. Given that Larry, and Larry alone, satisfies that existence-claim, he is the object of your perception. So given that Larry uniquely instantiates the property of being a thing in such and such a place that has such and such a morphology (etc.), Larry is the object (or, more likely, one of the objects) of your current perception. So, yes, your perception does represent Larry. But it represents him by way of encoding an existence- claim that he satisfies.
 
-d) Our actions are uncaused
+Given this, suppose that, the next day, you have a hallucination that is experientially just like the veridical perception we've been talking about. (A "veridical" perception is an accurate one. "Veridical" is to perceptions what "true" is to sentences. For some reason, perceptions are described as "veridical," not as "true.") So even though neither Larry nor anything that looks like him is in front of you, your visual experience is telling you otherwise. That hallucination thus gives you a false message. The message encoded in it will be similar
 
-3. The relationship between predictability and moral responsibility is that:
-
-a) They are incompatible
-
-b) Predictability actually supports moral responsibility
-
-c) They are unrelated
-
-d) Predictability partially undermines responsibility
-
-4. Someone's actions being predictable based on their character suggests:
-
-a) They are being coerced
-
-b) Their actions express their stable personality
-
-c) They lack free will
-
-d) Their choices are random
-
-5. The lecture suggests that moral responsibility requires:
-
-a) Unpredictability
-
-b) External control
-
-c) That actions flow from stable character traits
-
-d) Complete randomness
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. Predictability only indicates the presence of reliable causal mechanisms linking character to action. The fact that we can predict what someone will do based on their stable character traits doesn't mean they aren't the source of their actions - it actually confirms that their actions flow from who they are.
-
-2. A person can be predictable yet morally responsible because predictability stems from having a stable character that reliably produces certain kinds of actions. The predictability comes from the person's own values, beliefs and traits rather than external compulsion or control.
-
-3. Predictability supports moral agency because it shows that our actions flow reliably from our character, values and reasoning. If our actions were unpredictable and disconnected from our stable traits, they would be more like random events than genuine choices we could be responsible for.
-
-4. When we can predict someone's actions based on knowing their character well, this represents our understanding of how their stable traits manifest in behavior. This differs fundamentally from controlling their actions, as prediction stems from who they are rather than external manipulation.
-
-5. Psychological predictability is compatible with genuine decision-making because it reflects the reliable connection between our stable character traits and our choices. Our decisions can be both predictable and genuinely ours if they flow from our values and personality.
-
-Multiple Choice Correct Answers:
-
-1. c
-
-2. b
-
-3. b
-
-4. b
-
-5. c
-
-KEY TERMS DICTIONARY
-
-Predictability: The ability to forecast events or actions based on knowledge of causes and current conditions.
-
-Moral Responsibility: The condition of being properly subject to praise or blame for one's actions.
-
-Causal Mechanism: A reliable process by which causes produce their effects according to regular patterns.
-
-Character Traits: Stable psychological dispositions that influence how a person thinks and acts.
-
-Agency: The capacity to act based on one's own character, values and reasoning rather than external control.
-
-Compulsion: External force or control that overrides a person's own decision-making process.
-
-Lecture 7: God's Foreknowledge and Moral Responsibility
-
-If God (or a supercomputer) can predict all of our actions with complete certainty, does this undermine our moral responsibility? This profound question has troubled philosophers for centuries. At first glance, it might seem that such perfect predictability would indeed negate our freedom and responsibility - after all, if our actions are inevitable and predictable, how can we be truly responsible for them? However, a careful analysis reveals that divine foreknowledge is compatible with moral responsibility.
-
-First, we must understand that predictability implies deterministic mechanisms. Just as we can predict that flipping a light switch will turn on the light because of the deterministic electrical mechanisms involved, if our actions are perfectly predictable, this means they result from deterministic psychological mechanisms. When God predicts our actions, it's because there are reliable causal connections between our character, values, and choices.
-
-However, the key insight is that God's ability to predict our actions doesn't mean He is controlling or compelling them. Rather, His foreknowledge simply reflects the fact that our actions flow reliably from our own character and values. Consider an analogy: If you know your friend well enough to predict how they'll react in certain situations, this doesn't mean you're controlling their reactions. Your prediction simply reflects your understanding of their stable character traits.
-
-The crucial distinction is between prediction and compulsion. When God foresees that person X will perform action Y, this doesn't mean God is making X do Y. Rather, it means that given X's character, values, and circumstances, X will freely choose to do Y. God's knowledge simply reflects the fact that our actions express our stable character traits - it doesn't override or compel those actions.
-
-Think of it this way: The mere fact that the state of the universe at time T makes inevitable what you'll do at later time T* doesn't mean you're being compelled. Rather, it means the universe will produce a person (you) who, because of their own character and values, will freely choose certain actions. The inevitability lies not in compulsion but in the reliable connection between who you are and what you choose.
-
-This means that divine foreknowledge is actually evidence for, not against, genuine moral responsibility. If our actions were purely random and unpredictable, disconnected from our stable character traits, they would be more like seizures than choices. The fact that God can predict our actions based on who we are shows that they genuinely flow from and express our character - exactly what's needed for moral responsibility.
-
-SHORT ANSWER QUESTIONS
-
-1. Explain how divine foreknowledge differs from divine control or compulsion using the light switch analogy from the lecture.
-
-2. Why does the predictability of our actions by God actually support rather than undermine moral responsibility?
-
-3. How does the friend prediction analogy help explain the compatibility of foreknowledge and moral responsibility?`
+to LC. That message is to the effect that, in a certain place, there is a thing having such and such morphological, chromatic, kinematic (etc.) properties. On this occasion, the message-the existence- claim-in question is false, the reason being that nothing satisfies it. (Yesterday, the message represented by your visual experience was correct, the reason being that the existence-claim in question was satisfied.) The important point is that, although it was hallucinatory, your visual experience encoded an existence-claim and, in so doing, gave you a message and was therefore representational. It wasn't representational in the sense that there was some thing that it picked out and, for that reason, represented. It was representational in the sense that it gave you a message, albeit a false one, and thus represented the world as being a certain way.`
     },
     {
       id: "section-5",
       title: "Section 5",
-      content: `4. Explain the difference between an action being inevitable and an action being compelled.
+      content: `Your visual perception of yesterday, unlike your visual perception of today, encoded a true existence-claim. But your visual experience of today no more represents some non-existent entity than your sense-perception yesterday. Your visual experience today has for its content a false proposition to the effect that there is a thing having thus and such properties. But just as the sentence "there does not exist a ten-foot tall man" does not, in order to be true, require the existence of a ten-foot tall man, so your perception doesn't require the existence of an elephant before you.
 
-5. Why would purely random, unpredictable actions actually be less compatible with moral responsibility than predictable ones?
+The same thing is true of thoughts about the non-existent. When you think about some non- existent number-for example, an even prime greater than two-there isn't some mathematically impossible entity that you're cognitively locking onto. What's going on is that you're thinking some false existence-claim along the lines of: there is some number n such that n is both even and prime [etc.].
 
-MULTIPLE CHOICE QUESTIONS
+Mental entities have propositions for their contents. When correct, those propositions describe existing things. When false, they don't. But nothing non-existent or quasi-existent can be the object of a thought or perception. When we describe a thought or perception as having a "non-existent object," what we mean, so far as what we mean is coherent, is that it has for its content an existence-claim that nothing satisfies.
 
-1. According to the lecture, God's foreknowledge of our actions implies:
+But Brentano dropped the ball. He realized that hallucinations are, in some significant sense, representational. Wishing to reconcile this with the fact that there are no pink elephants (etc.), he said that a hallucination of a pink elephant has a non-existent pink elephant for its object.
 
-a) That God is controlling our actions
+But that's absurd, since it's the same as saying: "there exists some elephant x such that x doesn't exist and such that what you are hallucinating is x."
 
-b) That our actions are random
+In a failed to attempt to deal with this, Brentano distinguished different kinds of non-existence, and he used different terms to mark them ("inexistent," "non-existent," "un-existent," etc.) His pupil, Alexius Meinong (1853-1920), added another bogus category to this list-the category of "subsistent" entities. An entity "subsists" if it doesn't quite fail to exist, but doesn't quite succeed in existing either.
 
-c) That our actions flow reliably from our character
+This entire approach is misguided. Brentano and Meinong were ontologizing when they should have been analyzing. Properly analyzed, hallucinations no more require the existence of non-existent existents than veridical perceptions. The same is true of thoughts about Bart Simpson, the Fountain of Youth, etc. (This is further discussed in Chapters 6, 8, 9, and 25.)
 
-d) That we have no free will
+4.0 Empirical puzzles vs. philosophical puzzles
 
-2. The predictability of our actions suggests:
+Some puzzles result from ignorance of spatiotemporal facts. My valuables start disappearing. I'm puzzled. I learn the relevant facts: Larry has been sneaking into my house and stealing my valuables. I'm no longer puzzled.
 
-a) The presence of reliable psychological mechanisms
+The puzzles that science deals with typically involve a failure to know all the facts. The problem isn't that anyone is making erroneous inferences. The problem is that not all the facts are in. It isn't yet known that disease X results from an over-production of antibody Y. The reason it isn't yet known is that, given the available data, there isn't yet good reason to believe it. But once the data is in, it will be believed, and a cure will be forthcoming.
 
-b) External compulsion
+Of course, scientific puzzles seldom result entirely from a failure to have the relevant data. In most cases, scientific breakthroughs involve somebody's figuring out a new and better way to model already available data.
 
-c) A lack of moral responsibility
+The pre-history of relativity theory vividly illustrates this principle. If a train rushes past you at a rate of 100 mph, and I rush past you at a rate of 70 mph, the train is traveling at a rate of 30 mph with respect to
 
-d) Random behavior
+me. But if a light beam rushes past you at a rate of 186,000 miles/second, and I rush past you at a rate of 180,000 miles/second, the light beam rushes past me at a rate of 186,000 miles/second. There is thus is no optical test for determining one's own state of motion. In other words, no matter how quickly you travel, you will not be able to detect any change in your velocity relative to that of a light beam. People and instruments not traveling with you will be able to detect changes in your velocity relative to that of a light beam, and you will be able to detect changes in their velocities relative to that of a light beam. But nobody can detect any changes in his own velocity relative to that of a light beam.
 
-3. The lecture argues that moral responsibility:
+This deeply puzzling fact was established in 1879. But nobody had any idea how to explain it until, in 1905, Einstein put forth the Special Theory of Relativity. Einstein didn't cite any data that hadn't been available to the physics community for decades. Einstein's great innovation was of a conceptual nature. The facts were in, but he was the first to make sense of them.
 
-a) Requires our actions to be unpredictable
+Be all of this as it may, Relativity Theory is an empirical theory. It's based on observational and experimental data, much of which would be impossible to acquire except through carefully executed experiments. This data wasn't in until 1879. So even though nobody came up with Relativity Theory before 1879, that fact can't be chalked up to the fact that nobody drew the right inferences. It is due, at least in part, to the fact that the necessary data simply wasn't available. (What can be chalked up to a failure to draw the right inferences is the fact that, during the period from 1879 to 1905, nobody came up with Relativity Theory.)
 
-b) Is incompatible with divine foreknowledge
+In general, scientific breakthroughs have two components: (i) a strictly fact-based component (new raw data is acquired), and (ii) a purely conceptual component (already known data is modeled in a new and better way).
 
-c) Requires random actions
+4.1 Empirical puzzles vs. philosophical puzzles (continued)
 
-d) Is compatible with perfect predictability
+Unlike scientific puzzles, philosophical puzzles are not solved by generating new raw data. Philosophical puzzles are purely conceptual in nature and have no strictly factual component. Philosophical puzzles result, not from a failure to know the facts, but from a failure to draw the right inferences. They result, not from ignorance, but from confusion. In figuring out that:
 
-4. When God predicts our actions, this means:
+(NS2) the property of being a smoker is instantiated
 
-a) God is controlling us
+is what is meant by
 
-b) Our actions express our stable character
+(NS) "nothing smokes,"
 
-c) Our actions are random
+Frege solved a number of outstanding philosophical problems. But Frege didn't make any new empirical discoveries. In fact, his work didn't involve him having access to any empirical information that wasn't available to anyone who knows what (NS) (or its German equivalent) means. Einstein's work, by contrast, had a heavy empirical component: he was modeling facts that a layperson would know nothing about, and the same thing mutatis mutandis is true of any scientific discovery.
 
-d) We are not responsible for our choices
+Philosophical analysis ≠ linguistic analysis
 
-5. According to the lecture, genuine moral responsibility requires:
+Impressed by Frege's philosophical successes, many came to the conclusion that all philosophical puzzles are of a purely linguistic nature. The most famous, and also the most vehement, advocate of this view was Ludwig Wittgenstein (1889-1951). This thesis was the cornerstone of this work. He urged acceptance of it in practically everything he wrote during his long career. He said it before others said it, and he held onto it long after, for reasons to be described forthwith, most of its erstwhile supporters rejected it. "Philosophical confusion begins when language goes on holiday," he said. Elsewhere he said that all philosophical confusion "lies in a failure to understand the workings of our own language."
 
-a) Actions to be unpredictable
-
-b) Actions to be uncaused
-
-c) Actions to flow from stable character traits
-
-d) Actions to be random
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. Just as we can predict a light will turn on when we flip the switch due to deterministic mechanisms without controlling those mechanisms, God can predict our actions due to the deterministic psychological mechanisms of our character without controlling those mechanisms. Prediction reflects knowledge of reliable patterns rather than active control.
-
-2. Divine predictability of our actions indicates they flow reliably from our stable character traits and values rather than being random or externally compelled. This connection between who we are and what we do is essential for genuine moral responsibility.
-
-3. Just as a friend's ability to predict our behavior based on knowing our character doesn't mean they're controlling us but rather reflects their understanding of who we are, God's foreknowledge reflects understanding of our character rather than control over our actions.
-
-4. An action being inevitable means it will certainly occur given prior conditions, while being compelled means it's forced by external control. Our actions can be inevitable consequences of our own character without being compelled by outside forces.
-
-5. Random actions disconnected from our character would be more like seizures than genuine choices we could be responsible for. Moral responsibility requires our actions to express our stable traits and values, making them predictable rather than random.
-
-Multiple Choice Correct Answers:
-
-1. c
-
-2. a
-
-3. d
-
-4. b
-
-5. c
-
-KEY TERMS DICTIONARY
-
-Divine Foreknowledge: God's perfect knowledge of future events, including human actions, before they occur.
-
-Deterministic Mechanism: A reliable causal process that produces predictable outcomes given initial conditions.
-
-Compulsion: External force or control that overrides an agent's own decision-making process.
-
-Character: The stable set of traits, values, and dispositions that influence how a person thinks and acts.
-
-Psychological Mechanism: The reliable mental processes by which character traits and values produce decisions and actions.
-
-Inevitability: The certainty that an event will occur given prior conditions, distinct from external compulsion.
-
-Lecture 8: The Coherence of Free Will
-
-The concept of free will appears to contain an inherent paradox. On one hand, if our actions are determined by prior causes, they seem unfree. On the other hand, if they're undetermined, they seem random rather than free. This has led some philosophers to suggest that free will might be logically impossible - as contradictory as a square circle.
-
-However, this apparent paradox stems from a misunderstanding of what freedom really means. True freedom isn't about actions being uncaused, but about them being caused in the right way - specifically, by our own values rather than mere desires. Consider an addict who desperately wants to quit drugs but continually relapses. Though his drug use is driven by his desires, it isn't truly free because it conflicts with his higher-order values - his desire not to desire drugs.
-
-This points to a crucial distinction between first-order desires (wanting X) and second-order desires (wanting to want X). When our actions flow from desires that align with our values - our considered judgments about what is worth wanting - they are free. When they flow from desires we don't endorse or identify with, they are unfree, even if voluntary.
-
-But there's a further complication: we can rationalize and deceive ourselves, warping our higher-order desires to validate our lower impulses. Someone might convince themselves that their cowardice is actually wisdom, that their laziness is actually sophisticated leisure. This doesn't make their actions free - it just means they've corrupted their capacity for genuine self-evaluation.
-
-What makes an action truly free, then, is not just that it flows from our higher-order desires, but that it flows from authentic values that we haven't rationalized or distorted. These core values represent our real selves - who we truly are rather than who we've talked ourselves into being.
-
-This suggests that free will is neither logically impossible nor universally present in all human action. Rather, it exists to the degree that our actions flow from authentic values rather than mere desires or rationalized pseudo-values. We are most free when we act from stable character traits that we genuinely identify with and endorse, not when we act from impulses or self-deceptive rationalizations.
-
-The coherence of free will thus depends not on escaping causation entirely, but on the right kind of causation - actions flowing from authentic values that constitute our real selves. This makes free will a matter of degree rather than an all-or-nothing proposition, which aligns with our lived experience of being more or less free in different contexts and at different times.
-
-SHORT ANSWER QUESTIONS
-
-1. Explain why the apparent paradox between determinism and randomness doesn't actually make free will incoherent.
-
-2. How does the example of the addict illustrate the difference between mere desires and genuine freedom?
-
-3. Explain the relationship between rationalization and freedom. Why doesn't rationalizing our desires make our actions truly free?
-
-4. What makes an action flow from our "real self" rather than just from rationalized pseudo-values?
-
-5. Why is free will better understood as a matter of degree rather than an all-or-nothing proposition?
-
-MULTIPLE CHOICE QUESTIONS
-
-1. According to the lecture, true freedom is:
-
-a) The absence of all causation
-
-b) Actions flowing from authentic values
-
-c) Random, uncaused behavior
-
-d) Acting on any desire we have
-
-2. The lecture suggests that rationalization:
-
-a) Makes our actions more free
-
-b) Corrupts our capacity for genuine self-evaluation
-
-c) Has no effect on freedom
-
-d) Eliminates causation
-
-3. An addict's drug use is unfree because:
-
-a) It is caused by prior events
-
-b) It is random
-
-c) It conflicts with their higher-order values
-
-d) It is predictable
-
-4. Free will is coherent because:
-
-a) Actions can be uncaused
-
-b) The right kind of causation preserves freedom
-
-c) Randomness enables freedom
-
-d) All causation negates freedom
-
-5. According to the lecture, we are most free when:
-
-a) Our actions are random
-
-b) We act on any impulse
-
-c) We act from authentic values we identify with
-
-d) We successfully rationalize our desires
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. The paradox dissolves when we understand that freedom doesn't require either pure determinism or pure randomness, but rather the right kind of causation - actions flowing from our authentic values and stable character traits that we genuinely endorse.`
+But this position is incorrect. There are many philosophical puzzles that don't have anything to do with language, and the solutions to these puzzles cannot be modeled on Frege's solutions to the puzzles discussed a moment ago.`
     },
     {
       id: "section-6",
       title: "Section 6",
-      content: `2. The addict's case shows that merely acting on desires doesn't constitute freedom. Though their drug use is voluntary, it conflicts with their higher-order values and judgments about what's worth wanting. True freedom requires alignment between our actions and our authentic values.
+      content: `Here's an example from epistemology. You couldn't see the book in front of you were it not for the disturbances of your eyes brought about by the light-rays bouncing off of it. In general, nothing can sense-perceive anything that doesn't affect it. All knowledge of what is in space-time is rooted in sense-perception. (If it's in space-time, it isn't known unless it's directly perceived or evidence of it is perceived.) Taking it for granted that nothing that isn't space-time can possibly be known, many contemporary epistemologists, e.g. Jerry Fodor, hold that one can't know of anything without being affected by it. Thus, such philosophers hold that:
 
-3. Rationalization corrupts our capacity for genuine self-evaluation by warping our higher-order desires to validate our lower impulses. Though this might make us feel better about our actions, it doesn't make them truly free because they're still not flowing from authentic values.
+(JK) John's being aware of the fact that 1 + 1 = 2 involves his being on the receiving end of some
 
-4. Actions flow from our real self when they express stable character traits and values that we genuinely endorse upon honest reflection, rather than desires we've merely talked ourselves into accepting through self-deception and rationalization.
+causal process initiated by that fact.
 
-5. Free will comes in degrees because our actions can be more or less aligned with our authentic values, more or less influenced by rationalization, and more or less expressive of our stable character traits. This matches our experience of feeling more or less free in different situations.
+I personally regard JK as being absurd in the extreme. The fact that 1 + 1 = 2 isn't comparable to the fact that there is a book in front of you. Were mass-energy distributed differently, there wouldn't be a book in front of you. But 1+1 would equal 2 no matter how mass-energy were distributed. Thus, "1 + 1 = 2" says nothing about how mass-energy is distributed, and it therefore says nothing about the spatiotemporal world. The fact it describes must therefore be non-spatiotemporal. Nothing outside of space-time can bear any causal relation to anything. Therefore, JK is wrong.
 
-Multiple Choice Correct Answers:
+In any case, the dispute between those who accept JK and those who reject it has nothing to do with language. It's agreed what JK means. What isn't agreed is whether the thing that it's agreed to mean is true.
 
-1. b
+But the controversies surrounding NS do concern language; they concern the semantics of the word "nothing." Those who see "nothing" as being a referring term, like "Socrates," see NS as saying that some featureless entity smokes. Those who deny that "nothing" and "Socrates" belong to the same semantic category don't see NS as saying this. Therein lies the controversy. Nothing comparable to this holds in connection with JK.
 
-2. b
+Analytic philosophers do agree that the right way to figure out whether or not JK is correct is by carefully analyzing its meaning. But they also hold (rightly) that it isn't to be solved through linguistic analysis.
 
-3. c
+It must be emphasized that, according to analytic epistemologists, this puzzle is of a logical, not an empirical, nature. It is to be resolved through statement-analysis alone, not through statement- analysis combined with empirical research. They're clearly right about this. JK says that John's knowing that 1+1=2 is inconsistent with his not being on the receiving end of a causal process initiated by that fact. For P to be inconsistent with Q is for it to be impossible for both P and Q to be true. What is impossible or the otherwise non-existent cannot be observed. Thus, observation cannot tell you that anything is inconsistent with anything. So there is no way for it to tell you whether JK is correct.
 
-4. b
+The philosophy of law provides us with another example of a puzzle that is to be solved through statement-analysis but not through linguistic analysis. It's agreed that legal systems can be morally good. But it's fiercely debated whether they have to be. According to some, a legal system can fail to embody any morality at all. Law is about power, not morality. Advocates of this view are known as legal positivists (no relation to logical positivism). According to anti-positivists, anything that doesn't meet certain minimal standards of morality ipso facto isn't a legal system. To be sure, legal systems, like all institutions, presuppose the existence of relatively rigid distributions of power. But if an institution qualifies as a bona fide legal system, it is at least partly by virtue of its embodying a certain morality.
 
-5. c
+Positivists and anti-positivists disagree as to whether:
 
-KEY TERMS DICTIONARY
+(LM) "nothing can be a legal system without embodying a certain morality"
 
-Authentic Values: Core principles and preferences that constitute our real selves, distinct from rationalized pseudo-values.
+is a true sentence. But this debate has nothing to do with semantics. Positivists and anti-positivists are in agreement as to what LM means. What they disagree about is whether the meaning that they agree that it has is a correct one. What analytic philosophers of law, such as positivist H.L.A. Hart (1907-1992) and anti-positivist Ronald Dworkin (1931-) , do agree about is that LM is to be resolved on the basis of logical analysis.
 
-First-order Desires: Immediate wants and impulses (e.g., wanting to eat).
+Echoing what we said a moment ago, analytic philosophers deny that LM makes an empirical statement. They're right. LM says that x's being a legal system is inconsistent with x's failing to embody a certain morality. We've already seen why the merits of such a claim cannot possibly be determined on the basis of observation.
 
-Second-order Desires: Desires about our desires (e.g., wanting to want healthy food).
+No philosophical assertions are empirical. Philosophy analyzes the categories in terms of which we think about the world. It does this by saying exactly what it is that is ruled out by a given thing's falling into a given category-by, for example, a given thing's being an instance of knowledge. Since observation can't tell one whether one statement is inconsistent with another, philosophical assertions are non-empirical.
 
-Rationalization: Self-deceptive process of warping our higher-order desires to validate our lower impulses.
+Not all philosophical analysis linguistic analysis (continued)
 
-Real Self: The stable set of character traits and values that we genuinely identify with upon honest reflection.
+Thus, not all philosophical puzzles are linguistic puzzles; and Wittgenstein was wrong to say otherwise. But didn't we ourselves say that philosophical analysis is the analysis of statements? Yes we did, and we were right to do so. To see why, Wittgenstein is nonetheless wrong, we must distinguish sentences from propositions. Propositions are the things meant by sentences. "Snow is white," "schnee is weiss," and "la neige est blanche" all mean the same thing. There is some one proposition that is the meaning of each of them.
 
-Pseudo-values: Rationalized preferences that we've talked ourselves into accepting but don't genuinely endorse.
+A sentence is true or false depending on whether it has a true or false proposition for its meaning. Thus, when a sentence is described as "true," the property being attributed to it isn't the same as the property that is attributed to a proposition that is so described. For a sentence to be "true" is for it to encode a true proposition. But this isn't what it is for a proposition to be true, since propositions don't encode anything. In Chapter 3, we'll say what exactly it is for a proposition to be true. But the obvious answer, though imprecise, is the right one; namely, for a proposition to be true is for it to fit the facts.
 
-Lecture 9: The Structure of the Self
+The term "statement" is ambiguous; it has three distinct meanings. Sometimes it refers to propositions, sometimes it refers to the sentences used to affirm them, and sometimes it refers to the act of using a sentence to affirm a proposition. Wittgenstein didn't countenance the existence of propositions, and this obviously had a hand in his erroneously believing that philosophy is the analysis of sentences, when the truth is that philosophy is the analysis of propositions. Even Frege's analyses of sentences such as "someone snores" and "nothing is a square circle" fail to conform to Wittgenstein's conception of what philosophy is supposed to do, since, as we'll see in a moment, they're analyses of propositions that involve analyses of sentences and, therefore, are not themselves analyses of sentences.
 
-All selves are minds, but not all minds are selves. A self is a mind that has achieved agency - the capacity to act rather than merely react. To understand this crucial distinction, consider the difference between a mind that simply facilitates the gratification of basic urges and one that evaluates and regulates those urges according to values.
+One must know at least some English to understand the sentence:
 
-A simple mind provides the organism with information about how to satisfy instinctual drives without being injured or killed. Such a mind doesn't truly act; it merely enables informed reactions to instinctual pressures. Its role is to ensure that the organism's responses to basic drives don't run afoul of environmental constraints. But this kind of mind isn't a self, as it lacks the capacity for genuine agency.
+(1) "John knows that 1 + 1 = 2"
 
-A self emerges when a mind develops the ability to evaluate and regulate its own processes. This happens through the development of what we might call a "supervisory structure" - an internal regulatory system that can approve or inhibit impulses based on values rather than mere desires. This supervisory capacity is what transforms a mind into a self.
+But the proposition meant by that sentence can be grasped without speaking English; and one
 
-Importantly, selfhood comes in degrees. Just as some nations have more unified and effective governments than others, some minds have more robust and integrated regulatory systems than others. A mind whose supervisory structure has broad scope and consistent power is more of a self than one whose regulatory capacity is limited or fragmented.
+needn't know English, or any other given language, to be able to analyze that proposition correctly.
 
-The development of selfhood requires the ability to make second-order evaluations - judgments about one's own mental states and processes. Before this capacity emerges, a mind may be guided by principles, but it cannot evaluate whether it is properly applying those principles. Once a mind can assess its own operations, it becomes capable of genuine agency rather than mere reactivity.
-
-This self-evaluative capacity is what allows for the emergence of values distinct from mere desires. Values arise from judgments about which mental states and behaviors enhance rather than diminish the scope of one's agency. A self is therefore a mind that can regulate itself according to such values rather than being driven solely by immediate impulses.
-
-The result is a kind of internal government - a regulatory system that oversees and directs mental activity according to stable principles. The more unified and effective this system becomes, the more the mind manifests genuine selfhood rather than being a mere collection of reactions to stimuli. But this achievement is always a matter of degree rather than an all-or-nothing proposition.
-
-SHORT ANSWER QUESTIONS
-
-1. Explain the key difference between a mind and a self, using the distinction between reaction and action.
-
-2. How does the development of a "supervisory structure" transform a mind into a self?
-
-3. Why is selfhood a matter of degree rather than an all-or-nothing proposition? Use the analogy of nations to explain.
-
-4. What role do second-order evaluations play in the development of selfhood?
-
-5. Explain how values differ from mere desires in relation to the structure of the self.
-
-MULTIPLE CHOICE QUESTIONS
-
-1. According to the lecture, a self is:
-
-a) Any mind that can process information
-
-b) A mind that has developed regulatory agency
-
-c) Any organism with consciousness
-
-d) A mind that responds to basic drives
-
-2. The supervisory structure of a self primarily:
-
-a) Reacts to external stimuli
-
-b) Follows instinctual drives
-
-c) Evaluates and regulates mental processes
-
-d) Blocks all impulses
-
-3. Second-order evaluations are important because:
-
-a) They allow for faster reactions
-
-b) They enable assessment of one's own mental processes
-
-c) They increase instinctual drives
-
-d) They eliminate all desires
-
-4. The lecture suggests that values:
-
-a) Are identical to desires
-
-b) Have no relationship to agency
-
-c) Emerge from judgments about agency-enhancement
-
-d) Are purely instinctual
-
-5. The development of selfhood requires:
-
-a) Complete elimination of desires
-
-b) Purely instinctual responses
-
-c) Internal regulatory capacity
-
-d) Absence of mental states
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. While a mind can enable informed reactions to instinctual drives, a self has the additional capacity for genuine agency through its ability to evaluate and regulate those reactions. A mind merely facilitates responses to drives, while a self can act based on values and principles.
-
-2. The supervisory structure provides internal regulation of mental processes, allowing the mind to evaluate impulses based on values rather than just reacting to them. This creates genuine agency by enabling the mind to approve or inhibit impulses according to stable principles.
-
-3. Selfhood varies in degree based on how unified and effective the mind's regulatory system is, just as nations vary in how effectively their governments control their territory. A more integrated and consistently powerful supervisory structure indicates a greater degree of selfhood.
-
-4. Second-order evaluations enable a mind to assess its own operations and judge whether it is properly applying principles. This self-evaluative capacity transforms mere guided behavior into genuine agency and allows for the development of values.
-
-5. Values emerge from judgments about what enhances agency, while desires are simply immediate impulses. Values involve regulatory assessment of which mental states and behaviors increase rather than diminish the scope of one's agency, making them more sophisticated than basic desires.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. c
-
-3. b
-
-4. c
-
-5. c
-
-KEY TERMS DICTIONARY
-
-Self: A mind that has developed the capacity for agency through regulatory structures that enable evaluation of mental processes.
-
-Supervisory Structure: The internal regulatory system that enables a mind to evaluate and control its processes according to values.
-
-Agency: The capacity to act based on values and principles rather than merely react to drives and stimuli.
-
-Second-order Evaluation: The ability to make judgments about one's own mental states and processes.`
+But analyzing (1)-the sentence, not the corresponding proposition-does involve such knowledge. A sentence is an expression; it consist of nouns, verbs, etc. Analyzing (1) involves knowing the various grammatical nuances involved in its structure. Analyzing the corresponding proposition has nothing to do with anything relating to grammar or any other aspect of language. No such knowledge is needed to analyze the corresponding proposition.`
     },
     {
       id: "section-7",
       title: "Section 7",
-      content: `Value: A judgment about what enhances rather than diminishes the scope of one's agency, distinct from mere desire.
+      content: `Even though Frege's work inspired many to identify philosophy with sentence-analysis, Frege himself always made it very clear that propositions are not sentences and that, although sentences are human creations, their meanings are not.
 
-Regulatory System: The internal "government" that oversees and directs mental activity according to stable principles.
+The sentence "the moon is less massive than Earth" is a human artifact; it didn't exist until a few centuries ago. But the truth it expresses is in a different category. That truth exists independently of us. After all, the moon was less massive than the Earth before we came along, and it'll be that way after we sign out. For the same reason mutatis mutandis, the falsehood expressed by "the Earth is more massive than the moon" exists independently of our thoughts and deeds, even though that sentence itself is a human artifact.
 
-Lecture 10: The Libet Experiment: Description and Data
+Not all philosophical analysis linguistic analysis (continued): the nature of sentence-meanings (as opposed to sentences)
 
-In the early 1980s, neuroscientist Benjamin Libet conducted an experiment that would profoundly challenge our understanding of conscious decision-making. The experimental setup was simple: subjects were asked to flex their wrist whenever they felt like doing so while watching a fast-moving clock. They were to note the exact moment when they first became consciously aware of their decision to move.
+What are propositions? They're properties. For a proposition to be true is for the world to be a certain way. The proposition that Smith is in Richmond is true if the world is a certain way and it's false if it isn't. (If mass-energy is distributed one way, Smith is in Richmond; if it's distributed some other way, he isn't.) For a thing to be a certain way is for it to have a certain property. To be round is to be one way; to be square is to be some other way. To be round is to have one property; to be square is to have some other property. Thus, the world's being a certain way is identical with its having a certain property. Since, therefore, the world's being a certain way is identical with some proposition's being true, propositions must be identified with properties and a proposition's being true must be identified with its being instantiated. Propositions are properties and truth is instantiatedness.
 
-Meanwhile, Libet measured electrical activity in the subjects' brains using EEG (electroencephalogram). He was particularly interested in the "readiness potential" (RP) - a pattern of brain activity associated with voluntary movement. The results were striking: the readiness potential began building up about 550 milliseconds (over half a second) before the subject reported becoming aware of their decision to move, and about 800 milliseconds before the actual movement.
+It's widely thought that propositions are human creations. This is false. The world was a certain way before we were around; it will be a certain way after we're gone; and the way it is while we're around is up to us only to a limited extent. It follows that, independently of our having any beliefs or, indeed, our doing or thinking anything, certain propositions are true; and it follows from this that propositions are not human creations. Sentences, on the other hand, are human creations. They wouldn't be around if it weren't for us. So sentential analysis is a very different thing from propositional analysis.
 
-This timing pattern was remarkably consistent across subjects and has been replicated in numerous follow-up studies. Later research using more sophisticated technology like fMRI has shown that relevant brain activity may begin even earlier - up to 10 seconds before conscious awareness of the decision.
+Not all philosophical analysis linguistic analysis (continued): Frege's
 
-These findings pose a significant challenge to our intuitive sense of how voluntary decisions work. The subjects consistently reported feeling they had "just decided" to move and that their conscious decision was the initiator of the action. However, the neural activity associated with the movement was already well underway before they became consciously aware of any decision.
+accomplishments reassessed
 
-The data pattern typically shows three key time points:
+But didn't we say that Frege's great accomplishment lay in his insights concerning sentences-in his seeing that a sentence's surface structure sometimes pulled part from its deep structure? And didn't we say that, for this very reason, Frege was the first analytic philosopher-that, as Michael Dummett put it, analytic philosophy is post- Fregean philosophy, the reason being that analytic philosophy is statement-analysis? Yes, we did say all this. And yet we just spent a lot of time saying how analytic philosophy is "statement-analysis" only in the sense of being statement-meaning-analysis; that is, proposition-analysis, as opposed to sentence-analysis. How are we to reconcile those various statements with one another?
 
-1. The onset of the readiness potential (RP)
+The term "analytic philosophy" can be construed narrowly or broadly. Construed narrowly, analytic philosophy is post-Fregean philosophy in the sense that it directly flows out of Frege's work. Frege was interested in reference, quantification, the nature of logical truth, the extent to which it's possible to formalize intuitively valid inferences, etc. (These terms will be defined soon enough, if they haven't been already.) The term "analytic philosophy" sometimes refers to what is done by those people who write about those very questions and who, in so doing, are taking what Frege had to say about them into account. In other words, "analytic philosophy" sometimes refers to the philosophy of language, along with a related branch of philosophy, known as philosophical logic.
 
-2. The moment of conscious awareness of the decision (W)
+But Frege's work had a profound influence on philosophers who were working in areas that have no direct connection to language or logic. Frege showed that, by thinking clearly, systematically, and self-critically, one could make real headway on philosophical problems in which others had yet to make so much as a dent, despite hundreds of years of trying. "The devil is in the details," as they say. Pre-Fregean philosophers tended to disregard the details. Frege did not. He was a stickler for them. And it was partly, though obviously not entirely, for this reason that he was able to solve problems that his predecessors could not. The word "analytic philosopher" sometimes refers to the sort of philosophy done by people who aspire to approach philosophical problems in the same careful and clear-headed way as Frege.
 
-3. The actual movement
+Thus, there are analytic philosophers of law, analytic ethicists, analytic philosophers of religion, etc. What makes them analytic philosophers isn't that they're talking about language or logic or any of the things that Frege talked about. It's that they believe the problems they're concerned with to be solved in the same coolheaded, logical way that Frege solved problems relating to language and logic.
 
-The RP begins first, rises steadily, then W occurs during the rise, and finally the movement occurs at the peak. Notably, W does not appear to be a point where the RP changes course or shows any significant inflection, suggesting it may not have a causal role in initiating the action.
+But even when taken in the narrow sense, "analytic philosophy" (i.e., philosophical logic/the philosophy of language) is only misleadingly described as the analysis of sentences. Philosophers of language are interested in the sentence:
 
-This experiment raises profound questions about the role of conscious awareness in our decisions and actions. While subjects experienced their conscious awareness as the cause of their movements, the neural data suggests this awareness was more like a delayed broadcast of a decision that had already been set in motion by unconscious brain processes.
+(NS) "nothing is a square circle"
 
-SHORT ANSWER QUESTIONS
+only to the extent that, by understanding it, they will deepen their insight into concepts of a general kind (e.g., meaning, analytic truth, modality). Linguists, on the other hand, are interested in those concepts only to the extent that an understanding of them will help them understand specific sentences, such as NS. Frege did indeed painstakingly analyze specific sentences. But he did so only because he knew that, by so doing, he could identify general logical principles. Thus, for Frege, his insight that logical and grammatical form pull apart was ultimately just a means to an end, the end being the identification of the actual nature of the bearing- relations that propositions have with respect to one another. So, yes, analytic philosophy is statement-analysis; and, yes, it was Frege's brilliant analyses of sentences that availed philosophers of the principles needed to analyze statements properly. But analytic philosophy, even the narrow sense of the term, is not itself sentential analysis.
 
-1. Describe the basic setup of Libet's experiment, including what subjects were asked to do and how their brain activity was measured.
+Not all philosophical analysis linguistic analysis (continued): Wittgenstein-an introduction
 
-2. Explain the timing relationship between readiness potential (RP), conscious awareness (W), and actual movement in Libet's results.
-
-3. How did later studies using more sophisticated technology like fMRI build upon Libet's findings?
-
-4. Explain the discrepancy between subjects' experienced sense of decision-making and what the neural data showed.
-
-5. Why is the lack of inflection in the RP at point W significant?
-
-MULTIPLE CHOICE QUESTIONS
-
-1. According to Libet's findings, the readiness potential began:
-
-a) After conscious awareness
-
-b) About 550 milliseconds before conscious awareness
-
-c) At the same time as conscious awareness
-
-d) Only after movement
-
-2. The subjects' conscious awareness of their decision occurred:
-
-a) Before any neural activity
-
-b) After the movement
-
-c) Between RP onset and movement
-
-d) At random times
-
-3. Later fMRI studies showed that relevant brain activity could begin:
-
-a) Only after conscious awareness
-
-b) Up to 10 seconds before conscious awareness
-
-c) Only during movement
-
-d) After movement
-
-4. The relationship between RP and W suggests that conscious awareness:
-
-a) Initiates the action
-
-b) Prevents the action
-
-c) May be more like a delayed broadcast
-
-d) Occurs randomly
-
-5. The experimental data indicated that:
-
-a) Conscious decisions initiate all actions
-
-b) Neural activity precedes conscious awareness
-
-c) No pattern exists between brain activity and movement
-
-d) Consciousness and brain activity occur simultaneously
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. Subjects watched a fast-moving clock while being monitored by EEG equipment. They were instructed to flex their wrist whenever they chose and to note the exact moment they became consciously aware of their decision to move. The EEG measured the readiness potential, a pattern of brain activity associated with voluntary movement.
-
-2. The readiness potential began about 550 milliseconds before conscious awareness (W), and about 800 milliseconds before actual movement. This created a consistent sequence: RP onset, followed by W, followed by movement, with W occurring during the rise of RP.
-
-3. Studies using fMRI showed that brain activity related to the decision could be detected even earlier than Libet found - up to 10 seconds before conscious awareness. This reinforced and extended Libet's finding that neural preparation precedes conscious awareness.
-
-4. Subjects reported feeling they had "just decided" to move and that their conscious decision initiated the action. However, the neural data showed that brain activity associated with the movement was already underway well before they became consciously aware of any decision.
-
-5. If conscious awareness (W) were causally involved in initiating or directing the action, we would expect to see some change in the RP pattern at point W. The absence of such an inflection suggests that W may not play a causal role in generating the action.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. c
-
-3. b
-
-4. c
-
-5. b
-
-KEY TERMS DICTIONARY
-
-Readiness Potential (RP): The pattern of brain activity associated with preparation for voluntary movement.
-
-Conscious Awareness (W): The moment when subjects report first becoming aware of their decision to move.
-
-EEG: Electroencephalogram, a method for measuring electrical activity in the brain.
-
-fMRI: Functional magnetic resonance imaging, a technique for measuring brain activity through blood flow changes.
-
-Voluntary Movement: A self-initiated action that subjects experience as freely chosen.
-
-Temporal Sequence: The specific timing pattern of events from RP onset through conscious awareness to movement.
-
-Lecture 11: The Libet Experiment - Why It Does Not Validate Compatibilism
-
-The results of Libet's experiment pose a unique challenge to compatibilism that goes beyond the traditional free will debate. While some philosophers have argued that the experiment actually supports compatibilism (since it shows our actions have prior causes), this interpretation misses the experiment's most profound implication: it reveals that our conscious awareness is not what we thought it was.
-
-Compatibilism holds that free will is compatible with determinism. According to compatibilists, you can be free even if your actions are determined, so long as they flow from your own character, values, and decision-making processes. What matters for freedom, they argue, is not that your actions are uncaused, but that you are their source - that they genuinely express who you are.
-
-However, the Libet experiment reveals something more unsettling than mere determinism. It shows that what we experience as our conscious decisions - what we take to be the very essence of our agency - are actually afterthoughts. By the time we become consciously aware of "deciding" to act, the decision has already been made and the action is well underway. Our conscious experience of deciding is not the decision itself, but merely an awareness of a decision that has already occurred outside of consciousness.`
+Wittgenstein's two best-known works are the Tractatus Logico-philosophicus (TLP), which he completed in 1921, and the Philosophical Investigations, which he completed in 1949. In many ways, these works are antithetical to each other. But in both of them, Wittgenstein insists that that philosophical problems arise when, and only when, sentences are misused and are solved when, and only when, it is made clear how they are being misused.`
     },
     {
       id: "section-8",
       title: "Section 8",
-      content: `This creates a profound challenge for compatibilism. It's one thing to say that your actions are determined but still "yours" - this is the traditional compatibilist position. It's quite another to discover that what you thought was "you" making decisions is actually just a spectator, becoming aware of decisions after they've been made by other parts of your brain. The conscious self that we identify with - our inner narrative voice that seems to be the author of our choices - turns out to be more like a news reporter describing events after they've happened.
+      content: `In the TLP, Wittgenstein contends that all philosophical problems result from a failure to understand the syntactic rules of the languages we use. Sentences that would, if meaningful, express philosophical propositions are in all cases ungrammatical nonsense and thus fail to say anything. All such sentences violate the syntactic rules of the languages to which they belong. (For the time being, "syntactic" may be taken to be synonymous with "grammatical." See Chapter 4, Section 3.3 for a definition of "syntax.") Because they violate these rules in subtle, easily overlooked ways, they aren't always seen for the abject nonsense that they are. But we mustn't let the appearances deceive us. All such sentences are syntactically ill-formed and therefore devoid of meaning, and there would be no philosophical problems if people fully understood the syntactic rules of the languages they spoke. So far as philosophy has any legitimate function, it is to identify these rules, thereby heading off the syntactic blunders that lead to philosophical puzzlement.
 
-Consider: When you consciously "decide" to move your finger in the Libet experiment, you feel as though your conscious self is initiating that movement. But the experiment shows that by the time you become consciously aware of "deciding," the neural processes leading to that movement are already well underway. Your conscious self isn't the decider - it's a mere observer being informed of a decision made elsewhere in the brain.
+In the Philosophical Investigations, Wittgenstein says, just as he does in the TLP, that philosophical problems arise when language is misused. But in the Investigations, he denies that such misuses involve violations of hidden syntactic rules, and instead says that such misuses consist exclusively in one's using words in ways in which they are not ordinarily used. Thus, Wittgenstein's position in the Investigations is that all philosophical problems can be quickly and definitively solved by looking at how words are actually used and, on the basis of the knowledge thereby obtained, ceasing to use words in deviant ways. What we think of as philosophical puzzles concerning knowledge, logic, and morality are puzzles about the words "knowledge," "logic", and "morality." Those puzzles are created by our using those words in non-standard ways, and they're solved by our ceasing to do so.
 
-This poses a unique challenge to compatibilism because it's not just about whether our actions are determined. It's about whether the conscious self that we identify with - the "you" that compatibilism says can be free even if determined - is actually the source of our actions at all. If our conscious selves are mere observers rather than deciders, then saying "you are free even though determined" becomes problematic. Which "you" are we talking about? The conscious self that feels like it's making decisions but actually isn't? Or the unconscious neural processes that are really in charge?
+Is meaning identical with use?
 
-The Libet experiment thus suggests that the "self" that compatibilists want to vindicate - the conscious, deliberating self that we identify with - may be more of a spectator than an agent. This doesn't necessarily mean we lack free will, but it does mean we need to radically revise our understanding of what the "self" is and how it relates to our actions. This goes beyond the traditional compatibilist framework, which assumes that our conscious selves are the genuine source of our actions, even if those actions are determined.
+In a moment, we'll evaluate Wittgenstein's (1922) contention that all philosophical statements are ungrammatical nonsense. Right now, let us consider Wittgenstein's (1958) contention that philosophical puzzles are dissolved by looking at how words are used.
 
-SHORT ANSWER QUESTIONS
+This contention is incoherent on many levels. Given only the acoustical and morphological properties of its spoken and written occurrences, the word "knowledge" could mean anything. So, supposing that it's the concept of knowledge that we wish to learn about, we can't possibly know that the word "knowledge" is the right word to study unless we know that it expresses the right concept. But we can't possibly know that unless we have some way of grasping that concept that doesn't involve that word. So we can't even act on Wittgenstein's exhortation that we study knowledge by studying how people use the word "knowledge" unless we have some way of grasping the concept of knowledge that doesn't involve that word. But if we don't need that word to grasp that concept, we don't need it to it study it; and if we don't need it to study it, then Wittgenstein is simply wrong to say that one must study how it is used to understand the concept it expresses. Given any expression E and any concept C, an obvious extension of this argument shows that one can't learn about C by studying E unless one can grasp C, and can therefore examine it, without E's help. Thus, Wittgenstein is simply wrong to contend that one learns about concepts by learning about how the corresponding words are used.
 
-1. Explain how the Libet experiment's challenge to free will differs from traditional deterministic challenges.
+"But you've over-stated what Wittgenstein is claiming," it will be said. "Contrary to what you allege, he wasn't saying that concepts are to be learned about solely by looking at how the corresponding words are typically used. He was saying only that knowledge of expression-usage would be a useful adjunct to some other, more important way of knowing about concepts." If that's what Wittgenstein is saying, then he's conceding everything said the preceding paragraph. To grant that there is any expression-independent way of grasping concepts is to grant that expression-usage is to be evaluated in light of the very conceptual knowledge that, according to Wittgenstein's thesis, one is supposed to acquire through the study of expression-usage.
 
-2. Why does the discovery that conscious awareness comes after decision-making pose a special problem for compatibilism?
+But there's a problem with our argument. It assumes that, given a meaningful expression (e.g. "knowledge"), there is some object that is its meaning. Wittgenstein rejects this assumption. He holds that there is no entity that is the meaning of "knowledge." Wittgenstein's position is, I quote, that "meaning is use." In other words, for an expression to have a given meaning is for it to be used in a certain way. An expression's having a given meaning does not, in Wittgenstein's view, involve there being some entity that is its meaning.
 
-3. How does the "spectator" model of consciousness revealed by Libet's experiment conflict with compatibilist accounts of agency?
+Before we evaluate this contention, we must make a few facts about it clear. Wittgenstein isn't making the uncontroversial point that how expressions are used is a function, in part, of what they mean. Nor is he making the equally innocuous point that how an expression is used may have effects on what it means. ("Probable" used to mean "capable of being definitively established." Enough people used it to mean "likely, but not certain"; and, for that reason, that's what it now means.) He is saying that what it is for an expression to have a given meaning is for it to be used in a certain way. Here is his argument:
 
-4. Explain the difference between showing that actions are determined and showing that conscious decisions aren't really decisions.
+(WA) According to some philosophers, there is some entity that is the meaning of "snow is white" and some other entity that is the meaning of "grass is green." These entities are known as propositions. Propositions (if existent) are non-spatiotemporal entities.
 
-5. How does the Libet experiment force us to reconsider what we mean by "self" in discussions of free will?
+The very idea of such an entity is of doubtful coherence. And even if such entities do exist, they're nothing to us. We can't see them or touch them or otherwise have anything to do with them. So, even if they do exist, they have no role in human affairs. At the same time, "snow is white" and "grass is green" differ in meaning. So we must find a way of saying what it is for two expressions to 'differ in meaning' that doesn't involve our positing meanings.
 
-MULTIPLE CHOICE QUESTIONS
+This can be done. "Snow is white" isn't used in the same way as "grass is green." There are situations that prompt utterances of the one that don't prompt utterances of the other. By the same token, if they were used in the same way-i.e., if there were no situation that prompted utterances of the one that didn't prompt utterances of the other-then they wouldn't differ in meaning. If the sensory stimulations that induced people to say "grass is green" coincided with those that prompted people to say "snow is white," there would be no significant sense in which they "differed in meaning." Thus, two sentences S1 and S2 coincide in meaning exactly if they are used in the same way. So instead of identifying the meaning of "grass is green" with some non-spatiotemporal entity-with some entity whose existence is in doubt and whose role in human affairs, supposing it to exist, is also in doubt-we can just say that two expressions "have the same meaning" if they're used in the same way. An obvious
 
-1. The Libet experiment challenges compatibilism primarily by showing that:
+corollary is that for an expression to have this as opposed to that "meaning" is for it to be used
 
- a) Our actions are determined
+in this as opposed to that way.
 
- b) Our conscious decisions aren't really decisions
-
- c) We lack free will entirely
-
- d) Our choices are random
-
-2. According to the lecture, our conscious awareness of decisions is more like:
-
- a) A cause of our actions
-
- b) A random occurrence
-
- c) A news reporter describing events after they happen
-
- d) A predictor of future actions
-
-3. The experiment's implications for compatibilism focus primarily on:
-
- a) Whether actions are determined
-
- b) The role of consciousness in decision-making
-
- c) The speed of neural processing
-
- d) The relationship between brain and behavior
-
-4. The lecture suggests that compatibilism's main problem after Libet is:
-
- a) Its acceptance of determinism
-
- b) Its assumption about who the "self" is
-
- c) Its view of moral responsibility
-
- d) Its definition of freedom
-
-5. The key discovery of Libet's experiment relative to compatibilism is that:
-
- a) All our actions are predetermined
-
- b) We have no free will
-
- c) Conscious awareness follows rather than precedes decisions
-
- d) Decisions are random
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. While traditional challenges focus on whether determined actions can be free, Libet's experiment shows that our conscious selves aren't even the source of our decisions - they merely become aware of decisions after they're made. This challenges not just freedom but agency itself.
-
-2. Compatibilism assumes that even if our actions are determined, they still flow from our conscious selves. The discovery that conscious awareness comes after decisions suggests our conscious selves aren't the actual source of our actions, undermining a key compatibilist assumption.
-
-3. Compatibilism relies on the idea that our conscious selves are the genuine source of our actions, even if those actions are determined. The "spectator" model suggests our conscious selves merely observe decisions made elsewhere in the brain, challenging the basic compatibilist framework.
-
-4. Showing actions are determined still allows for the possibility that our conscious selves are the source of those determined actions. Showing conscious decisions aren't really decisions suggests our conscious selves aren't even involved in the decision-making process.
-
-5. The experiment suggests that what we consider to be our "self" - our conscious awareness and sense of agency - may be more of an observer than an actor. This forces us to reconsider whether compatibilist defenses of free will are even addressing the right conception of self.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. c
-
-3. b
-
-4. b
-
-5. c
-
-KEY TERMS DICTIONARY
-
-Compatibilism: The view that free will is compatible with determinism, typically assuming conscious decisions are genuine sources of action.
-
-Conscious Decision: What we experience as making a choice, which Libet shows to be awareness of a choice already made.
-
-Agency: The capacity to be the genuine source of one's actions, traditionally associated with conscious decision-making.
-
-Spectator Model: The view suggested by Libet's results that consciousness observes rather than makes decisions.
-
-Neural Processes: The brain activities that actually initiate actions before conscious awareness occurs.
-
-Self-Awareness: The conscious experience of deciding, which follows rather than precedes the actual decision-making process.
-
-Lecture 12: Frankfurt's Refutation of the "Could Have Done Otherwise" Analysis of Freedom
-
-According to G.E. Moore and others, freedom requires alternative possibilities - we act freely only when we "could have done otherwise." This seems intuitively plausible. After all, how can an action be free if the person had no choice but to perform it? Harry Frankfurt, however, demonstrated through an ingenious thought experiment that this analysis is incorrect. An action can be free even when the person could not have done otherwise.
-
-Consider Frankfurt's scenario:
-
-Mr. Smith intends to kill Mr. Jones. Like Mr. Smith, Mrs. Green also wants Mr. Jones dead. However, Smith doesn't want to go to jail for murder. Without Smith's knowledge, Mrs. Green installs a microchip in his cranium. Through this microchip, she can control Smith's actions - she can make him do whatever she wants. Green knows Smith is intent on killing Jones. But if Smith should get cold feet, Green will use the microchip to force Smith to go through with it. Smith doesn't know about the microchip; nor does he even know of Green's existence. Smith kills Jones - he doesn't chicken out at the last minute. And he does so freely (at least insofar as anyone does anything freely - he is not in the grips of any delusions or compulsions).
-
-This scenario demonstrates that Smith freely kills Jones, even though he could not have done otherwise. Had he decided at the last minute not to kill Jones, Green would have forced him to do so. This shows that "x performs act A freely" is not equivalent to "x does A and, had x chosen not to do A, x would not have done A."`
+Were WA cogent, Wittgenstein would be doing to meanings what Frege did to square circles. Frege got rid of square circles by showing that sentences appearing to require their existence (e.g. "square circles simultaneously have, and lack, uniform curvatures") are equivalent to sentences that don't (e.g. "the statement x is a circle entails x has a uniform curvature and the statement x is a square entails x does not have a uniform curvature"). Wittgenstein wishes to get rid of meanings by showing that statements appearing to require the existence of expression-meanings are equivalent to statements (about expression-usage) that don't.`
     },
     {
       id: "section-9",
       title: "Section 9",
-      content: `The key insight is that what makes an action free is not the availability of alternative possibilities, but rather whether the action flows from the person's own choice and decision-making process. In Frankfurt's scenario, Smith's action comes from his own intention and deliberation - the fact that Green's microchip would have forced the same outcome had Smith chosen differently is irrelevant to the freedom of the action Smith actually performed.
+      content: `This wish of Wittgenstein's embodies some very wrong views as to what linguistic expressions are. A burst of noise that doesn't have a meaning is just a burst of noise. A burst of noise is an expression only if it has a meaning. But if it already has a meaning, then how it's being used isn't what gives it its meaning.
 
-However, while Frankfurt's argument refutes the specific counterfactual analysis of freedom (that freedom requires the ability to do otherwise), it doesn't undermine the more fundamental principle that free acts are choice-driven. Moore was led to equate "x acted freely" with "x could have done otherwise" not because of a misconception about freedom, but because he accepted a flawed analysis of causality - the counterfactual analysis which states that x caused y just in case if x hadn't happened, y wouldn't have happened.
+Our knowledge of what words mean is what guides our linguistic behavior. Expressions have meanings. We know this. And that's why we use expressions in the way we do. I know what "hug" means; I also know what "discuss" means. That's why, when talking to my students, I say "I want to discuss the exam," and not "I want to hug the exam." If meaning were use, meaning couldn't guide use. But it obviously does.
 
-This counterfactual analysis fails because of causal redundancy in the world. If I push the elevator button, causing it to come, but 20 other people were waiting to push it, then it's not true that the elevator wouldn't have come if I hadn't pushed the button. Yet clearly my pushing the button did cause it to come.
+To the extent that meaning doesn't guide use, people are misspeaking. Wanting to tell you that you're an absolute genius, I say "you're an absolute moron," since, despite my generally good command of the English language, I wrongly think that "moron" means genius. To the extent that my uttering those words embodied a failure to know the actual meaning of what I was saying-to the extent that meaning failed to guide use, in other words-I misspoke. And to the extent that my uttering those words embodied a knowledge of what they meant-to the extent that meaning did guide use, in other words-I spoke properly. This shows that, to the extent that utterances aren't simply defective, meaning guides use and, consequently, that use is not constitutive of meaning.
 
-The correct principle is that a free act is one that expresses the agent's decision to act that way, regardless of whether alternative possibilities existed. What matters for freedom is not whether we could have done otherwise, but whether our action flows from our own choice and agency.
+Bearing these points in mind, let us revisit Wittgenstein's (1958) contention that it's a philosopher's job, not to analyze concepts or meanings or other such alleged phantasms, but merely to take note of when words like "justice," "knowledge," and "truth" are used. What would it be to do this? The situations in which the word "justice" is used don't necessarily have any observable characteristics in common with one another. It's not as though people utter the word "justice" when, and only when, they're just been bitten by a cat. This isn't to say that uses of the word "justice" cannot be correlated in any way with facts about the situations in which those uses occur. Such correlations clearly can be made. People are likely to use that word when they're in classes concerning ethics or the philosophy of law; they're likely to use it when they believe that they've been wronged; they're likely to be used by politicians who want people to believe them to be worthy of holding office.
 
-SHORT ANSWER QUESTIONS
+The boldfaced terms express extremely abstract concepts; and utterances of those words are no more capable than utterances of the word "justice"' of being correlated with observable facts about the contexts in which they occur. So, while a person's decision to use the word 'justice' (or "knowledge" or "law," etc.) may obviously have a situational basis, there is no way to identify that basis except in terms of the very concepts that, according to Wittgenstein, are to be studied by figuring when those terms are used. In other words, any correct generalization as to when words like "justice," "logic," "knowledge" and "morality" are used will itself employ the very concepts that, according to Wittgenstein, knowledge of such generalizations is supposed to yield.
 
-1. Explain Frankfurt's scenario and how it demonstrates that freedom doesn't require alternative possibilities.
+These reflections bring us face to face with an incoherence inherent in all of the different variants of the contention that philosophy is sentence-analysis. To speak isn't just to make noises; it's to make noises for the reason that one believes those noises to have certain meanings. I'm with my friend Larry. All of a sudden he starts convulsing and foaming at the mouth. I call 9-1-1 and say (i) "my friend is foaming at the mouth and convulsing; please send help." Why did I choose those words? Why didn't I say (ii) "I like pizza" or (iii) '"giraffes are friendly creatures"? Because I know that (i) has the right meaning and that (ii) and (iii) don't. In general, speaking consists in making noises for the reason that one believes that, given existing semantic rules, those noises have certain meanings. If somebody makes a noise that he does not believe to be assigned a meaning by any semantic rule, he isn't speaking. If, not believing that the noises I'm about to make are assigned any meaning by any semantic rules, I say "blurga dunga blurbo," I am not speaking. I'm just making noise. Maybe
 
-2. Why does the presence of Mrs. Green's microchip not make Smith's action unfree?
+the semantic rules of some language do assign them a meaning. That doesn't matter. My making that noise wasn't guided by my knowledge of such rules. So I wasn't saying anything. And as we saw earlier, I am misspeaking if I misidentify the meaning assigned by existing semantic rules to the noises I am making. So there is no bona fide speech where there isn't awareness of semantic rules.
 
-3. What's wrong with Moore's counterfactual analysis of causation, and how does this relate to his analysis of freedom?
+Thus, the analysis of sentences isn't the analysis of noises. (In this context, take references to "noises" to be short for references to anything that can constitute the occurrence of an expression- e.g., hand-movements, patterns of light on a monitor, etc.) In and of themselves, noises aren't speech, as we just saw. It is only when a noise embodies an attempt to follow a semantic rule that it constitutes speech. So the analysis of speech-that is, of spoken sentences-concerns noises only to the extent that they embody attempts to follow such rules; and for the same reason mutatis mutandis, the analysis of sentences per se, as opposed to their spoken (or written) occurrences, necessarily involves, if it doesn't coincide with, the analysis of those rules.
 
-4. Explain the difference between saying an action is free because we could have done otherwise versus because it expresses our choice.
+Those rules are not themselves sentences. The semantic rule that assigns meaning to "snow is white" is not itself a sentence. Given these points, what might it mean to say that philosophy is sentential analysis? It could mean that philosophy is the empirical study of different languages, i.e., that philosophy is linguistics. But that clearly isn't what philosophy is. So it must mean that philosophy is the study of semantic rules qua semantic rules-that, in other words, it is the study of the concept of a semantic rule.
 
-5. How does causal redundancy show the problems with the counterfactual analysis of both causation and freedom?
+In that case, philosophy is also the study of those concepts that must be understood to understand the concept of a semantic rule. And there are many such concepts. Among them are narrowly semantic concepts such as compositionality, reference, quantification, force, and negation.
 
-MULTIPLE CHOICE QUESTIONS
+But many of these concepts aren't only of relevance to semantics. As we've seen, no noise constitutes a sentence-utterance unless it embodies an intention of a certain kind; and there is no linguistic behavior of any kind where people aren't intentionally following what they believe to be existing semantic rules. Some believe that semantic rules are conventions. Others believe that they are functions (in the mathematical sense)- assignments of meanings or truth-conditions to noises or to properties that are instantiated by noises (or inkmarks, etc.). There is no way to figure out what semantic rules are without examining these concepts.
 
-1. According to Frankfurt's argument:
+And even if these questions are side-stepped, and philosophers focus only on narrowly semantic concepts (e.g., reference, compositionality, etc.), philosophy ends up being the analysis, not of sentences, but of concepts. Thus, the thesis that philosophy is the study of sentences either collapses into the obviously false thesis that philosophy is the empirical study of language or into the thesis that philosophy is conceptual analysis (i.e., the analysis of the concepts in terms of which the world is understood). Thus, Wittgenstein's contention that philosophy is the study of sentences collapses into the very view to which it is meant to be an alternative (viz. that philosophy is the analysis of concepts, as opposed to expressions), and is therefore false.
 
- a) No actions are truly free
+Let us now turn to Wittgenstein's (1922) Tractarian contention that philosophical statements are
 
- b) An action can be free even if we couldn't have done otherwise
+ungrammatical nonsense.
 
- c) Freedom requires alternative possibilities
+The Tractarian contention that philosophical statements syntactically ill-formed nonsense
 
- d) Only uncaused actions are free
-
-2. In Frankfurt's scenario, Smith's action is free because:
-
- a) He could have chosen not to kill Jones
-
- b) The microchip forced him to act
-
- c) It flowed from his own decision-making process
-
- d) Mrs. Green controlled him
-
-3. The problem with Moore's counterfactual analysis is that:
-
- a) It ignores causal redundancy
-
- b) It makes freedom impossible
-
- c) It requires determinism
-
- d) It assumes all actions are caused
-
-4. Frankfurt's argument shows that:
-
- a) We never act freely
-
- b) Alternative possibilities are necessary for freedom
-
- c) Freedom is compatible with inevitability
-
- d) Choices don't matter for freedom
-
-5. Freedom primarily requires:
-
- a) The ability to do otherwise
-
- b) That our actions express our choices
-
- c) Complete lack of constraints
-
- d) Absence of external causes
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. Frankfurt's scenario involves Smith who freely decides to kill Jones, while unknown to him, Mrs. Green has installed a microchip that would force him to kill Jones if he decided not to. Since Smith goes through with the killing based on his own decision, he acts freely even though he couldn't have done otherwise.
-
-2. The microchip never actually influences Smith's action - his action flows from his own decision-making process. The mere presence of a mechanism that would have forced him to act doesn't make his actual, unforced action unfree.
-
-3. Moore's analysis fails because it doesn't account for causal redundancy - multiple factors that could cause the same outcome. Just as my pushing the elevator button caused it to come even if others would have pushed it, an action can be free even if other factors would have forced the same outcome.
-
-4. What makes an action free is that it expresses our own choice and flows from our decision-making process, not that we could have done otherwise. Alternative possibilities are less relevant than the actual source of the action.
-
-5. Causal redundancy shows that an effect can have multiple possible causes while still being caused by the actual factor that produced it. Similarly, an action can be free even if other factors would have forced it to occur, as long as it actually flowed from the agent's choice.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. c
-
-3. a
-
-4. c
-
-5. b
-
-KEY TERMS DICTIONARY
-
-Frankfurt Scenario: A thought experiment showing how an action can be free even when alternative possibilities are blocked.
-
-Counterfactual Analysis: The view that causation and freedom require that things could have happened differently.
-
-Causal Redundancy: When multiple factors could produce the same outcome, making simple counterfactual analysis inadequate.
-
-Alternative Possibilities: Different options or choices that might be available to an agent.
-
-Choice-Driven Action: An action that flows from an agent's own decision-making process rather than external force.
-
-Freedom of Action: The condition where an action expresses an agent's choice, regardless of whether alternatives existed.
-
-Lecture 13: Frankfurt's Analysis of Freedom
-
-According to Harry Frankfurt, freedom is not about having alternative possibilities but about having the right kind of psychological structure - specifically, one where our actions align with our second-order desires. To understand this analysis, we must first understand the distinction between first-order and second-order desires.
-
-A first-order desire is a direct desire for something - like wanting to eat chocolate or take drugs. A second-order desire is a desire about a desire - wanting to want (or not want) something. For example, a drug addict might have a first-order desire to take heroin but simultaneously have a second-order desire not to want heroin. This distinction is crucial for understanding Frankfurt's analysis of freedom.
-
-Consider Jones, a talented writer who is addicted to heroin. Because his addiction is only moderate, he can function perfectly well even when heroin-deprived. He knows that if he shoots up right now, the resulting lethargy would make it impossible to write for the rest of the day. He also knows that if he doesn't write ten pages today, he will lose his book contract. Jones doesn't want to lose the contract. Plus, he wants to grow as a writer, which he won't do if he takes heroin. He thus has a desire not to take heroin, even though he simultaneously has a desire to take it.
-
-If Jones caves in and takes the heroin, he is acting as a slave to his first-order desires. His will has been compromised. But if Jones resists and does his writing instead, he is acting freely because his behavior aligns with his second-order desires - his desire not to be driven by his addiction.
-
-This example illustrates Frankfurt's key insight: freedom consists in having our actions align with our second-order desires rather than our mere first-order impulses. But why are second-order desires so special? Why is freedom about doing what our second-order desires dictate rather than our first-order desires?
-
-The answer lies in Frankfurt's conception of personhood. For Frankfurt, what distinguishes persons from non-persons is self-consciousness combined with the capacity for rational self-evaluation. Non-persons may be clever about achieving their objectives (like beavers building dams), but they don't evaluate whether they should have those objectives in the first place. Persons, on the other hand, can step back and assess their own desires. We can ask: "Should I want this? What would be the consequences of acting on this desire?"`
+The sentence`
     },
     {
       id: "section-10",
       title: "Section 10",
-      content: `This capacity for self-evaluation is expressed through second-order desires. When we form a second-order desire, we are engaging in rational assessment of our first-order desires. Thus, second-order desires represent our capacity for rational self-direction - our ability to shape ourselves according to our values rather than mere impulses.
+      content: `"one can be aware of the fact that 1 + 1 = 2 without being causally affected by that fact"
 
-Freedom, therefore, consists in having our actions flow from this capacity for rational self-evaluation rather than from our unexamined first-order desires. When we act on our second-order desires, we are expressing our nature as rational, self-evaluating beings. When we act on mere first-order desires against our second-order desires, we are surrendering our distinctive capacity for rational self-direction.
+appears meaningful. So does the sentence
 
-This analysis helps explain why we see addicts as unfree even when they're doing exactly what they want to do (satisfying their addiction). Their actions flow from first-order desires that conflict with their second-order desires. Their distinctive capacity for rational self-evaluation is being overridden by mere impulse.
+"there could in principle be a legal system that failed to embody any morality at all."
 
-SHORT ANSWER QUESTIONS
+But, in the TLP, Wittgenstein says that that this is an illusion. Here is the viewpoint underlying this bold contention:
 
-1. Explain the difference between first-order and second-order desires using Frankfurt's example of the heroin-addicted writer.
+(TA) All philosophical statements are ungrammatical nonsense, and all philosophical problems would vanish if we spoke grammatically. "All philosophical problems belong to the same class as the question whether the good is more or less identical than the beautiful." Thus, all philosophical statements belong to the same class as:
 
-2. Why does Frankfurt consider second-order desires more important for freedom than first-order desires?
+(BG) the good is more or less identical than the beautiful.
 
-3. How does Frankfurt's analysis of personhood relate to his conception of freedom?
+BG is obviously meaningless. The reason for this is that it's syntactically ill-formed. If we produced only syntactically well-formed sentences, we wouldn't produce nonsense like BG. Since all philosophical statements are in the same class as BG, we'd never produce any sentences whose merits it was the job of philosophy to determine.
 
-4. Explain why an addict can be unfree even when doing exactly what they want to do.
+Were the logical forms of (a) and (b) brought into alignment with their logical forms-in other words, were their actual meanings reflected in their grammar-they'd be ungrammatical since they have no meanings.
 
-5. How does rational self-evaluation relate to second-order desires and freedom?
+Although TA is a paraphrase, not a quotation, the part in quotes is an exact quotation from the TLP.
 
-MULTIPLE CHOICE QUESTIONS
+What Wittgenstein is saying isn't confined to the defensible claim that philosophical problems are to be solved by clarifying statements. Wittgenstein is making two additional claims. First, no sentence that appears to make a philosophical statement means anything. Second, it's only because they're syntactically ill-formed that such sentences are meaningless-there is no other reason.
 
-1. According to Frankfurt, freedom primarily consists in:
+Let us evaluate these claims. Though ungrammatical, the sentence:
 
- a) Having no external constraints
+(MH) "me and Herby play tennis every day, and me always win because Herby not in good shape"
 
- b) Having our actions align with our second-order desires
+is perfectly meaningful. Ungrammatical statements are often meaningful. Thus, BG's failure to mean
 
- c) Following our strongest desires
+anything cannot be entirely blamed on its being ungrammatical.
 
- d) Having alternative possibilities
+What's the real problem with BG? The expression "more identical than" is obviously supposed to function in the same way as relational expressions, like "more important than" or "identical with." But there is no relation that it picks out. Though it consists of English expressions, the expression "more identical than" is itself no more a part of the English lexicon than "blurga derba gurb." For that reason, the meaninglessness of BG is to be accounted for in the same way as the meaninglessness of:
 
-2. Second-order desires are:
+(BG#) "the beautiful is blurga derba gurb the good."
 
- a) Stronger than first-order desires
+The problem with BG# is that "blurga derba gurb" doesn't mean anything. It may be that its meaninglessness is reflected in its syntax. It may be that because "blurga derba gurb" doesn't mean anything, BG#'s syntax is off. But, if so, its syntactic shortcomings are to be explained in terms of its lack of meaning, not vice versa.
 
- b) Always rational
+The same holds of BG. The reason that BG doesn't mean anything is that "more identical than" doesn't mean anything. BG's syntactic shortcomings are to be explained in terms of its lack of meaning, and not vice versa.
 
- c) Desires about our desires
+This is easily verified. Given any relation R, if "more identical than" denoted R, BG would be meaningful. If, for example, it denoted the relation that is in fact picked out by the expression 'a better dancer than," BG would say that the good is a better dancer than the beautiful; and it would thus have the same meaning as
 
- d) Basic impulses
+(BG) "the property of goodness is a better dancer than the property of being beautiful."
 
-3. What distinguishes persons from non-persons according to Frankfurt?
+BG isn't meaningless; it's false. The property of goodness can't dance; neither can any other property, including the property of being beautiful. Therefore, the former property isn't a better dancer than the latter. Nothing false is meaningless, since to be false is to bear a false meaning. So BG is meaningful.
 
- a) Intelligence
+Incidentally, according to Gilbert Ryle (1900-1976), a career-long Wittgenstein-hardliner, it cannot meaningfully be said of properties that they can, or cannot, dance. It can be said of a human being that he can, or cannot, dance. But nothing that can meaningfully be said of non-properties, such as human beings, can be meaningfully said of properties themselves.
 
- b) Consciousness
+Ryle's position is false. There are many differences between people and properties. One of them is that people can dance, whereas properties cannot. Ryle's position is also self-refuting. In saying that it cannot be said that properties cannot dance, Ryle is saying exactly what it is that, according to his theory, cannot be said.
 
- c) The capacity for rational self-evaluation
+Ryle is confusing absurdity with meaninglessness. The sentence "triangles have four sides" makes an absurd, but meaningful, statement. Given that triangles have three sides, not four, it's false. Given that it's false, it's meaningful. "Properties can dance" is absurd and, therefore, false and, therefore meaningful.
 
- d) Physical abilities
+There are two kinds of "nonsense." A sentence can be nonsense by failing to have any meaning. (BG# is nonsense in this sense.) And a sentence can be nonsense by virtue of having of an absurd meaning. ("Properties can dance" is nonsense in this sense.) Ryle doesn't distinguish between these two kinds of nonsense. Neither does Wittgenstein. And Wittgenstein's position, like Ryle's, is self- refuting-and for much the same reason. If Wittgenstein is right to say that all philosophical assertions are ungrammatical nonsense, that very assertion is ungrammatical nonsense and therefore isn't true.50
 
-4. An addict who takes drugs is unfree because:
+Given how implausible and illogical it is, why on Earth did Wittgenstein hold that philosophical statements are always ungrammatical nonsense? The answer, I believe, is that Wittgenstein thought this view to be the distillation of Frege's groundbreaking philosophical successes. Frege showed that reparsing sentences sometimes solves philosophical problems. By reparsing
 
- a) They have no choice
+(NS) "nothing is a square circle,"
 
- b) Their action conflicts with their second-order desires
+we show that it doesn't attribute the property of being a square circle to some non-entity, thereby dissolving an age-old riddle. Wittgenstein seems to have inferred from these successes of Frege's that all philosophical problems are to be solved by reparsing sentences.
 
- c) Someone is forcing them
+This inference is fallacious. Given only that some philosophical problems are to be solved by reparsing sentences, it doesn't follow that they are all to be solved in that way. And we've seen that, indeed, many of them are not to be solved in that way.
 
- d) They lack intelligence
+Also, there were no cases where Frege's reparsing of a problematic sentence showed it to be ill- formed. For example, in reparsing NS, Frege showed that its logical syntax differed from its apparent syntax. He didn't show that there was anything wrong with its logical syntax.
 
-5. When we act on second-order desires, we are:
+To be sure, philosophers often produce deeply absurd statements. For example, according to pre- Fregean philosophers, NS entails that:
 
- a) Always making the right choice
+(NS1) there exists some non-entity that that is a square circle. If NS1 is right,
 
- b) Expressing our rational nature
+(NS2) there exists some entity that does not exist that is a square a circle.
 
- c) Following our strongest impulses
+NS2 is self-contradictory and therefore absurd. But it's obviously meaningful.51 If it weren't, it wouldn't contradict itself. (For a sentence to contradict itself is for it to bear two opposed meanings. "Smith is a lawyer and Smith is not a lawyer" because the one conjunct52 contradicts the other.) But whereas this sentence is explicitly self-contradictory, the self-contradictory sentences that people actually utter are usually only implicitly so.)
 
- d) Avoiding responsibility
+In any case, even if philosophical statements are meaningless, they're not meaningless because they're ungrammatical. Second, they're not meaningless. The statement that they're meaningless is itself a philosophical statement. That statement is therefore false if it's true. Therefore it is false. (Any statement that entails its own negation is false.53)
 
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. The writer has a first-order desire to take heroin (the immediate urge) but a second-order desire not to want heroin (based on his values and goals as a writer). This shows how we can want something while simultaneously wanting not to want it.
-
-2. Second-order desires represent our capacity for rational self-evaluation and reflect our values and considered judgments, while first-order desires are mere impulses. Freedom consists in acting from reason rather than impulse.
-
-3. Frankfurt sees persons as beings capable of rational self-evaluation. Freedom consists in having our actions flow from this distinctive capacity rather than from unexamined impulses.
-
-4. Even though addicts are doing what they want (first-order desire), they're acting against their own rational self-evaluation (second-order desires), making them slaves to impulse rather than self-directing agents.
-
-5. Second-order desires express our capacity to rationally evaluate our first-order desires. When we act on second-order desires, we're exercising our distinctive capacity for rational self-direction.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. c
-
-3. c
-
-4. b
-
-5. b
-
-KEY TERMS DICTIONARY
-
-First-Order Desires: Direct desires for objects or actions (e.g., wanting to eat).
-
-Second-Order Desires: Desires about our desires (e.g., wanting to want healthy food).
-
-Rational Self-Evaluation: The capacity to assess and judge our own desires and motivations.
-
-Person: A being capable of forming and acting on second-order desires through rational self-evaluation.
-
-Freedom: The condition where our actions align with our second-order desires rather than mere first-order impulses.
-
-Hierarchical Desires: The structure of having both first-order desires and second-order desires about those desires.
-
-Lecture 14: Problems with Frankfurt's Analysis of Freedom
-
-While Frankfurt's analysis of freedom in terms of second-order desires represents a significant advance in our understanding of human agency, it contains a serious flaw: second-order desires can be warped to validate first-order desires. People can and often do rationalize - they modify their higher-order desires to accommodate and justify their lower-order impulses rather than truly evaluating them.
-
-Consider someone (call him Green) who faces a moral choice in an academic setting. A senior professor is plagiarizing the work of a junior colleague. Green could speak up, but doing so would damage his career prospects. Instead of acknowledging his cowardice in staying silent, Green rationalizes his behavior with the following kind of reasoning:
-
-"I'm not 'lazy' or 'weak.' Unlike the blinkered maniac who works all the time and never takes time to smell a rose or go to the beach, I see the larger picture. Nor am I 'weak.' Unlike the so-called 'hero' who moronically tries to buck the system, I see that despite the system's imperfections, it is one that I am duty-bound to comply with. The 'hero' isn't a hero at all.
-
-We need the system. If we don't follow the rules, the system will collapse. But there are two kinds of system-constitutive rules: those that are spoken and those that are not. The hero's behavior is heroic only relative to the first set of rules. But in this context, it is the second set of rules that count. Therefore, I will take it as a complement when somebody reacts to my system-friendly conduct by calling me 'a weak, faceless bureaucrat' or 'an empty, servile, cringing shell.'"
-
-Deep down, Green doesn't really believe this rationalization. He knows he's being servile and weak, doing the pragmatic thing rather than the right thing. But by convincing himself otherwise, he's warped his second-order desires to validate his cowardly first-order desires. According to Frankfurt's analysis, since Green is now acting in accordance with his (corrupted) second-order desires, he would be acting freely. But this seems wrong - Green is clearly not free but rather a slave to his cowardice and fear.
-
-This reveals a crucial oversight in Frankfurt's analysis: just as a junkie who lets his cravings make his choices for him is unfree, someone who lets their cowardice make their choices (by warping their higher-order desires) is equally unfree. Higher-order desires are not automatically legitimate just because they're higher-order - they can be corrupted to become mere vehicles for lower impulses.
-
-A key problem is that people can use rationalization to convince themselves that their character defects are actually virtues. The lazy person tells himself he's "laid back." The coward tells himself he's "prudent." The cruel person tells himself he's "honest." In each case, higher-order desires are modified to endorse rather than evaluate lower impulses.
-
-This suggests that Frankfurt's analysis needs significant modification. True freedom isn't just about acting in accordance with second-order desires - it's about acting in accordance with genuine values that haven't been warped through rationalization. Values differ from mere desires (even second-order ones) in that they represent authentic judgments about what enhances rather than diminishes our agency.`
+4.3 The Tractarian roots of Logical Positivism`
     },
     {
       id: "section-11",
       title: "Section 11",
-      content: `When we rationalize, we're not truly exercising our capacity for rational self-evaluation - we're finding ways to avoid it. Rather than using our higher-order desires to genuinely assess our impulses, we're corrupting those higher-order desires to rubber-stamp whatever our impulses want. This is a form of unfreedom masquerading as freedom.
+      content: `Although one of the TLP's contentions is that all philosophical statements are ungrammatical
 
-SHORT ANSWER QUESTIONS
+nonsense, this is not its main contention. The main contention of the TLP is that:
 
-1. Explain how rationalization can corrupt second-order desires using Green's example.
+(CT54) a sentence is meaningful if, and only if, it is either a tautology or an observation report.
 
-2. Why isn't acting in accordance with second-order desires sufficient for freedom?
+A "tautology" is a definitional truth (e.g., "fathers are male," "there are three feet in a yard").
 
-3. How does rationalization differ from genuine rational self-evaluation?
+An "observation report" is a statement that reports what one's senses have told one (e.g., "I am now seeing a dog," "there is chocolate syrup (or, in any case, a brown discoloration of some kind or other) on Smith's ice-cream," "I can see your house from here").
 
-4. Explain the difference between someone who authentically changes their values versus someone who rationalizes.
+CT can be broken down into two claims:
 
-5. Why can't Frankfurt's analysis distinguish between genuine second-order desires and rationalized ones?
+All meaningful non-empirical statements are tautologies
 
-MULTIPLE CHOICE QUESTIONS
+and
 
-1. The main problem with Frankfurt's analysis is that:
+All meaningful non-tautologous statements are observation-reports.
 
- a) Second-order desires don't exist
+entails that non-empirical disciplines (e.g., philosophy, mathematics) consist of statements that say nothing about anything. (2) entails that anything non-tautologous that cannot be known strictly on the basis of what one's senses tell is meaningless.
 
- b) First-order desires are more important
+Wittgenstein's claim that all philosophical statements are ungrammatical nonsense is a corollary55 of CT. If they're meaningful, philosophical statements, unlike tautologies, are non-trivial. Consider the statement that:
 
- c) Second-order desires can be corrupted through rationalization
+(KC) "knowing a truth doesn't necessarily involve one's being affected by the state affairs described by that truth."
 
- d) Freedom requires alternative possibilities
+KC is a philosophical statement; and so its negation. Neither statement is a tautology, and neither statement is empirical. If CT is correct, it immediately follows that both KC and its negation are ungrammatical nonsense. Since philosophical assertions are never tautologous, CT entails, as Wittgenstein knew, that philosophical assertions are categorically meaningless.
 
-2. When someone rationalizes, they are:
+The position that (1) and (2) are both correct is known as logical positivism (LP). During the decade or so following the publication of the TLP, and largely because of it, LP was very popular.56 But (1) and (2) are false. Let us now say why.
 
- a) Genuinely evaluating their desires
+4.4. Verificationism and falsificationism
 
- b) Warping higher-order desires to validate lower impulses
+is identical with a doctrine known as verificationism. According to verificationism a non- tautologous statement is meaningful iff it's capable of being verified strictly on the basis of sensory observation.57
 
- c) Acting freely
+Verificationism is false. The statement "all metal expands when heated" is meaningful. But it cannot be conclusively verified (i.e., shown to be true) strictly on the basis of observation. No matter how many metal objects you find to expand when heated, it's a possibility that some metal object that you haven't yet considered will fail to do so.58
 
- d) Creating new first-order desires
+Even though it cannot be verified "all metal expands when heated" can be falsified (i.e., shown to be false) strictly on the basis of observation. Advocates of LP saw this and, having for this reason rejected verificationism, accepted a doctrine known as falsificationism. According to falsificationism, a non-tautologous statement is meaningful if and only if it's capable of being falsified strictly on the basis of observation.59
 
-3. Green's case shows that:
+Falsificationism is false. Though obviously meaningful, the statement "there exists a gold ball that weighs exactly 27.13654 lbs" cannot be conclusively falsified, since no matter how many gold balls you consider, it's possible that some gold ball that you haven't considered has that weight.
 
- a) The academic system works well
+Falsificationism is really a version of verificationism. According to verificationism, S is meaningful if verifiable. According to falsificationism, S is meaningful if S's negation is verifiable. So given that verificationism fails, it's no surprise that falsificationism does as well.
 
- b) Heroes are foolish
+In light of the failure of falsificationism, advocates of LP decided to soften their views about meaningfulness one more time. This time, they said that a non-tautologous statement is meaningful if possible observations can confirm it. (P confirms Q if, other things being equal, Q is more likely to be true if P is true than if not-P is true. Other things being equal, Smith is more likely to be wealthy if he wears fancy clothes than if he doesn't wear fancy clothes. Thus, "Smith wears fancy clothes" confirms "Smith is wealthy.") We'll refer to this view as "confirmationalism."
 
- c) Acting on second-order desires isn't sufficient for freedom
+Confirmationalism is equivalent with the position that all meaningful non-tautologous statements are empirical. An empirical statement is one that, if true, expresses a truth that must be known through observation and that, if false, is the negation of a true empirical statement. "There are trees in Santa Barbara, CA" is a true empirical statement, and "there are no trees in Santa Barbara, CA" is a false one. The negation of an empirical statement is an empirical statement. This is becasue, if it's an empirical question whether or not S is true, then it's an empirical question whether or not S is false and, therefore, whether or not not-S is true. (There are, as we will see, very few truths, if any, that can be known strictly through observation. A statement is empirical if the truth or falsity of it is to be decided on grounds that are at least partly observational.)
 
- d) First-order desires are always corrupt
+Henceforth when we refer to "logical positivism" (LP), we will refer to the position that a
 
-4. True freedom requires:
+statement S is meaningful if and only if (i) S is a tautology (e.g., "sisters are female siblings") or
 
- a) Only first-order desires
+(ii) S is an empirical statement (e.g., "there are trees in Santa Barbara").60
 
- b) Only second-order desires
+Logical Positivism Evaluated
 
- c) Genuine values rather than rationalized desires
+Consider the statement:
 
- d) No desires at all
+"triangles are three sided figures."
 
-5. Rationalization involves:
+is plausibly seen as just being true by convention. The same is true of:
 
- a) Genuine self-evaluation
+"pentagons have five sides."
 
- b) Making character defects appear as virtues
+For argument's sake, we'll grant that, indeed, (1) and (2) are true by convention-that they're
 
- c) Eliminating all desires
+definitional truths.61 Given (1) and (2), it follows that:
 
- d) Creating new values
+If x is the number of sides of an arbitrary triangle and y is the number of sides of an arbitrary pentagon, then w is an even prime iff w is one less than x and three less than y.
 
-ANSWER KEY
+But (3) clearly isn't a conventional truth. Though it follows from conventions, (3) is not itself a
 
-Short Answer Model Responses:
+convention. (3) is thus a non-tautologous, non-empirical truth. It follows that LP is false.
 
-1. Green warps his higher-order desires to justify his cowardice, creating elaborate rationalizations about "protecting the system" rather than acknowledging his fear. His second-order desires become vehicles for validating rather than evaluating his fear-based choices.
+It's possible to have conventions that are inconsistent with one another. If I stipulate that "x" unambiguously refers to the number two, and I also stipulate that "x" refers to the number of sides of a triangle, my definitions are inconsistent with one another. The internal consistency of conventions is not itself a matter of convention. It isn't an empirical fact that the conventions just described are inconsistent with each other. To say that P is inconsistent with Q is to say that P must be false if Q is true. Observation cannot tell you what must be the case; it can tell you, at most, what is the case. So it cannot tell you that two linguistic conventions are inconsistent with each other.
 
-2. Second-order desires can be corrupted through rationalization to become mere rubber stamps for lower impulses. Acting on corrupted second-order desires is no more free than acting directly on first-order impulses.
+Since observation cannot tell you whether or not two statements are inconsistent with each other, it cannot tell you whether or not one statement is a necessary consequence of some other. This is because for Q to be a necessary consequence of P is to P to be inconsistent with the negation of Q. (The negation of "snow is white" is "snow is not white." In general, the negation of a Q is not-Q.)
 
-3. Genuine rational self-evaluation involves honestly assessing our impulses and motives. Rationalization involves creating justifications to avoid such honest assessment.
+When evaluating LP, one must be careful to distinguish sentences from their meanings. Two different sentences can have the same meaning (e.g., "snow is white" and "schnee ist weiss"). The meaning of a sentence is a proposition. Propositions are not sentences. The thing meant by "snow is white" is not itself a sentence. Some sentences express propositions that are logically true. A proposition is logically true if the laws of logic prohibit its negation from being true. The proposition meant by
 
-4. Authentic value change comes from genuine rational evaluation. Rationalization involves distorting our higher-order desires to avoid having to actually change or confront our defects.
-
-5. Frankfurt's analysis can't distinguish between genuine second-order desires and rationalized ones because it looks only at whether actions align with second-order desires, not at how those desires were formed.
-
-Multiple Choice Correct Answers:
-
-1. c
-
-2. b
-
-3. c
-
-4. c
-
-5. b
-
-KEY TERMS DICTIONARY
-
-Rationalization: The process of warping higher-order desires to validate rather than evaluate lower impulses.
-
-Genuine Values: Authentic judgments about what enhances agency, as opposed to rationalized desires.
-
-Corrupted Second-Order Desires: Higher-order desires that have been warped to become vehicles for lower impulses.
-
-Self-Deception: The process of convincing oneself that character defects are actually virtues.
-
-Authentic Self-Evaluation: Honest assessment of one's motives and desires, as opposed to rationalization.
-
-Character Defect: A trait that diminishes agency but can be rationalized as a virtue.
-
-Lecture 15: The Actual Nature of Human Freedom
-
-Freedom, properly understood, is not about having alternative possibilities or even about acting on second-order desires. Rather, freedom consists in acting from genuine values rather than mere desires. To understand this conception of freedom, we must first understand three crucial distinctions: between minds and selves, between desires and values, and between reaction and action.
-
-A mind is any system capable of having a series of mental states. But having a mind isn't sufficient for having a self. A self emerges only when a mind develops what we might call a "supervisory structure" - an internal regulatory system that can evaluate and regulate its own processes. Just as a group of people living in the same area don't constitute a nation until their activities fall under the jurisdiction of some regulatory agency, a collection of mental states doesn't constitute a self until they fall under the jurisdiction of an evaluative system.
-
-This supervisory structure does more than just facilitate the gratification of basic urges. A mere mind might be quite sophisticated in using information about the environment to satisfy desires - like a beaver cleverly building a dam. But such a mind merely reacts to stimuli; it doesn't truly act. Action, as opposed to reaction, requires the capacity to evaluate one's own mental states and processes.
-
-Values emerge from this self-evaluative capacity. A value is a judgment that a certain course of action or way of living will increase the scope and power of one's agency. Values must be distinguished from mere desires. We can desire things we don't value (like an addict craving drugs) and value things we don't immediately desire (like a writer valuing their work even when they don't feel like writing). Values represent judgments about what enhances rather than diminishes our agency.
-
-Consider someone reading a difficult philosophical text rather than watching television. They might desire to watch TV more strongly, but they value reading the philosophical text because they judge it will enhance their agency - their capacity for rational self-direction and understanding. The pleasure of watching TV would be mere enjoyment, while the satisfaction of reading philosophy involves what we might call "agential enjoyment" - the distinctive satisfaction that comes from exercising and expanding one's agency.
-
-True freedom consists in acting from such values rather than from mere desires (whether first-order or second-order). When we act from values, we express and enhance our agency. When we act from mere desires - even rationalized second-order desires - we diminish our agency. This is why an addict acting on their addiction is unfree even if they've rationalized their behavior through corrupted second-order desires.
-
-This conception helps us understand why some forms of constraint can actually enhance freedom. Just as a nation requires laws and regulations to function as a unified whole, a self requires constraints and standards to maintain its agency. Complete lack of constraint would mean surrendering to every impulse, which would destroy rather than enhance freedom properly understood.
-
-The ultimate mark of freedom is not the absence of constraint or the presence of alternative possibilities, but whether our actions flow from and express genuine values that enhance our agency. This requires a robust supervisory structure that can genuinely evaluate rather than merely rationalize our desires and impulses.
-
-SHORT ANSWER QUESTIONS
-
-1. Explain the difference between a mind and a self using the analogy of a population versus a nation.
-
-2. How does genuine action differ from mere reaction? 
-
-3. What makes values different from desires, and why is this distinction crucial for understanding freedom?
-
-4. Explain how constraints can enhance rather than diminish genuine freedom.
-
-5. Why is "agential enjoyment" different from mere pleasure, and what does this tell us about freedom?
-
-MULTIPLE CHOICE QUESTIONS
-
-1. A self emerges when:
-
- a) A mind can process information
-
- b) A mind develops a supervisory structure
-
- c) A being can feel pleasure
-
- d) A being has strong desires
-
-2. True freedom consists in:
-
- a) Absence of constraints
-
- b) Having alternative possibilities
-
- c) Acting from genuine values`
+"If a given thing is round, then that thing is not a square"`
     },
     {
       id: "section-12",
       title: "Section 12",
-      content: `d) Following our strongest desires
+      content: `is logically true, since the laws of logic don't allow round things to be square. And some authors, for this reason, would describe (4) itself, the sentence, as logically true. But what they mean is that, given what it is that it means, (4) must be true. So what they are in fact describing as logically true is the proposition that (4) couldn't be false, given what it is that it means.
 
-3. Values differ from desires because:
+Thus, it is always propositions, and never sentences, that are logically true. But no proposition is true by convention. It's up to us what our symbols mean. But it's not up to us whether those meanings are correct. It's up to us what it is that "the moon is not made of cheese" means. But it isn't up to us whether that meaning is correct. LP identifies logical truth with conventional truth: truths of logic are sentences that are true by convention. But that's false. Logical truths are never sentences; they're always propositions, and propositions are never conventionally true.
 
- a) Values are stronger
+Incidentally, (ii) collapses into (i). Linguistic conventions are known empirically. It can be known only through observation that "triangles have three sides" is true. That sentence could mean anything.62 It could mean that penguins are smarter than humans; and it's only because you've had the requisite sense-perceptions that you know it not to mean this.
 
- b) Values are judgments about agency-enhancement
+It should be pointed out that logical positivists were unanimous in denying the existence of propositions and of meanings generally. Logical positivists didn't accept the view that for a lecture to concern triangles is for the meaning of that lecture to concern triangles. This is why Rudolph Carnap63 (1890-1970), an LPhardliner for many years, said that for a lecture to concern triangles is for the word "triangle" to occur in the lecture.
 
- c) Values are always pleasurable
+Carnap's view is false. Many a lecture that doesn't contain the word "triangle" concerns triangles. (Think of all the mathematics lectures given in Japanese, Swedish, and Arabic. How often does the word "triangle" occur in them?) And a lecture that contains the word "triangle" isn't necessarily about triangles. Somebody giving a lecture on linguistics may use the word 'triangle' to illustrate some point about phonetics; but in so doing, that person isn't talking about triangles. They're talking, not about triangles, but about the word "triangle."
 
- d) Values are unconscious
+The distinction between the word "triangle" and the corresponding meaning is one that Carnap couldn't countenance without ceasing to be a logical positivist. The very essence of logical positivism is the denial of meaning. For argument's sake, suppose there to exist objects that are the meanings of sentences. (Following convention, we'll refer to these things as "propositions.") Given the existence of propositions, whether a given sentence is meaningful is not to be explained in terms of its being either tautologous or confirmable. Rather, a sentence's being tautologous or confirmable is to be explained in terms of its bearing a proposition of a certain kind. A tautologous sentence would be one that had a logically correct proposition for its meaning, and a confirmable sentence would be one that had a confirmable proposition for its meaning. But if there are logically true propositions, then some truths are ipso facto not empirical.
 
-4. Agency requires:
+We can use words in any way that we like. We can use the words "if Smith has three boats, then Smith has more than one boat" to mean that 1+1=3. But whatever meaning we end up assigning to those words, it's not up to us whether that meaning is correct. And if, as is actually the case, that meaning is of a logical nature, there is ipso facto non-empirical truth, an immediate consequence being that LP is wrong.
 
- a) Complete lack of constraint
+Carnap's attempt to do away with meanings consisted in his saying (though he did not himself put it this starkly) that the meaning of the word "snow" was that very word, i.e., that words were their own meanings.64 Given how brazenly wrong this view is, Carnap's attempt to do away with meanings never had many takers.
 
- b) Only following desires
+A much better received attempt to do away with meanings is to be found in a doctrine known as conceptual role semantics (CRS). According to CRS, two sentences have the same meaning if, and only if, they are used in the same way. So "hace mucho calor" is the Spanish translation of "it's hot" not because those sentences share a meaning-meanings don't exist, according to CRS-but because the one sentence is used in the same way as the other.65
 
- c) An internal regulatory system
+CRS seems to coincide with the Wittgenstein-Grice thesis that "meaning is use." It's thus a mystery why CRS is so popular, given that Grice's coincident position was universally rejected long ago.
 
- d) Avoiding all pleasure
+In any case, CRS is indefensible. So far as she isn't misspeaking or randomly barking out noises, anyone who says "it's hot out" or "hace much calor," or any other sentence, does so because she knows that existing semantic rules assign a certain proposition to those words and she wishes to put that proposition into words.
 
-5. "Agential enjoyment" is:
+One immediate consequence of this is that Carnap's position is false. Another immediate consequence is that what it is for those two sentences to have the same meaning is not for them to be "used in the same way."
 
- a) The same as physical pleasure
+Also, given any natural language, there are infinitely many sentences belonging to it that have never been used. The thesis that sentences have the same meaning iff they're used in the same way has the absurd consequence that any two sentences that haven't been used before have the same meaning. (If two sentences aren't used at all, they aren't used differently, and are therefore used in the same way, if only in a vacuous sense.)
 
- b) The satisfaction of exercising agency
+Logical Positivism Evaluated (continued)
 
- c) Following our impulses
+Let's resume our discussion of Logical Positivism (LP). We've seen that, contrary to what LP says, there are non-empirical truths that have nothing to do with anyone's linguistic practices. We'll now see that, contrary to what LP says, there are facts about the spatiotemporal world that cannot possibly be known strictly on the basis of sense-perception.
 
- d) Avoiding responsibility
+Let NT be the body of assertions jointly constituting Newton's physics.66 There is no denying that NT is meaningful. But by itself NT doesn't make any predictions or otherwise have observable consequences. Physical laws are expressed by conditional assertions-that is, by statements of the form ‹if P, then Q.›67 NT doesn't say anything about how this or that physical object will behave. It says how a given object will behave if certain conditions are met. NT says, for example, how an object will behave if it has a certain mass and is within a certain distance of another body having a certain mass.68 But NT itself obviously doesn't say that this or that object has this or that mass or is within this or that distance of this or that other specific body. Thus, taken by itself, NT isn't confirmable. What is confirmable isn't NT, but NT plus statements describing specific matters of fact. What is confirmable isn't NT, but some statement of the form t ‹given such and such, NT makes it likely that thus and such.›
 
-ANSWER KEY
+But NT is obviously meaningful. This is a problem for LP. To deal with it, advocates of that doctrine proposed that (ii) be replaced with the position that (ii) a statement S1 is meaningful if there is some statement S2, such that given S2, S1 is confirmable (i.e., capable of being supported by observation).
 
-Short Answer Model Responses:
+By this standard, "the nothing nothings" qualifies as meaningful and so does every other nonsense sentence one can think of. Given the statement "if grass is green, then the nothing nothings," anything that confirms "grass is green" confirms "the nothing nothings," and "the nothing nothings" thus qualifies as meaningful.
 
-1. Just as a population becomes a nation only when unified under regulatory structures, a collection of mental states becomes a self only when unified under an evaluative supervisory structure that can regulate and assess its own processes.
+LP replaced (ii) with other, similar proposals. But they all ended failing for reasons similar to the one just discussed.69
 
-2. Reaction involves responding to stimuli based on desires and information, while genuine action requires evaluating our own mental states and processes through a supervisory structure that can assess and regulate them.
-
-3. Values are judgments about what enhances agency, while desires are mere wants or urges. This distinction matters because freedom consists in acting from authentic judgments about agency-enhancement rather than from mere wants.
-
-4. Just as a nation requires laws to function as a unified whole, genuine freedom requires constraints that allow for coherent agency. Absence of constraint would mean collapse into mere impulse-gratification.
-
-5. Agential enjoyment comes from exercising and expanding our capacity for rational self-direction, while mere pleasure comes from satisfying desires. This shows that freedom involves more than just doing what we want.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. c
-
-3. b
-
-4. c
-
-5. b
-
-KEY TERMS DICTIONARY
-
-Self: A mind that has developed a supervisory structure capable of evaluating and regulating its own processes.
-
-Value: A judgment that a certain way of acting or being will enhance agency.
-
-Agency: The capacity for genuine action based on rational self-evaluation rather than mere reaction.
-
-Supervisory Structure: The internal regulatory system that enables evaluation of mental states and processes.
-
-Agential Enjoyment: The distinctive satisfaction that comes from exercising and expanding one's agency.
-
-Freedom: The condition of acting from genuine values that enhance rather than diminish agency.
-
-Lecture 16: The Nature of Human Values
-
-To understand human values, we must first grasp several fundamental points about their nature. Values must be distinguished from things that have value - a great novel has value but is not itself a value. Values are relational - what has value for one person may not have value for another. However, this relativity doesn't make values purely subjective or mean that no value is better than another. Just as "three miles from" is a relational term while still being objective, values can be relational while still being real and capable of being correct or incorrect.
-
-Most crucially, values must be distinguished from mere likes or desires. People can value activities they don't enjoy (like helping someone in need) and enjoy activities they don't value (like taking drugs). While we tend to enjoy what we value, the relation we bear to something by virtue of valuing it is distinct from the relation we bear to it by virtue of enjoying it. Valuing involves a cognitive judgment, while enjoyment is purely affective.
-
-At their core, values are judgments about what enhances agency - our capacity for genuine self-directed action. When we value something, we judge that engaging with it will increase rather than diminish our capacity to act based on rational self-evaluation rather than mere impulse.
-
-Consider reading a difficult philosophical text versus watching television. Someone might desire to watch TV more strongly at a given moment, but value reading philosophy because they judge it will enhance their agency - their capacity for understanding and rational self-direction. The immediate pleasure of TV watching would be mere enjoyment, while the satisfaction of philosophical study involves "agential enjoyment" - the distinctive satisfaction that comes from exercising and expanding one's capacity for rational agency.
-
-This explains why we see Bach's music as more valuable than popular entertainment. The enjoyment of pop music is often easily traced to basic impulses like sexual desire. The pleasure of Bach's music, however, is more akin to the satisfaction of philosophical or mathematical insight. It engages and exercises our rational capacities in ways that enhance rather than diminish our agency.
-
-Values can conflict with immediate desires precisely because they represent judgments about agency-enhancement rather than mere wants. An addict may strongly desire drugs while valuing sobriety because they recognize that addiction diminishes their agency. Their value judgment isn't about what they want but about what would enhance their capacity for genuine self-directed action.
-
-This conception helps explain several key features of values:
-
-1. Why values often require us to suppress immediate impulses - because agency requires the capacity to regulate rather than merely express desires
-
-2. Why we can value things we don't immediately enjoy - because we can recognize their agency-enhancing properties even without immediate pleasure
-
-3. Why some values seem more "objective" than mere preferences - because they represent judgments about real effects on agency rather than just subjective likes
-
-4. Why values can be correct or incorrect - because judgments about what enhances agency can be accurate or inaccurate
-
-Understanding values as judgments about agency-enhancement also explains their intimate connection to selfhood. A self emerges when a mind develops the capacity to evaluate and regulate its own processes. This supervisory structure necessarily operates according to some standards - judgments about what mental states and processes should be encouraged or discouraged. These standards are our values, and they constitute the foundation of genuine selfhood and agency.
-
-SHORT ANSWER QUESTIONS
-
-1. Explain the difference between valuing something and merely liking or desiring it.
-
-2. How do values relate to agency-enhancement, and why is this relationship important?
-
-3. Why can values be both relational and objective? Use the "three miles from" analogy to explain.
-
-4. Explain why Bach's music might have more value than pop music using the concept of agency-enhancement.
-
-5. How does the concept of values as judgments about agency-enhancement explain their connection to selfhood?
-
-MULTIPLE CHOICE QUESTIONS
-
-1. Values are primarily:
-
- a) Subjective preferences
-
- b) Strong desires
-
- c) Judgments about agency-enhancement
-
- d) Physical pleasures
-
-2. The relationship between values and desires is:
-
- a) They are identical
-
- b) Values are stronger desires
-
- c) They are distinct but can align
-
- d) Values exclude desires
-
-3. Values can be correct or incorrect because:
-
- a) Society decides what's valuable
-
- b) They represent judgments about real effects on agency
-
- c) They are purely subjective
-
- d) They are based on pleasure
-
-4. Agential enhancement means:
-
- a) Getting what we want
-
- b) Increasing physical pleasure
-
- c) Expanding capacity for rational self-direction
-
- d) Following social norms
-
-5. Values are connected to selfhood because:
-
- a) They are purely personal preferences
-
- b) They constitute standards for mental self-regulation
-
- c) They are inherited from society
-
- d) They are based on pleasure
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. Valuing involves a cognitive judgment about what enhances agency, while liking or desiring is a purely affective state. We can value things we don't immediately enjoy and enjoy things we don't value, showing they are distinct relations.`
+LP self-defeating`
     },
     {
       id: "section-13",
       title: "Section 13",
-      content: `2. Values are judgments about what activities or ways of being will enhance our capacity for rational self-direction. This relationship is crucial because it explains why values can conflict with immediate desires while still being rational.
+      content: `For the reasons just given, it soon became clear that LP was unsalvageable, and soon everybody jumped ship. In fact, it was some of LP's most staunch proponents who first made it clear what LP's shortcomings were.
 
-3. Values can be relational (what enhances agency for one person may not for another) while still being objective (whether something enhances agency is a matter of fact, not mere opinion), just as "three miles from" is relational but objective.
+We'll see this in this chapter when we discuss the brilliant criticisms of LP put forth by Carl Hempel
 
-4. Bach's music engages our rational capacities and requires disciplined attention in ways that enhance our agency, while pop music often appeals primarily to basic impulses. The pleasure of Bach involves agential enjoyment rather than mere sensual pleasure.
+(1905-1997), who was one of LP's first and most ardent advocates.
 
-5. Values emerge from and guide the supervisory structure that constitutes selfhood. They provide the standards by which we evaluate and regulate our mental states, making them essential to genuine agency.
+But erstwhile advocates of LP tended not to see the incoherence that lies at the center of that doctrine. When saying why they rejected LP, they usually cited narrow, technical problems of the sort just discussed. What they didn't do, but what we're about to do, is to say why LP is at its very core a broken and illogical doctrine.70
 
-Multiple Choice Correct Answers:
+Anything that is true or false is meaningful. Truth implies meaningfulness and so does falsity. Thus, LP is meaningful if it's correct. LP says that any meaningful statement is either a tautology or is empirical. So if LP is correct, it is itself either a tautology or it is empirical.
 
-1. c
+It isn't a matter of convention that the expression "meaningful sentence" is interchangeable with the expression "sentence that is either a tautology or is empirical." Therefore, LP isn't a tautology.71
 
-2. c
+Since it isn't a tautology, LP is an empirical truth if it isn't false.
 
-3. b
+But LP isn't an empirical truth. Any attempt to provide an observational basis for any statement presupposes the meaningfulness of that statement and thus presupposes an answer to the question "what conditions must a statement fulfill to be meaningful?" For this reason, the question "what conditions must a statement satisfy if it is to be meaningful?" isn't empirical in nature. It follows that one cannot coherently attempt to find empirical grounds for accepting LP, since any attempt to do so itself presupposes the meaningfulness of LP. Thus, LP isn't an empirical theory.
 
-4. c
+Thus, LP is neither an empirical truth nor a tautology. It is thus a counterexample to itself and is therefore false.
 
-5. b
+Interestingly, in the TLP, Wittgenstein seems to be aware that one cannot coherently say that there can be non-tautologous meaningful statements. Not a single one of the assertions in the TLP is empirical; and not a single one of them is a tautology. This means that, if the TLP's main thesis is correct, the TLP is nonsense. Wittgenstein acknowledges this. For he ends his book by saying that everything that he says in it is meaningless and that those points ought to be seen, not as truths, but as ladders that one can use to get to the truth but that, once one actually gets there, one must throw away, since they are not themselves truths. Here are the very last words of the TLP:
 
-KEY TERMS DICTIONARY
+"My propositions serve as elucidations in the following way: anyone who understands me eventually recognizes them as nonsensical, when he has used them-as steps-to climb up beyond them. (He must, so to speak, throw away the ladder after he has climbed up it.) He must transcend these propositions, and then he will see the world aright. What we cannot speak about we must pass over in silence."72
 
-Value: A judgment about what enhances agency and the capacity for rational self-direction.
+So far as they aren't trivial, these magisterial words are false. To understand something is to see its meaning. Therefore, anything that is understood has a meaning. So Wittgenstein's words, if understood, have a meaning, and Wittgenstein is therefore contradicting himself in saying that those who understand his words will see that they're meaningless. Wittgenstein's awe-inspiring injunction that we pass over in silence what we can't speak about involves a similar solecism. To remain silent about something is to pass over it in silence. So Wittgenstein is asking, emptily, that we not say anything about what we can't possibly say anything about.
 
-Agency-Enhancement: Expansion of capacity for genuine self-directed action based on rational evaluation.
+Empiricism self-refuting
 
-Agential Enjoyment: The distinctive satisfaction that comes from exercising and expanding agency.
+These points are easily extended to show that empiricism is false if it's true and, therefore, that it's false.
 
-Value Judgment: A cognitive assessment of how activities or ways of being affect agency.
+Empiricism isn't the claim that
 
-Supervisory Structure: The self-regulatory system that evaluates mental states according to values.
+whatever we know now, we learned it through sense-perception-but it's possible that at some time in the future we'll acquire knowledge in some other way.
 
-Relational Objectivity: The quality of being relative to individuals while still representing objective facts.
+Empiricism is the doctrine that everything that can be known must be known through observation, i.e., that
 
-Lecture 17: Ego-dystonic vs Ego-syntonic Mental Illness and Freedom
+it's inherent in the nature of knowledge that all knowledge be strictly observation-based.
 
-Mental illnesses affect human freedom in radically different ways depending on whether they are ego-syntonic (identified with by the person) or ego-dystonic (experienced as alien to the self). This distinction is crucial for understanding how psychological disturbances impact human agency and freedom.
+But it cannot be known through observation that (2) is correct. According to (2), ‹x is knowledge› is inconsistent with ‹x isn't known through observation.› But, as we noted on page 24, observation cannot tell you whether one statement is consistent with some other statement. Thus, any body observational data is consistent with the assumption that empiricism is false.
 
-Ego-syntonic disorders are those where the person identifies with their symptoms and doesn't see them as symptoms at all. For example, an acute schizophrenic who sees goblins dancing on their bed believes they're seeing things as they really are. In their mind, it's other people who are wrong - they can't see what's there, but the patient can. Similarly, the paranoid person who believes their phone conversations are being monitored by the President doesn't experience this belief as a symptom but as a legitimate insight into reality.
+This means that there cannot be strictly observational grounds for believing empiricism correct. Thus, so far as empiricism is correct, there are no grounds for believing it correct; and so far as there are such grounds, empiricism is false. Thus, the likelihood that empiricism is correct is inversely proportional to the degree of probability that the information at our disposal confers on it. And this means that, if it's a certainty that empiricism is correct, it's a certainty that it's false. Therefore, empiricism, if true, is false; therefore it's false.
 
-In ego-syntonic disorders, the viewpoint embodied in the patient's symptoms coincides with the viewpoint of the patient themselves. The disturbed mental content is not experienced as an "alien intruder" but as part of who they are. The symptoms are integrated into their sense of self.
+The final sentence of a famous argument given by Bertrand Russell (1872-1970) ends with a sentence very similar to the last one. (This was deliberate.) The argument in question is to the effect that "naïve realism"-which is a specific, particularly extreme form of empiricism, and is therefore relevant in this context-is false:
 
-Ego-dystonic disorders, by contrast, are those where people don't identify with their symptoms but rather experience them as unwanted intrusions. The classic example is obsessive-compulsive disorder (OCD). Those with OCD are compelled to perform actions they themselves recognize as irrational - like having to snap their fingers whenever they think about the number seven, or brushing their teeth twenty times a day. Crucially, they know these compulsions are irrational. They submit to them not because they see any objective reason to do so, but because they suffer intolerable anxiety if they don't.
+We all start from naïve realism, i.e., the doctrine that things are what they seem. We think that grass is green, that stones are hard, and that snow is cold. But physics assures us that the greenness of grass, the hardness of stones, and coldness of snow are not the greenness, hardness, and coldness that we know in our experience, but something very different. The observer, when he seems to himself to be observing a stone, is really, if physics is to be believed, observing the effects of the stone upon himself. Thus, science seems to be at war upon itself. When it most means to be objective, it finds itself plunged into subjectivity against its will. Naïve realism leads to physics; and physics, if true, shows that naïve realism is false. Therefore, naïve realism, if true, is false; therefore it's false.73
 
-Unlike the schizophrenic, the person with OCD sees their symptoms as symptoms. The symptoms belong to their minds but not to them - they are experienced as alien invaders that have taken root in their psyche. The symptoms are theirs but not of them.
-
-This distinction has profound implications for freedom. In ego-syntonic disorders, the person's very capacity for self-evaluation is compromised because they cannot distinguish between legitimate and illegitimate mental content. Their supervisory structure - the internal regulatory system that enables genuine agency - has itself become corrupted. This represents a more fundamental loss of freedom than ego-dystonic disorders, where the capacity for self-evaluation remains intact even though the person struggles to control certain behaviors.
-
-Interestingly, some ego-dystonic symptoms can actually enhance rather than purely diminish agency. Many high achievers have had OCD, not because OCD itself enhances performance, but because the personality traits that, when pathologized, express themselves as OCD (intense focus, high standards, attention to detail) can contribute to achievement when properly channeled. Beethoven and Einstein both had OCD, and while their obsessiveness may have caused them suffering, it may also have contributed to their ability to focus intensely on complex problems.
-
-This reveals a key difference between physical and mental illness. Physical illnesses are never adaptive (except accidentally, like asthma preventing someone from joining the army and being injured). But ego-dystonic mental illnesses can be partially adaptive because they often represent defensive mechanisms that have become too strong rather than completely dysfunctional. The same heightened anxiety that can be crippling in some contexts might enhance performance in others by enabling sustained focus and attention to detail.
-
-The line between pathological and non-pathological obsessiveness isn't clearly defined, and one's pathologies may be implicated in, and sometimes even enhance, one's achievements. This shows that the relationship between mental illness and freedom is complex - particularly with ego-dystonic conditions where the capacity for self-evaluation remains intact.
-
-SHORT ANSWER QUESTIONS
-
-1. Explain the key difference between ego-syntonic and ego-dystonic mental illness using examples.
-
-2. Why do ego-syntonic disorders represent a more fundamental threat to freedom than ego-dystonic ones?
-
-3. How can ego-dystonic symptoms sometimes enhance rather than purely diminish agency?
-
-4. Explain why the relationship between mental illness and freedom is more complex than that between physical illness and freedom.
-
-5. How does the distinction between ego-syntonic and ego-dystonic symptoms relate to the capacity for self-evaluation?
-
-MULTIPLE CHOICE QUESTIONS
-
-1. Ego-syntonic symptoms are:
-
- a) Experienced as alien to the self
-
- b) Identified with by the person
-
- c) Always recognized as symptoms
-
- d) Easy to treat
-
-2. In ego-dystonic disorders:
-
- a) The person identifies with their symptoms
-
- b) Symptoms are experienced as alien intrusions
-
- c) The capacity for self-evaluation is lost
-
- d) Symptoms are never adaptive
-
-3. The relationship between OCD and achievement shows that:
-
- a) Mental illness always enhances performance
-
- b) Mental illness is never truly harmful
-
- c) Pathological traits can have adaptive aspects
-
- d) Physical and mental illness are the same
-
-4. The capacity for self-evaluation is:
-
- a) Lost in ego-dystonic disorders
-
- b) Enhanced by all mental illness
-
- c) Compromised in ego-syntonic disorders
-
- d) Irrelevant to mental health
-
-5. Mental illness differs from physical illness because:
-
- a) It's not real illness
-
- b) It can have adaptive aspects
-
- c) It's always totally disabling
-
- d) It's easier to treat
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. In ego-syntonic illnesses like schizophrenia, people identify with their symptoms and don't recognize them as symptoms. In ego-dystonic illnesses like OCD, people recognize their symptoms as irrational intrusions and don't identify with them.
-
-2. Ego-syntonic disorders compromise the very capacity for self-evaluation, making people unable to distinguish between legitimate and illegitimate mental content. This undermines the foundation of agency more fundamentally than ego-dystonic disorders.`
+Though eloquently stated, this argument consists of spurious reasoning for a false conclusion. In observing the paper-weight on my desk, I'm not observing some effect of the stone upon myself: I'm observing the stone itself. To be sure, my observing the stone is itself an effect of some event involving the stone. (Light bounces off the stone and, in due course, strikes my retinas, precipitating various physiological and psychological responses, among them the aforementioned sense- perception.) But that doesn't mean that what I'm seeing, in having that sense-perception, is some effect that the stone had on me; and unless we're perpetually hallucinating, in which case we're never observing anything external, we very obviously do observe external objects.`
     },
     {
       id: "section-14",
       title: "Section 14",
-      content: `3. The personality traits underlying ego-dystonic disorders like OCD can enhance achievement when properly channeled. The same intense focus that can be pathological can also enable sustained work on complex problems.
+      content: `This brings us to the second problem with Russell's argument. Russell says that the greenness, hardness, and coldness of daily observation are not identical with the counterparts in physics. This is false. Physics has a lot to say about greenness, hardness, and coldness that commonsense does not. But that's very different from saying that the coldness we feel, the greenness we see, etc., aren't the greenness, coldness, and hardness of physics. Physics tells us what it is for something to have the properties we know them to have through sight, touch, etc. When you grab and object and feel that it's cold, you don't feel or otherwise sense-perceive the micro-events in virtue of which it is cold. It's the job of the theoretical physicist to tell you about these microevents. This means that the coldness studied by the physicist is identical with the coldness that you feel. Physics tells us that many of our pre-theoretic beliefs as to what that coldness is are wrong; and in order to do that, it has to study the coldness that those pre-theoretic beliefs concern. So Russell's argument, despite Einstein's high regard for it, is a failure.74
 
-4. Mental illness, particularly ego-dystonic conditions, can have adaptive aspects and contribute to achievement, while physical illness is never adaptive. This makes the relationship between mental illness and freedom more complex.
+The empiricism-unfriendliness of the concept of confirmation
 
-5. In ego-syntonic disorders, the capacity for self-evaluation is compromised because people can't recognize their symptoms as symptoms. In ego-dystonic disorders, this capacity remains intact, allowing people to recognize their symptoms as intrusions.
+Confirmationalism, the doctrine that a non-tautology is meaningful iff confirmable, is a form of empiricism. But we'll now see that the concept of confirmation is an incoherent one unless it's granted that there is nonempirical knowledge and, therefore, that confirmationalism is incoherent.
 
-Multiple Choice Correct Answers:
+An argument due to Nelson Goodman (1954) makes this clear75:
 
-1. b
+(GA76) Let's say that an object is "grue" if it's green and examined before Jan. 1, 2010, or it's blue and examined anytime thereafter. All green objects examined before Jan. 1, 2010, are grue. So, supposing that we've examined ten million emeralds before Jan. 1, 2010, and found them all to be green, we've also found them to be grue. Presumably, the fact that they've all been green warrants the inference that they'll be green after Jan. 1, 2010. But, so far as that data entitles us to infer that they'll be green, it also entitles us to infer that they'll be grue and, therefore, blue.
 
-2. b
+This line of thought is easily extended to show that anything can confirm anything.77 Let phi, psi, and chi be three properties such that (i) a thing is phi if it's examined by a human being who knows and therefore truly believes that, at that time, no human being can fly; (ii) a thing is psi if examined by a human who knows that, at that time, all human beings can fly; and (iii) a thing is chi if it's examined before Jan. 1, 2010, and known to have phi or it's examined after that time and is known to have psi. Since everything ever examined as of the present time (May 24, 2009) has had phi, it's also had chi. So given that, thus far, no human has been able to fly, we're no less entitled to infer that in 2015 they'll all be able to fly than we are entitled to infer that, at that same time, none of them will.
 
-3. c
+GA can be taken to show either that no inductive inference is better than any other or that, since some inductive inferences clearly are better than others, GA must involve an error of some kind. Supposing that the second interpretation is the right one, it's easy to identify the problem with GA. Contrary to what that argument tacitly assumes, induction does not have strictly observational basis. From a strictly observational standpoint, it's no less correct to describe an emerald examined in 2009 as "grue" than it is to describe it as "green." Given any body of data, there are different, but equally observationally legitimate ways of describing it. This means that, if any inductions are better than any others, we must have legitimate but at least partly nonobservational grounds for believing that, when making inductive inferences, certain properties (e.g., green) are relevant and others (e.g., grue) are not. (These grounds are identified in Chapters 12 and 18.)
 
-4. c
+The brokenness of the concept of tautological truth
 
-5. b
+In this section we'll see that it is utterances of sentences, not sentences per se, that are tautologies. For reasons that will become clear, this entails that, contrary to what LP alleges, non-empirical truth cannot be identified with conventional truth.
 
-KEY TERMS DICTIONARY
+Whether a given utterance is tautologous very much depends on the manner in which the person hearing that utterance learned the meanings of the expressions composing it. A story may help make this clear. You don't know to what length the word "yard" refers, and you ask your friend Smith to give you this information. In response, he points to some object L and says: "the length of that object is one yard." L is in fact three-feet long. But you can't tell this just from looking at it. You can tell roughly, but not exactly, how long L is. You don't bother to measure L. This all happens on Monday.
 
-Ego-syntonic: Mental symptoms that the person identifies with and doesn't recognize as symptoms.
+The next day, you see some object M. You measure it and find that its length is three feet. You tell your (still present) friend Smith that M is exactly three-feet long. You know, of course, that M's length is more or less comparable to L's-that neither length is, for example, ten times as great as the other. But you don't have precise knowledge of their comparative lengths; you don't know, for example, whether L's length is within six inches of M's. Because you have a passion for knowing the comparative lengths of objects, you find this upsetting, and you tell Smith that you wish you knew how L's length compared to M's. Smith says: "I don't know
 
-Ego-dystonic: Mental symptoms that the person experiences as alien intrusions and recognizes as symptoms.
+why you're upset. You've measured M and found that it's three-feet long. Since, as you know, L is a yard long, it's patently obvious what M's length is." You don't quite know what he means, and you tell him this. Somewhat irritated, he says:
 
-Self-evaluation: The capacity to assess one's own mental states and distinguish legitimate from illegitimate content.
+(i) "there are three feet in a yard."
 
-Adaptive Aspects: Features of mental illness that can potentially enhance rather than diminish functioning.
+Under these circumstances, (i) is not trivial and, therefore, is not a tautology. It would be tautologous if you had learned the meaning of the word "yard" by being told that "yards are lengths of three feet." But this isn't how you were told it. You were shown a yard-long object and told that the word "yard" refers to its length. Obviously that visual perception did apprise you of that object's length. But the way it described that length to you was different from the way that this same information would be conveyed to you by an utterance of: "the lenght of that object is one yard."
 
-Supervisory Structure: The internal regulatory system that enables genuine agency and can be compromised in ego-syntonic disorders.
+And given the information embodied in your visual perception's of L and M, it wouldn't be a trivial matter to know that the length described by the contents of your L-perceptions coincided with that described by your M-perceptions. Therefore, (i) would not, under those circumstances, express a tautology, at least not from your perspective. But it would express a tautology from the perspective of somebody to whom "yard" had initially been defined as "distance of three feet."
 
-Pathological Traits: Characteristics that can be either harmful or beneficial depending on context and degree.
-
-Lecture 18: Rationalization and How It Undermines Freedom
-
-Rationalization occurs when someone warps their higher-order desires to validate rather than evaluate their lower impulses. Instead of genuinely assessing whether they should act on a desire, they find ways to justify whatever they want to do. This process fundamentally undermines freedom by corrupting our capacity for genuine self-evaluation.
-
-Consider someone who is too lazy and weak to do what they believe to be right. They have two options: (1) choose to do the right thing, which involves making needed but difficult changes to their character, or (2) replace their existing higher-order desires with ones that conveniently validate their existing first-order desires. Rationalization is choosing option 2 - convincing oneself that one's character defects are actually virtues.
-
-Here's how someone might rationalize their laziness and weakness:
-
-"I'm not 'lazy.' Unlike the blinkered maniac who works all the time and never takes time to smell a rose or go to the beach, I see the larger picture. Nor am I 'weak.' Unlike the so-called 'hero' who moronically tries to buck the system, I see that despite the system's imperfections, it is one that I am duty-bound to comply with."
-
-This rationalization involves several moves:
-
-1. Reframing laziness as wisdom (seeing "the larger picture")
-
-2. Portraying industriousness as pathological ("blinkered maniac")
-
-3. Recasting cowardice as prudence ("duty-bound to comply")
-
-4. Converting weakness into a kind of strength ("I see that...")
-
-Deep down, the rationalizer knows these justifications are false. They know they're being weak and lazy, but they've convinced themselves otherwise to avoid the hard work of genuine self-improvement. This is not a mere error - it's an active process of self-deception that corrupts our capacity for honest self-evaluation.
-
-What makes rationalization particularly insidious is that it mimics genuine rational evaluation while actually subverting it. The rationalizer isn't just acting on impulse - they're creating elaborate justifications that make their impulses seem rational and even virtuous. This can make rationalization harder to detect than simple weakness of will.
-
-Rationalization undermines freedom in several ways:
-
-1. It corrupts our higher-order desires, making them mere rubber stamps for our impulses
-
-2. It compromises our capacity for genuine self-evaluation
-
-3. It replaces authentic values with pseudo-values that merely validate what we want to do
-
-4. It makes us slaves to our character defects while convincing us we're acting freely
-
-This reveals why authentic freedom requires not just acting on higher-order desires (as Frankfurt suggested) but acting on genuine values that haven't been corrupted through rationalization. A lazy person who has rationalized their laziness into a virtue is no more free than an addict acting on their addiction - in both cases, what appears to be free choice is actually compulsion wearing a mask of rationality.
-
-True freedom requires the courage and strength to resist the temptation to rationalize. We must maintain our capacity for honest self-evaluation even when it reveals uncomfortable truths about our character defects. This is difficult precisely because rationalization offers an easier alternative - but taking that easier path means surrendering our freedom while pretending to exercise it.
-
-SHORT ANSWER QUESTIONS
-
-1. How does rationalization differ from genuine rational evaluation of our desires?
-
-2. Explain how rationalization can make character defects appear as virtues.
-
-3. Why is rationalization more insidious than simple weakness of will?
-
-4. How does rationalization compromise our capacity for genuine self-evaluation?
-
-5. Why isn't someone who has rationalized their behavior truly free even if they're acting on "higher-order" desires?
-
-MULTIPLE CHOICE QUESTIONS
-
-1. Rationalization primarily involves:
-
- a) Genuine self-improvement
-
- b) Warping higher desires to validate lower ones
-
- c) Eliminating all desires
-
- d) Acting on pure impulse
-
-2. The main difference between rationalization and genuine evaluation is:
-
- a) Rationalization takes longer
-
- b) Rationalization validates rather than assesses
-
- c) Genuine evaluation is impossible
-
- d) They are the same thing
-
-3. Rationalization undermines freedom by:
-
- a) Creating new impulses
-
- b) Removing all desires
-
- c) Corrupting self-evaluation
-
- d) Adding more constraints
-
-4. Someone who rationalizes is:
-
- a) Truly free
-
- b) A slave to their defects while thinking they're free
-
- c) Without any desires
-
- d) Always aware they're rationalizing
-
-5. True freedom requires:
-
- a) Always following impulses
-
- b) Never having higher-order desires
-
- c) Resisting the urge to rationalize
-
- d) Ignoring character defects
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. Genuine evaluation involves honestly assessing whether we should act on our desires, while rationalization creates false justifications to validate whatever we already want to do. Evaluation tests desires against values; rationalization warps values to fit desires.
-
-2. Rationalization reframes character defects as virtues through elaborate justifications - laziness becomes "wisdom," cowardice becomes "prudence," weakness becomes "seeing the larger picture." This makes our flaws seem like strengths.
-
-3. Unlike simple weakness where we know we're giving in to impulse, rationalization creates sophisticated justifications that make impulses seem rational and virtuous. This self-deception is harder to detect and correct.
-
-4. Rationalization replaces honest self-assessment with self-deception, making us unable to genuinely evaluate our motives and actions. We lose the capacity to distinguish between real values and rationalized pseudo-values.
-
-5. Someone who has rationalized isn't truly choosing but rather letting their character defects make choices while pretending those choices are rational. Their higher-order desires have become mere vehicles for lower impulses.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. b
-
-3. c
-
-4. b
-
-5. c
-
-KEY TERMS DICTIONARY
-
-Rationalization: The process of warping higher-order desires to validate rather than evaluate lower impulses.
-
-Self-Deception: The active process of convincing oneself that character defects are virtues.
-
-Pseudo-Values: Corrupted higher-order desires that merely validate rather than evaluate impulses.
-
-Character Defect: A trait that diminishes agency but can be rationalized into appearing as a virtue.`
+So even though it's standard practice among philosophers to describe sentences as "tautologies," this practice embodies a serious confusion. A given sentence may or may not be tautology, depending on the manner in which the auditor learned the meanings of its constituent expressions and depending, therefore, on the information on the basis of which the auditor knows those meanings.`
     },
     {
       id: "section-15",
       title: "Section 15",
-      content: `Genuine Self-Evaluation: Honest assessment of our motives and desires, uncorrupted by rationalization.
+      content: `It might be thought that, so far as (i) is non-trivial to you, it's only because you don't really understand it. This isn't true. To somebody who doesn't speak Albanian, a sentence of Albanian isn't trivial or non-trivial. It doesn't mean anything to you and is, from your perspective, just so much noise and is no more "trivial" or "non-trivial" than the sound of wind chimes. But, in our story, you do know what is meant by (i). It's not as though you're hearing a sentence of Albanian (or, if you happen to speak Albanian, a sentence of some language that you don't know). Therefore, it is only because you understand Smith's utterance of (i) that it is nontrivial for you. Therefore, tautologousness, and non-tautologousness, are properties, not of sentences, but of the information on the basis of which auditors figure out the meanings of sentences. And it's wrong to say that sentences per se are, or are not, tautologies.78
 
-Freedom: The capacity to act on genuine values rather than rationalized pseudo-values.
+This story illustrates some deeply important facts that are in the philosophy of language. First, one knows the meanings of expressions descriptively. It is through sight and hearing (and, possibly, other sensory modalities; e.g., touch) that you learn what words mean. Your perceptions apprise you of facts about the world by describing them to you-by apprising you of their colors, shapes, etc. Two very different descriptions can pick out some one thing (cf. "the third U.S. President" and "the President responsible for the Louisiana Purchase"). Therefore, the perceptually encoded descriptions through which one learns what two expressions mean may differ enormously, even if those expressions mean the same thing. A consequence is that what utterances tell you is as much a function of the information through which you learn their meanings as it is of the those meanings themselves. Thus, a given sentence may convey very different propositions to different people, all of whom know what it means, the reason being that those people access that meaning through different descriptions.
 
-Lecture 19: Existentialism - Its Strengths and Weaknesses
+An alternative to the logical positivist conception of meaningfulness
 
-Existentialism is fundamentally an attitude rather than a doctrine. While doctrines like quantum physics or Freudian psychology are systems of interconnected propositions that can be judged true or false based on logical and empirical benchmarks, existentialism at its core is an injunction to choose our own values rather than passively accept pre-existing ones.
+The logical positivist's analysis of meaningfulness was a complete failure. I'd like to propose an
 
-As an attitude, existentialism has significant strengths. First, people who approach life with an existentialist mindset are more likely to reflect critically on values rather than blindly accepting traditional ones. This reflectiveness tends to lead to better psychological outcomes, as people are more likely to live according to values that genuinely work for them. Second, even if someone chooses "wrong" values, the mere act of choosing rather than passively accepting values affirms their rationality and freedom - their essential humanness.
+alternative to it.
 
-A third strength of existentialism is that it helps protect against societal pressure to diminish oneself. Many conventional values seem to demand a reduction of the self: "Be a team player - don't do what you want," "Work for the family business - don't do what you want," etc. As Freud emphasized, civilization requires the abridgment of individual freedoms. Moreover, the values society imposes often express people's desire to prevent others from superseding them. The existentialist attitude helps resist this pressure to reduce oneself.
+First of all, when asked to give examples of meaningless statements, the logical positivists tended to cite sentences that nobody ever uses; for example, "the nothing nothings"1, "the all is one," "the absolute is perfect." This is deeply suspicious: a theory that only takes on straw men can't be much of a theory.
 
-However, existentialism faces several serious problems. First, while conventional values may sometimes be wrong, it doesn't follow that there are no values one ought to accept. When people productively reject conventional values, they typically do so in service of what they see as deeper, more legitimate values. The choice is rarely between values and no values, but between different value systems.
+And LP can't even prevail against these straw men. For, contrary to what its advocates said, the problem with these so-called statements is not that they're incapable of empirical corroboration. Consider the sentence:
 
-Second, while existentialism as an attitude isn't itself true or false, it seems to presuppose the thesis that "there is no set of values that one must accept." This can be interpreted in two problematic ways:
+(i) "the universe is a perfect unity."
 
-1. Morally: There are no values one must accept to be a good person. But this implies there are no genuine moral truths at all - a highly questionable position.
+Much loved by many a freshman narco-intellectual, this is a meaningless sentence if ever there was one; and it is just the sort of sentence that logical positivists had in mind.
 
-2. Psychologically: No value system is more conducive to human happiness than any other. But this ignores how our emotional architecture may constrain which values we can genuinely accept and still flourish.
+But if it were said what exactly it means to describe something as a "perfect unity," (i) would be meaningful, as it would then be true or false. If, by a "perfect unity", one means an object that consists of events bearing a specified causal or logical relationship to one another, then (i) is either true or false, depending on the identity of that relationship. For example, if a "perfect unity" is an object such that, given any two nonsimultaneous events composing it, there is a possible causal process connecting the first of those two events with the second, then (i) is true.1 (In contemporary physics, ‹x precedes y› is defined as: ‹there is a possible causal process, e.g. a light-signal, beginning with x and ending with y.› ) On the other hand, if, by a "perfect unity," one means an object such that, if x and y are any two of its parts, the very idea of x's existing in the absence of y is an incoherent one, then (i) is meaningful-and false. (One can coherently imagine a universe in which Cheney exists but Biden does not.)
 
-The psychological critique is particularly powerful. Our emotions seem to embody certain value judgments - we feel angry at perceived wrongs, satisfied by perceived justice. This suggests some values are "hardwired" into our psychological structure. Like language, where Chomsky showed humans are predisposed to learn languages with certain structural properties, we may be predisposed to certain kinds of values based on our innate emotional architecture.
+In any case, the term "perfect unity" is clearly intended to refer to some sort of causal or logical integratedness, and once that mode of integration is pinpointed, (i) speedily becomes a true or false claim.
 
-This doesn't mean all people have identical values, but rather that the range of psychologically viable value systems is limited by our nature. We can't simply choose any arbitrary values without risking our wellbeing. While we can behaviorally comply with values that make us miserable, our emotions may prevent us from truly accepting them.
+"Statements" such as "the universe is a perfect unity," "the nothing nothings," and so on, aren't really statements at all. They're statement-forms. (i) is obviously supposed to attribute some property to the universe. But since this property isn't identified, (i) contains an undefined term and therefore says nothing. Once that term is defined, a meaningful statement results.
 
-SHORT ANSWER QUESTIONS
+It's true that (i) is neither tautologous nor confirmable. But that's a consequence of the real problem, viz. that "perfect unity" is undefined. (i) is comparable to "x is tall." The reason "x is tall" says nothing is that "x" is undefined-it hasn't been assigned a referent. And no sooner is a referent assigned to "x" than "x is tall" becomes meaningful. ("x is tall" comes to have the same meaning as "Bob Dole is tall" the moment Bob Dole is assigned to "x.")
 
-1. How does existentialism's nature as an attitude rather than a doctrine affect how we should evaluate it?
+Before "x" is assigned a referent, "x is tall" is neither confirmable nor tautologous. But that's only a symptom of the real problem, viz. that "x" doesn't have a referent. The same thing mutatis mutandis is true of (i).
 
-2. Explain how existentialism can protect against societal pressure to diminish oneself.
+Let's move onto the next phase of our argument. If S is a meaningful sentence, there is some object x and some property phi such that S says that x has phi. In other words, any given sentence is equivalent to one that has the form: ‹x has phi.› Let us now say why this is so.
 
-3. Why doesn't the rejection of conventional values necessarily lead to having no values at all?
+Any non-compound sentence (i.e., any sentence that doesn't consist of other sentences) either says of some individual that it has some property or it says that two more individuals are interrelated in a certain way. Thus, "Smith is tall" says of some individual (Smith) that he has a certain property (tallness), and "Bob loves Sally" says that one individual (Bob) bears a certain relation (that of loving) with respect to some other individual (Sally).
 
-4. How does our emotional architecture potentially limit what values we can genuinely accept?
+"Smith is tall," "Jerry snores," and all other non-relational, non-compound sentences obviously have the form ‹x has phi.› And, though it isn't obvious, the same is true of "Bob loves Sally," "Wilma detests Linda," and all other non-compound sentences that affirm the existence of relations between two or more objects. Let "R" be defined as follows: for any objects x and y, ‹ has R› is true iff x loves y. (So for any objects x and y, the ordered pair has R exactly if x loves y.) Thus, "Bob loves Sally" is equivalent with " has R," which has the form ‹x has phi.›
 
-5. What's the difference between behaviorally complying with values versus truly accepting them?
+A similar procedure can be performed on sentences (such as "Bob is standing in between Sally and Larry") that affirm the existence of relations involving three or more objects. Let "R" be defined as follows: for any objects x, y, and z, ‹ has R› is true iff x is standing in between y and z. Thus, "Bob is standing in between Sally and Larry" is equivalent with " has R," which has the form ‹x has phi.› Other non-compound relational sentences are to be dealt with similarly.
 
-MULTIPLE CHOICE QUESTIONS
+What about compound sentences? Not a problem. Let "K" be defined as follows: for any sentences S1 and S2, ‹ has K› is true iff the state of affairs described by S1 is a consequence (of some kind or other) of the state of affairs described by S2. Thus, "Smith broke his leg because he fell out of the a tree" is equivalent with " has K," which has the form ‹x has phi.› Other compound sentences are to be dealt with similarly.
 
-1. Existentialism is best understood as:
-
- a) A scientific theory
-
- b) An attitude toward choosing values
-
- c) A system of moral rules
-
- d) A psychological theory
-
-2. The strength of existentialism lies in:
-
- a) Proving moral relativism
-
- b) Encouraging critical reflection on values
-
- c) Eliminating all values
-
- d) Supporting conventional morality
-
-3. The main problem with existentialism is:
-
- a) It's too traditional
-
- b) It ignores psychological constraints on values
-
- c) It's too complex
-
- d) It's too simple
-
-4. Our emotional architecture suggests:
-
- a) We can accept any values
-
- b) Values don't matter
-
- c) Some values are hardwired
-
- d) Emotions are irrelevant
-
-5. According to the lecture, rejecting conventional values typically involves:
-
- a) Accepting no values at all
-
- b) Following society blindly
-
- c) Embracing different, deeper values
-
- d) Pure randomness
-
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. As an attitude, existentialism can't be simply judged true or false like a doctrine, but must be evaluated based on its psychological and practical effects on how people approach values and life choices.
-
-2. Existentialism encourages people to question societal values that demand self-diminishment, recognizing that civilization often requires individual suppression and that others may impose values to prevent excellence.
-
-3. Productive rejection of conventional values typically involves embracing what are seen as deeper, more legitimate values. The choice is between different value systems, not between values and no values.
-
-4. Our emotions embody value judgments - we feel angry at perceived wrongs, satisfied by justice. This suggests we're psychologically structured to accept certain kinds of values and reject others.
-
-5. We can outwardly comply with values while emotionally rejecting them. True acceptance requires alignment with our emotional architecture, while mere compliance can leave us in psychological conflict.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. b
-
-3. b
-
-4. c
-
-5. c
-
-KEY TERMS DICTIONARY
-
-Attitude: A way of approaching life and values, as opposed to a system of propositions that can be judged true or false.
-
-Emotional Architecture: The innate psychological structure that shapes our emotional responses and constrains what values we can genuinely accept.
-
-Value System: An integrated set of principles and judgments about what is worthwhile or important.
-
-Conventional Values: Traditional or socially imposed standards that may demand self-diminishment.
-
-Psychological Viability: The degree to which a value system aligns with our emotional architecture and can support psychological wellbeing.
-
-Genuine Acceptance: True integration of values into one's psychological structure, as opposed to mere behavioral compliance.
-
-Lecture 20: From Freedom to Agency - A New Framework
-
-The preceding nineteen lectures have traced a complex path through various attempts to understand human freedom. We began with determinism and predictability, worked through compatibilist and incompatibilist positions, examined Frankfurt's hierarchical model of freedom, explored rationalization and self-deception, and investigated the relationship between values, selfhood, and mental illness. What emerges from this investigation is not just another theory of freedom, but rather a recognition that the very concept of freedom may be more obstacle than aid in understanding human nature and action.`
+Negative sentences are particularly easy to deal with. "Smith doesn't smoke" is equivalent with "the proposition that Smith smokes is false," which clearly has the form: ‹x has phi.› Other negative sentences are to be dealt with similarly.`
     },
     {
       id: "section-16",
       title: "Section 16",
-      content: `The elaborate philosophical machinery required to salvage the concept of freedom should give us pause. With each refinement - from rejecting the "could have done otherwise" criterion, to distinguishing between first and second-order desires, to differentiating genuine values from rationalized pseudo-values - we move further from what people ordinarily mean by freedom. Perhaps instead of performing more conceptual acrobatics to preserve this increasingly technical notion of freedom, we should replace it with something more fundamental: agency.
+      content: `There is only one kind of sentence that we haven't yet considered, namely, quantified generalizations. A "quantified generalization" is any statement that says how many members one class of objects has in common with some other class of objects. Examples are: (a) "some person smokes," (b) "no giraffes fly," and (c) "all mice read Tolstoy." (a) says that the class of people has at least one member in common with the class of smokers. (b) says that the class of giraffes has no members in common with the class of things that fly. And (c) says that the class of mice has no members in common with the class of things that don't read Tolstoy.
 
-Agency is the capacity for intentional action - the ability to do rather than merely react. Unlike freedom, agency naturally comes in degrees and can be empirically observed. An infant has highly limited agency; they react to stimuli but cannot yet act in any meaningful sense. A person with severe obsessive-compulsive disorder has diminished agency in certain domains - they can recognize their compulsions as irrational but cannot effectively regulate their behavior. Someone who has rationalized their cowardice into "prudence" has reduced their agency by placing part of themselves beyond their capacity for honest evaluation.
+Bearing this in mind, let "E" be defined as follows: for any properties P and Q, ‹ has E› is
 
-This framework helps us understand phenomena that the concept of freedom struggles to accommodate. Consider Freud's crucial insight about rationalization and repression: when we shove material into the unconscious through rationalization, that material doesn't simply disappear. Instead, it continues to operate but now functions as an external opponent to our conscious intentions. The rationalized person hasn't "freely chosen" their course of action; they've actually diminished their agency by creating unconscious forces that work against their capacity for intentional action.
+true iff the class of things having P has a least one member with the class of things having Q. Thus,
 
-This points to a fundamental truth: agency requires integration. A self emerges only when a mind develops what we've called a "supervisory structure" - an internal regulatory system that can genuinely evaluate and direct mental processes. This structure must be capable of honest self-assessment rather than mere rationalization. When we rationalize, we fragment this structure, reducing rather than enhancing our capacity for intentional action.
+(a) is equivalent with: ", has E" which obviously has the form ‹x has phi.› Other quantified generalizations are to be dealt with similarly.
 
-The shift from freedom to agency also illuminates the relationship between values and action. Values, properly understood, are judgments about what enhances rather than diminishes agency. This explains why we can value things we don't immediately desire and why some activities (like studying philosophy or practicing Bach) can be more valuable than others despite being less immediately pleasurable. They engage and develop our capacity for intentional action rather than merely satisfying impulses.
+We have thus established that any given sentence S is equivalent to some sentence having the form ‹x has phi.› Given this fact, there is an obvious answer to the question "what is it for a sentence to be meaningful?" A sentence is meaningful if it attributes some property to some object. A sentence S is meaningful if, for some object x and some property phi, S says that x has phi.1 It's irrelevant whether it can be perceptually confirmed, let alone verified, that x has phi.
 
-Our investigation of mental illness further supports this framework. The distinction between ego-syntonic and ego-dystonic disorders reflects different ways that agency can be compromised. In ego-syntonic disorders, the very capacity for self-evaluation is corrupted - the person cannot distinguish between legitimate and illegitimate mental content. In ego-dystonic disorders, the capacity for evaluation remains intact even though the ability to act on that evaluation is impaired. This explains why ego-syntonic disorders represent a more fundamental threat to human agency.
+How could this theory be wrong? If a sentence attributes any property to any thing, it says something about something and is therefore meaningful. And if a sentence doesn't attribute any property to anything, it doesn't say anything about anything and is therefore meaningless.
 
-The agency framework also helps us understand development and recovery. An infant develops agency gradually as they acquire the capacity to regulate their behavior and evaluate their mental states. A person in therapy can expand their agency by bringing unconscious material back into the scope of conscious evaluation and control. Someone working to overcome rationalization can enhance their agency by developing their capacity for honest self-assessment.
+The picture theory of meaning
 
-This shift from freedom to agency is not merely terminological. It represents a fundamental reframing of how we understand human action and development. Instead of asking whether someone is "free" - a question that leads us into philosophical puzzles about determinism and alternative possibilities - we can ask more productive questions: How extensive is their capacity for intentional action? What enhances or diminishes this capacity? How integrated is their psychological structure?
+One of the most interesting contentions put forth in the Tractatus Logico-Philosophicus (TLP) is the so-called "picture theory of meaning." In the TLP, Wittgenstein says that sentences are "pictures" of the facts they describe.
 
-These questions are both philosophically clearer and practically more useful than traditional questions about freedom. They align better with empirical psychology, provide clearer guidance for personal development and clinical practice, and avoid the conceptual tangles that have plagued discussions of free will.
+What does he mean? Maybe he means that sentences are picture-like in that they, like pictures, represent facts. But in that case what Wittgenstein is saying is completely and utterly trivial.
 
-The concept of freedom served an important historical purpose in helping us think about human action and responsibility. But like many concepts in the history of thought, it may have reached the point where it obscures more than it illuminates. By replacing it with the more precise and empirically grounded concept of agency, we can better understand both the nature of human action and the conditions for its enhancement.
+Thus, so far as what Wittgenstein is saying has substance, it isn't that sentences are like pictures of the facts they describe; and it must therefore be that they are such pictures.
 
-What the previous nineteen lectures have shown us, perhaps unintentionally, is that the philosophical difficulties surrounding freedom are not problems to be solved but rather indicators that we need a new framework. Agency provides that framework, offering a way to preserve what was valuable in our thinking about freedom while moving beyond its limitations to a more productive understanding of human action and development.
+But in that case, what Wittgenstein is saying is false. It is only relative to arbitrary conventions that "Smith punched Jones" describes the fact that Smith punched Jones. But it isn't relative to such conventions that a film or painting of Smith punching Jones describes that fact.
 
-The task ahead is not to further refine our concept of freedom but to develop our understanding of agency - how it emerges, what sustains it, and how it can be enhanced. This is both a theoretical and practical project, one that promises to be more fruitful than continuing to wrestle with the philosophical puzzles created by the concept of freedom.
+To be sure, there is a non-conventional component to sentential representation. Let P be the proposition meant by the sentence:
 
-KEY CONCEPTS:
+(1) "Given that Socrates was a philosopher, it follows from the fact that Socrates was bald that there has been at least one bald philosopher."
 
-Agency: The capacity for intentional action, which comes in degrees and can be empirically observed.
+The fact that (1) means P is not itself a convention. It is a logical consequence of our semantic conventions (e.g., that "Socrates" refers to Socrates, etc.). But for that very reason, there is a conventional component to that fact. And since graphic resemblance is a non-conventional method of representation, it follows that, so far as (1)'s relation to the fact it describes is conventional, that relation is fundamentally not like the relation borne by a picture of an event to that event. Thus, the picture-theory is false if taken literally and it's empty if taken non-literally.
 
-Integration: The psychological state where conscious evaluation and unconscious processes work together rather than in opposition.
+But maybe there's some way of interpreting that theory that we've overlooked. To see whether this is so, let's consider Wittgenstein's argument for it:
 
-Supervisory Structure: The internal regulatory system that enables genuine self-evaluation and intentional action.
+At first sight a sentence-one set out on the printed page, for example-does not seem to be a picture of the reality with which it is concerned. But neither do written notes seem at first sight to be a picture of a piece of music, nor our phonetic notation (the alphabet) to be a picture of our speech. At yet these sign-languages prove to be pictures, even in the ordinary sense, of what they represent79 . . . There is a general rule by means of which the musician can obtain the symphony from the score, and which makes it possible to derive the symphony from the groove on the gramophone record, and, using the first rule, to drive the score again. That is what constitutes the inner similarity between these things which seem to be constructed in such entirely different ways. And that rule is the law of projection which projects the symphony into the language of musical notation. It is the rule for translating this language into the language of gramophone records.
 
-Rationalization: A process that reduces agency by creating unconscious forces that oppose conscious intentions.
+The idea seems to be that just as laws of projection coordinate the painting of the bowl of fruit with the bowl of fruit itself, so the semantic rules of a language coordinate its sentences with the realities they describe.80
 
-Development: The gradual expansion of agency through enhanced capacity for self-regulation and evaluation.
+But this analogy is a shallow one; and when it's scrutinized, it becomes even more clear than
 
-This framework suggests new directions for both theoretical investigation and practical application. Rather than debating whether humans have free will, we can focus on understanding how agency develops, what compromises it, and how it can be enhanced. This promises to be a more productive approach to understanding human action and supporting human flourishing.
+before how unlike pictures sentences are.
 
-SHORT ANSWER QUESTIONS
+What if, because of some change in the environment, snow turned black? The English language would not for that reason be impaired. In fact, the English language would, without itself having to change, give us the resources to describe this change. We could describe it by saying "snow is black." Thus, as far as the English language is concerned, snow can be any color. The semantic rules of English don't say that snow is white. They say that, if snow is white, one can express that fact by saying "snow is white." And those rules are to the effect that if snow is black, one can express that fact by saying "snow is black." So the semantic rules of English assigns sentences not to the fact that snow is white-for as far those semantic rules know, it isn't a fact that snow is white-but to the proposition that, when true, gives rise to that fact.81 Thus, sentences depict facts by way of having propositions for their meanings. But this isn't how photographs work. A photograph doesn't go through the corresponding proposition. It goes straight to the fact (when there is one). No picture goes through a proposition. Pictures, unlike sentences, go straight to the facts, if any there be, that they represent. This shows how fundamentally unlike pictures sentences are.82
 
-1. Explain why the extensive philosophical machinery needed to defend the concept of freedom should make us skeptical of the concept itself.
+A related point is that pictures have structures that are radically different from those of any sentences. Sentences are digital structures.83 They have a unique decomposition into a finite number of discrete parts. ("The cat is on the mat" decomposes into "cat," "mat," etc.) Pictures aren't like this. A picture of a cat on the mat doesn't have one, minimal unit of significance corresponding to the cat, another to the mat, etc. The part of the picture corresponding to the cat may also contain a part corresponding to the cat's ear and to the cat's leg, etc.
 
-2. How does the concept of agency differ from freedom in terms of being empirically observable and coming in degrees?
+The fact that sentences, unlike graphic representations, are digital structures is a consequence of the fact that the former, unlike the latter, have a conventional component. The reason for this is a subtle one. But it's worth stating, since it shows how deeply wrong the picture-theory is and since, in so doing, it reveals a lot about language.
 
-3. Explain Freud's insight about how rationalization reduces agency by creating opposing unconscious forces.
+Let D1 be some random photograph of a person smiling. D1 isn't a symbol of a language. But that could easily change. For this to happen, some convention would have to arise whereby it had a fixed a meaning- whereby it meant, for example, that people are sometimes are happy, and the same thing mutatis mutandis happens in connection with each of several other photographs. So for example, there is some photograph D2 of a person who is crying, and some convention is created whereby D2 means that people are sometimes unhappy; and so on. Let L be the language defined by the totality of these conventions.
 
-4. How does the agency framework help us better understand the distinction between ego-syntonic and ego-dystonic mental illness?
-
-5. Why is psychological integration necessary for robust agency, and how does rationalization undermine it?
-
-6. How does the agency framework help us understand human development from infancy through adulthood?
-
-7. Explain how the shift from freedom to agency changes how we think about values and their relationship to action.
-
-8. Why might agency be a more useful concept than freedom for clinical practice and personal development?
-
-MULTIPLE CHOICE QUESTIONS
-
-1. The lecture suggests that the concept of freedom should be:
-
- a) Further refined philosophically
-
- b) Replaced with the concept of agency
-
- c) Combined with determinism
-
- d) Understood as all-or-nothing
-
-2. According to the agency framework, rationalization:
-
- a) Enhances our freedom of choice`
+Even though D1 is an image, it isn't functioning as an image so far it's functioning as an expression of`
     },
     {
       id: "section-17",
       title: "Section 17",
-      content: `b) Reduces our capacity for intentional action
+      content: `L. The fact that D1 is a picture of a smiling person may obviously make it easier for people to remember that, in L, D1 means that people are sometimes happy. But it won't be what it is for D1 to bear that meaning, or any other, in L. The character "0" is an unfilled hole and can thus be taken as graphic representation of emptiness.
 
- c) Has no effect on agency
+But so far as, "0" is such a representation, that isn't what it is for it to denote the integer preceding the number one. The same point mutatis mutandis holds of D1.
 
- d) Increases psychological integration
+Also, D1 doesn't graphically represent the fact that people are sometimes happy; it graphically represents the tenuously related fact that, on some one occasion, some one individual was happy, along with various other specific facts about that person's appearance that have nothing to do with anyone's being happy. So isn't by virtue of graphically representing the fact that people are sometimes happy that, when functioning as a sentence of L, D1 describes that fact.84
 
-3. The relationship between agency and consciousness is:
+So far as D1 is a sentence of a language, what it actually picks out is irrelevant; the various
 
- a) Agency requires complete conscious control
+nuances of the smiling gentleman's face are irrelevant. In general, its internal structure is irrelevant. Considered as an expression of L, it has no internal structure. (It is what philosophers of language call a semantic primitive. A semantic primitive," or primitive symbol," is one that doesn't consist of other symbols and that, so far as it is an expression of a language, thus has no internal structure.) For exactly similar reasons, each of the other photographs composing L is, when considered as an expression of L, devoid of internal structure and thus, in the most extreme way possible, not like a graphic representation.
 
- b) Agency requires integration of conscious and unconscious processes
+We must make one more point before we can close the argument. Let N be a photograph of a bolt of lightning, and suppose that N is the L-translation of the English expression "it is not the case that." So if S is the L-translation of "grass is green," NS is the L-translation of "grass is not green." (NS is formed by putting N to the left of S.) Even though NS consists of pictures, it is not itself a picture. Putting two pictures together isn't one picture; it's just two pictures that are next to each other. For exactly similar reasons, if conventions were created whereby the sentences of L could be conjoined, disjoined85, or otherwise combined, the resulting compound sentences would not be pictures.
 
- c) Agency is purely unconscious
+Let us take stock. Not a single one of the simple symbols belonging to L is a graphic representation of the fact that it depicts, and not a single one of the complex symbols belonging to L is a graphic representation of the fact depicted by any one of its components. In general, to the extent that a given thing is functioning as a linguistic expression, it is not functioning as a picture. Things that happen to be pictures cannot function as pictures so far as they are functioning as linguistic expressions or, therefore, as sentences. Thus, Wittgenstein's contention that sentences are pictures of the facts they describe is the antithesis of the truth. In addition to showing that Wittgenstein's picture- theory is false, this shows that any conventional assignment of meaning to any collection of symbols-any language, in other words-necessarily yields symbols that have a unique decomposition into discrete parts. This is obviously, almost tautologically, true of compound symbols; and it's vacuously true86 of non-compound symbols, since no such symbol has any internal structure at all.
 
- d) Agency and consciousness are unrelated
+The picture theory of meaning (continued)
 
-4. Development of agency involves:
+It's not entirely clear why Wittgenstein said that sentences are pictures. But it is clear that this
 
- a) Suddenly achieving full freedom
+contention of his is consistent with this empiricism.
 
- b) Eliminating all unconscious processes
+Empiricism says that all knowledge is observation based. Thus, if you know it, you either (i) sense-perceived it or (ii) you inferred it from what you saw, provided that the inference rule you used is one that is known through sense-perception. (So far as knowledge is obtained with the help of inference rule whose legitimacy can't be authenticated by sense-perception, some knowledge is not perception-based.)
 
- c) Gradual expansion of capacity for self-regulation
+Our sense-perceptions give us pictures. Not all sensory modalities give us visual pictures, of course. Hearing gives us auditory pictures, touch gives us tactile pictures, etc. But perceptual representation is pictorial representation. (In what follows, when I say "see," I mean "see or hear or touch [etc.].")
 
- d) Removing all external constraints
+But much of what we know can't be embodied in images of any kind. (In this context, I'll use the word 'image' not just to still-images, but to moving pictures.) I know that:
 
-5. The lecture suggests that values are best understood as:
+(1) the moon is not made of cheese.
 
- a) Purely subjective preferences
+What would an image of this fact be? An image of a cheesy moon with a big X on it? No. The big X wouldn't be an image at all. Like the word "not," it would be a conventional sign of negation. Whereas a picture of a
 
- b) Judgments about what enhances agency
+cheesy moon would indeed resemble a cheesy moon, a big X doesn't resemble the operation of negation. Nothing could physically resemble that operation, since it isn't something that could possibly be seen or otherwise sense-perceived.
 
- c) Social conventions
+Also, a picture of a cheesy moon corresponds to a lot of different propositions.87 Any such picture will also depict an object having a certain color, shape, etc. Since (1) doesn't anything about the moon's shape or color, it isn't identical with such an image. No proposition is identical with any image, since any image will contain information not contained in the image.
 
- d) Unrelated to agency
+Thus, there are at least some cases where one's knowing of some fact doesn't consist in there being an image in one's mind of that fact. How is the strict empiricist to deal with this? First of all, it's hard to see how sense-perception, which gives us nothing but one image after another, could apprise us of truths that are incapable of being expressed in a strictly imagistic form. For argument's sake, let's concede to the empiricist that it's strictly through perception that I know that the Moon is made of XYZ. How are we to deal with my subsequent knowledge that the Moon is not made of cheese? Obviously that knowledge is largely based on my knowledge that it's made of XYZ. But it can't be entirely based on it. What my senses tell me, at most, is what the moon is made of, not what it isn't made of. So some kind of non-perceptual knowledge is involved in my making the leap from the moon is made of XYZ to the moon is not made of cheese.
 
-ANSWER KEY
-
-Short Answer Model Responses:
-
-1. The increasingly technical modifications needed to preserve the concept of freedom - rejecting alternative possibilities, distinguishing orders of desires, differentiating genuine from rationalized values - suggest we're trying to save a fundamentally problematic concept. Each refinement moves us further from what people actually mean by freedom, indicating we might need a different framework entirely.
-
-2. Agency can be empirically observed through a person's capacity for intentional action in various domains. It naturally comes in degrees - an infant has less agency than an adult, someone with OCD has diminished agency in certain areas. Freedom, by contrast, tends to be conceived as all-or-nothing and is difficult to measure empirically.
-
-3. Freud showed that when we rationalize and repress material into the unconscious, that material continues to operate but now works against our conscious intentions. Rather than achieving freedom through rationalization, we actually reduce our agency by creating unconscious forces that oppose our capacity for intentional action.
-
-4. The agency framework explains why ego-syntonic disorders represent a more fundamental threat - they compromise the very capacity for self-evaluation that agency requires. Ego-dystonic disorders leave this evaluative capacity intact even while impairing the ability to act on it, representing a less severe compromise of agency.
-
-5. Psychological integration means having a unified supervisory structure that can genuinely evaluate and direct mental processes. Rationalization fragments this structure by creating opposing unconscious forces, reducing our capacity for intentional action. Robust agency requires that conscious and unconscious processes work together rather than in opposition.
-
-6. The agency framework sees development as the gradual acquisition of capacity for intentional action and self-regulation. Infants begin with minimal agency and develop it through increasing ability to evaluate and direct their mental states and behavior. This provides a clearer model for understanding human development than concepts of freedom.
-
-7. Rather than seeing values as subjective preferences or moral absolutes, the agency framework understands them as judgments about what enhances our capacity for intentional action. This explains why we can value things we don't immediately desire and why some activities can be more valuable despite being less pleasurable.
-
-8. Agency provides clearer guidance for clinical practice because it's observable, comes in degrees, and suggests specific interventions. Therapists can work to expand client agency by integrating unconscious material, developing capacity for honest self-evaluation, and enhancing psychological integration. This is more practical than abstract questions about freedom.
-
-Multiple Choice Correct Answers:
-
-1. b
-
-2. b
-
-3. b
-
-4. c
-
-5. b
-
-KEY TERMS DICTIONARY
-
-Agency: The capacity for intentional action that comes in degrees and can be empirically observed.
-
-Psychological Integration: The state where conscious and unconscious processes work together rather than in opposition.
-
-Rationalization: A process that reduces agency by creating unconscious forces that oppose conscious intentions.
-
-Supervisory Structure: The internal system that enables genuine self-evaluation and intentional action.
-
-Development: The gradual expansion of agency through enhanced capacity for self-regulation and evaluation.
-
-Value: A judgment about what enhances rather than diminishes agency.
-
-COMPREHENSIVE GLOSSARY (All Terms Alphabetically Ordered)
-
-Adaptive Aspects: Features of mental illness that can potentially enhance rather than diminish functioning.
-
-Agency: The capacity for intentional action that comes in degrees and can be empirically observed.
-
-Agency: The capacity for genuine action based on rational self-evaluation rather than mere reaction.
-
-Agency: The capacity to act based on one's own character, values and reasoning rather than external control.
-
-Agency-Enhancement: Expansion of capacity for genuine self-directed action based on rational evaluation.
-
-Agential Enjoyment: The distinctive satisfaction that comes from exercising and expanding agency.
-
-Agential Enjoyment: The distinctive satisfaction that comes from exercising and expanding one's agency.
-
-Attribution: The relationship between an action and an agent that makes the action properly "theirs."
-
-Authentic Self-Evaluation: Honest assessment of one's motives and desires, as opposed to rationalization.
-
-Authentic Self-Evaluation: Honest assessment of our motives and desires, uncorrupted by rationalization.
-
-Authentic Values: Core principles and preferences that constitute our real selves, distinct from rationalized pseudo-values.
-
-Causal Chain: A sequence of events where each event is caused by previous events and causes subsequent events.
-
-Causal Mechanism: A reliable process by which causes produce their effects according to regular patterns.
-
-Causal Redundancy: When multiple factors could produce the same outcome, making simple counterfactual analysis inadequate.
-
-Causation: The relationship between events where one event necessarily leads to or produces another event.
-
-Character: The stable set of traits, values, and dispositions that influence how a person thinks and acts.
-
-Character: The stable set of values, dispositions, and decision-making tendencies that constitute who someone is.
-
-Character Defect: A trait that diminishes agency but can be rationalized as a virtue.
-
-Character Defect: A trait that diminishes agency but can be rationalized into appearing as a virtue.
-
-Choice-Driven Action: An action that flows from an agent's own decision-making process rather than external force.
-
-Compatibilism: The doctrine that free will is compatible with determinism.
-
-Compatibilism: The view that free will is compatible with determinism, typically assuming conscious decisions are genuine sources of action.
-
-Compulsion: External force or control that overrides a person's own decision-making process.
-
-Compulsion: External force or control that overrides an agent's own decision-making process.
-
-Conscious Awareness (W): The moment when subjects report first becoming aware of their decision to move.
-
-Conscious Decision: What we experience as making a choice, which Libet shows to be awareness of a choice already made.
-
-Conventional Values: Traditional or socially imposed standards that may demand self-diminishment.
-
-Corrupted Second-Order Desires: Higher-order desires that have been warped to become vehicles for lower impulses.
-
-Counterfactual Analysis: The view that causation and freedom require that things could have happened differently.
-
-Determinism: The doctrine that nothing is uncaused and all events follow necessarily from prior events according to natural laws.
-
-Deterministic Mechanism: A reliable causal process that produces predictable outcomes given initial conditions.
-
-Development: The gradual expansion of agency through enhanced capacity for self-regulation and evaluation.
-
-Divine Foreknowledge: God's perfect knowledge of future events, including human actions, before they occur.`
+Here is a related, if not quite coincident, argument. Even if image-resistant facts (e.g., those expressed by negative statements) are learned in a strictly perceptual manner, the mental states that mediate our knowledge of them are not themselves images. The information borne by those mental states must be encoded in some non-iconic form. This means that, at some point, pictorial information was converted into non-pictorial information. But if our post-perceptual mental states are to be knowledge, that conversion process must be a legitimate one. In other words, it can't, when given pictorial input x, yield some output y that is inconsistent with x. Moreover, we must know that the conversations being made are legitimate. For argument's sake, suppose that I don't know that, given my (let us assume) strictly perception-based knowledge that the moon is made of XYZ, it is correct to hold that the moon is not made of cheese. In that case, to the extent that my belief that it isn't made of cheese is based on my knowledge that it's made of XYZ, that belief isn't knowledge. If, on the basis of testimony given by a source of whose reliability I have knowledge, I believe P, I don't know that P. Uncorroborated testimony, though a helpful initial step on the road towards knowledge, is not itself enough for knowledge. For much the same reason, if I don't know the rules that permit the derivation of non-perceptual beliefs from strictly perceptual ones, then, even if my post-perceptual beliefs are correct, they aren't knowledge.`
     },
     {
       id: "section-18",
       title: "Section 18",
-      content: `EEG: Electroencephalogram, a method for measuring electrical activity in the brain.
+      content: `But there couldn't possibly be any strictly perceptual way of knowing that those conversions were accurate. Those conversions, by supposition, turn pictures into non-pictures. So our knowledge of their existence, or (a fortiori) of their legitimacy, cannot itself be strictly pictorial. This is the real problem with empiricism. The rules that we use to make inferences from perceptual experience cannot themselves be learned strictly on the basis of sense-perception. This will be discussed at length in Chapters 12 and 13.
 
-Ego-dystonic: Mental symptoms that the person experiences as alien intrusions and recognizes as symptoms.
+The picture theory of meaning (continued)
 
-Ego-syntonic: Mental symptoms that the person identifies with and doesn't recognize as symptoms.
+Interestingly, Wittgenstein made points at least vaguely like these in the TLP:
 
-Emotional Architecture: The innate psychological structure that shapes our emotional responses and constrains what values we can genuinely accept.
+In order to be ale to represent logical form, we should have to be able to station ourselves with sentences outside logic, that is to say outside the world. Sentences cannot represent logical form: it is mirrored in them. What finds its reflection in language, language cannot represent. What expresses itself in language, we cannot express by means of language. Propositions show the logical form of reality. They display it.
 
-External Causation: Causes that bypass or override an agent's decision-making process.
+Thus, if one proposition 'fa' shows that the object a occurs in its sense, two sentences 'fa' and 'ga' show that the same object is mentioned in both of them. If two sentences contradict one another, then their structure shows it; the same is true if one of them follows from the other. And so on. What can be shown, cannot be said.90
 
-External Forces: Causes that bypass an agent's decision-making processes.
+Wittgenstein seems to be saying that we cannot correctly describe the relationship holding between our words and the facts they describe. But, if correct, that point itself describes that relationship, calling into question its own coherence.91
 
-First-order Desires: Direct desires for objects or actions (e.g., wanting to eat).
+In any case, contrary to what Wittgenstein says, we can identify the logical forms of our own utterances. To identify the logical form of a statement is simply to make it clear what it means. We can do this. We do it all the time. We do it whenever we put the meanings of words into words. There are some qualifications to this, as we'll see in a moment, but none that redound to the credit of Wittgenstein's point.
 
-First-order Desires: Immediate desires for objects or actions (e.g., wanting to eat).
+Wittgenstein's assertion that "what can be shown, cannot be said" is obviously false. I tell you that I can do fifty push-ups. (I say "I can do fifty push-ups.") You don't believe me. So I show you that I can do fifty push-ups. (I do fifty push-ups in front of you.) And, as we just saw, that principle holds no less in connection with logical forms than in connection with a person's ability to do push- ups.
 
-fMRI: Functional magnetic resonance imaging, a technique for measuring brain activity through blood flow changes.
+Echoing what we said earlier, although it isn't clear why Wittgenstein made these claims or what he meant by them, it is clear that they're consistent with his view that sentences are pictures of reality. A picture cannot picture itself. If P is a picture of a seagull, P can't contain a picture of itself, for the simple reason that nothing can be a proper part of itself. Of course, P might be a picture of a big seagull and also of some other, much littler, but otherwise identical seagull. But the big-seagull part of the picture isn't identical with the little-seagull part. The big part contains two seagull-images; the little part only contains one.
 
-Frankfurt Scenario: A thought experiment showing how an action can be free even when alternative possibilities are blocked.
+So if sentences were pictures, then a given sentence S1 couldn't be a picture of itself. But it doesn't follow that some other picture S2 couldn't be a picture of S1. Nor, therefore, does Wittgenstein's much stronger claim that nothing-no picture, no set of pictures, no sentence-could depict or otherwise represent the rules by which true statements are paired off with the facts they described.
 
-Freedom: The capacity to act on genuine values rather than rationalized pseudo-values.
+Wittgenstein's claim that we cannot state the logical forms of sentences, which collapses into the brazenly false claim that we can never say what our words mean, has two roots. One of them is his just-discussed belief that sentences are pictures of the facts they describe. The other is his not yet discussed belief that, if it's assumed that we can say what our words mean, we have no way of dealing with paradoxes like the following. If somebody says:
 
-Freedom: The condition of acting from genuine values that enhance rather than diminish agency.
+(i) "what I'm saying is false,"
 
-Freedom of Action: The condition where an action expresses an agent's choice, regardless of whether alternatives existed.
+what that person is saying is true if it's false and false if it's true. Wittgenstein was keenly interested in this paradox during his pre-Tractarian years.92 His reaction to it, it appears, was to hold that any attempt to articulate semantic rules would self-refer in the same the same paradox-engendering way as
 
-Genuine Acceptance: True integration of values into one's psychological structure, as opposed to mere behavioral compliance.
+(i) and, therefore, that such rules cannot possibly be put into words.93
 
-Genuine Self-Evaluation: Honest assessment of our motives and desires, as opposed to rationalization.
+But this is not good reasoning. When I say, while pointing at the person exiting the limo, "that's Mick Jagger," I'm stating a semantic rule. There is some individual x such that I am saying (correctly, we may suppose) that it's a semantic rule that "Mick Jagger" refers to x. The semantic rule I'm expressing doesn't self-refer and isn't otherwise defective.
 
-Genuine Values: Authentic judgments about what enhances agency, as opposed to rationalized desires.
+As we'll see in a moment, there are reasons to think that some semantic rules cannot be put into words, and Wittgenstein seems to have had at least a vague knowledge of some of them. But given only that some semantic rules can be put into words, it obviously doesn't follow, contrary to what Wittgenstein seems to have inferred, that no semantic rules can be put into words.
 
-Hierarchical Desires: The structure of having both first-order and second-order desires about those desires.
+Having spent pages dwelling on the shortcomings of the Tractatus, let's end this section on a
 
-Initial Conditions: The state of all relevant variables at the starting point of prediction.
+sunnier and more constructive note.
 
-Inevitability: The certainty that an event will occur given prior conditions, distinct from external compulsion.
+It is often said that truth is indefinable. Many people say this without meaning anything by it. Setting such people aside, those who say this seem to mean either (a) that it cannot be said what it is for a proposition to be true or (b) that no language can state all of the semantic rules that belong to it.
 
-Integration: The psychological state where conscious and unconscious processes work together rather than in opposition.
+is false. (See Chapter 3.) But (b) is true.
 
-Internal Causation: Causes that work through an agent's own psychological mechanisms and choices.
+isn't the absurd claim that no language can state any of its own semantic rules. Every time one uses an English sentence to define an English expression, one is expressing a semantic rule of English in English. But neither the English language, nor any other, can state all of its own semantic rules. Here's why.
 
-Intervention Effects: Changes to a system caused by the act of observing or measuring it for predictive purposes.
+Given any meaningful expressions, there is a semantic rule r saying what s's meaning is. (This is trivially true. A meaningful expression is one that has a meaning and is therefore one such that some true proposition identifies that meaning; and any proposition that, like r, says what an expression means is ipso facto a semantic rule.) So, for example, supposing that x is Dick Cheney, there is a semantic rule of English to the effect that "Dick Cheney" refers to x. That rule is not itself a sentence. But it can obviously be expressed by a sentence (as we just saw). In general, semantic rules, though often capable of being expressed by sentences, are not themselves sentences. In light of this fact, suppose for argument's sake that, for each semantic rule of English, there is a sentence of English that expresses that rule. Let K be the class containing all and only sentences of English that correctly express actual semantic rules of English. Let SRE be the conjunction of all of K's members. SRE is a true and therefore meaningful sentence of English. SRE is also a member of K. After all, K contains every sentence that correctly says what is meant by at least one expression of English, and SRE obviously satisfies that requirement. But given that SRE is also a conjunction consisting of all of K's members, it follows that SRE is one of its own conjuncts. No conjunction can be one of its conjuncts. (The conjunction "snow is white and snow is white" is not one of its own conjuncts, since that sentence is a conjunction, whereas "snow is white" is not.) We're forced to reject this obvious truth if we grant the supposition that the English language can express each of its own semantic rules. Therefore, the English language cannot state all of its own semantic rules. Given any language L, what we just said about English is true of L. Thus, no language can express all of its own semantic rules.94
 
-Moral Responsibility: The condition of being properly subject to praise or blame for one's actions.
+6.0 (ii) revisited: formal truth ≠ analytic truth`
+    },
+    {
+      id: "section-19",
+      title: "Section 19",
+      content: `One of the main contentions of the TLP is that all entailment is formal entailment. One statement entails another if, supposing the first is true, the second couldn't possibly be false. So "Smith is a triangle" entails "Smith has more than one side." One statement, S1, formally entails another sentence, S2, if the statement "if S1, then S2" is a formal truth. A statement is a formal truth if every statement having the same form as it is true. Thus,
 
-Natural Laws: The consistent rules or principles according to which events in the universe occur and interact.
+(1) "If Smith is in the barn, then it is not the case that it is not the case Smith is barn"
 
-Neural Processes: The brain activities that actually initiate actions before conscious awareness occurs.
+is a formal truth, since every statement of the form
 
-Pathological Traits: Characteristics that can be either harmful or beneficial depending on context and degree.
+(2) "if P, then it is not the case that it is not the case that P"
 
-Person: A being capable of forming and acting on second-order desires through rational self-evaluation.
+is true.
 
-Practical Prediction: The actual ability to forecast future events, as opposed to theoretical predictability.
+(1) is also an example of a formal entailment. It's a formal entailment since it's a formal truth that is also an entailment. (It's an entailment since it's to the effect that that one statement (Smith is in the barn) entails another (it is not the case that it is not the case that Smith is in the barn).
 
-Predictability: The ability to forecast events or actions based on knowledge of causes and current conditions.
+In the TLP, Wittgenstein asserted that all entailments are of this kind. He was aware that there are apparent counterexamples to this. For example:
 
-Predictability: The practical ability to forecast future events based on knowledge of causes and current conditions.
+"Brown is a bachelor"
 
-Psychological Integration: The state where conscious and unconscious processes work together rather than in opposition.
+entails that
 
-Psychological Mechanism: The reliable mental processes by which character traits and values produce decisions and actions.
+"Brown is unmarried."
 
-Psychological Structure: The organized system of values, judgments, and decision-making capacities that constitute an agent's will.
+But
 
-Psychological Viability: The degree to which a value system aligns with our emotional architecture and can support psychological wellbeing.
+"if Brown is a bachelor, then Brown is unmarried"
 
-Pseudo-values: Rationalized preferences that we've talked ourselves into accepting but don't genuinely endorse.
+isn't formally true, since it has the same form as
 
-Pseudo-Values: Corrupted higher-order desires that merely validate rather than evaluate impulses.
+"if Brown is a bachelor, then Brown is a cupcake"
 
-Rational Self-Evaluation: The capacity to assess and judge our own desires and motivations.
+which isn't true at all.
 
-Rationalization: The process of warping higher-order desires to validate rather than evaluate lower impulses.
+Wittgenstein deals with this by saying, very reasonably, that (4) is synonymous with:
 
-Readiness Potential (RP): The pattern of brain activity associated with preparation for voluntary movement.
+(4F) "Brown is unmarried and Brown is an adult and is male."
 
-Real Self: The stable set of character traits and values that we genuinely identify with upon honest reflection.
+Unlike (4), (4F) does formally entail (5). According to Wittgenstein, all apparent counterexamples to his thesis that all entailment is formal entailment can be dealt with similarly.
 
-Relational Objectivity: The quality of being relative to individuals while still representing objective facts.
+But the method used in connection with this particular counterexample fails in connection with others. The sentence:
 
-Retrodiction: The process of inferring past causes from present effects.
+"Brown is a circle"
 
-Second-order Desires: Desires about our desires (e.g., wanting to want healthy food).
+entails
 
-Self: A mind that has developed a supervisory structure capable of evaluating and regulating its own processes.
+"Brown is a two-dimensional figure."
 
-Self-Awareness: The conscious experience of deciding, which follows rather than precedes the actual decision-making process.
+(8) doesn't formally entail (9). Wittgenstein must say that (8) is synonymous with something that does
 
-Self-Deception: The active process of convincing oneself that character defects are actually virtues.
+formally entail (9). If there is any sentence that is synonymous with (8) that formally entails (9), it's:
 
-Self-Deception: The process of convincing oneself that character defects are virtues.
+"Brown is a closed, planar, two-dimensional figure of uniform curvature."
 
-Self-evaluation: The capacity to assess one's own mental states and distinguish legitimate from illegitimate content.
+does indeed formally entail (9). But (10) isn't synonymous with (8). That's why:
 
-Spectator Model: The view suggested by Libet's results that consciousness observes rather than makes decisions.
+"Brown is a circle iff Brown is a circle"
 
-Supervisory Structure: The internal regulatory system that enables evaluation of mental states and processes.
+is trivial, and says nothing, whereas
 
-Supervisory Structure: The internal regulatory system that enables genuine agency and can be compromised in ego-syntonic disorders.
+"Brown is a circle iff Brown is a closed, planar, two-dimensional figure of uniform curvature"
 
-Supervisory Structure: The self-regulatory system that evaluates mental states according to values.
+is non-trivial.
 
-System Complexity: The number and interaction of variables that must be known to make accurate predictions.
+(12) doesn't say anything about the spatiotemporal world. (12) is logically true; its truth is guaranteed by the structures of the concepts composing it. Unlike (11), (12) isn't a tautology. Therefore, it's a non-tautologous, non-empirical truth. Thus, there are non-formal entailments, and this entails that the Tractarian conception criterion of meaningfulness advocated false. ("Tractarian" is the adjective form of "the Tractatus Logic-Philosophicus.")
 
-Temporal Sequence: The specific timing pattern of events from RP onset through conscious awareness to movement.
+Why the concept of a logically perfect language is an incoherent one (This section is hard and should be skipped on a first reading.)
 
-Ultimate Self-Creation: The impossible condition of being the uncaused cause of one's own character.
+Let's say that a sentence is perspicuous iff its logical and grammatical forms coincide; and let's say
 
-Value: A judgment about what enhances agency and the capacity for rational self-direction.
+that a language is logically perfect iff every sentence belonging to it is perspicuous.
 
-Value Judgment: A cognitive assessment of how activities or ways of being affect agency.
+Many non-perspicuous sentences belong to any given natural language (e.g., English, Swedish). One of Wittgenstein's objectives in the TLP is to identify the conditions that a language must meet if it is to
 
-Value System: An integrated set of principles and judgments about what is worthwhile or important.
+be logically perfect. Wittgenstein takes it for granted that the concept of such a language is a coherent one. Influenced by the TLP, many early analytic philosophers longed for the day when logically perfect languages would replace natural languages.95
 
-Values: Authentic judgments about what enhances agency.
+In any case, the concept of a logically perfect language is not a coherent one. It isn't possible for everything about a sentence's meaning to be reflected in its grammar. And if per impossibile there did exist a logically perfect language, it would be expressively inferior to English, Arabic, and every other natural language. In other words, there would be much that couldn't be said in it that could be said in any natural language.
 
-Voluntary Movement: A self-initiated action that subjects experience as freely chosen.`
+More precisely, for each analytic truth capable of being expressed by a logically perfect language, there would be infinitely many that it could not express and that English or Spanish or any other natural language could express. At the same time, there would be no truth that could be expressed in a logically perfectly language that couldn't also be expressed in a logically imperfect language, such as English. Let us now discuss why this is so.
+
+A sentence belonging to a logically perfect language is analytically true iff it is formally true. Why is this? A sentence is perspicuous only to the extent that its grammatical form makes it clear what it says and, therefore, makes it clear what it entails and what entails it. Bearing this in mind, let S be some arbitrary sentence. To the extent that there are false sentences, or true but non-analytic sentences, that have the same surface-structure as S, S's grammatical and logical forms don't coalesce and, consequently, S isn't perspicuous. So an analytically true sentence is perspicuous only if all other sentences having the same form are true. A sentence is formally true if, and only if, any sentence having the same form is true. Thus, a sentence is perspicuous only if formally true. Therefore, a sentence belonging to a logically perfect language is analytic only if formally true.96
+
+A consequence is that, for each analytic truth that a logically perfect language can express, there are infinitely many that it cannot express. Given any object x and any property phi, the sentence
+
+(S1) ‹if x has phi, then it is not the case that x does not have phi›
+
+is perspicuous, the reason being that nothing having the same surface structure is false. But the superficially similar sentence
+
+(S2) "given any object x and any property phi, x has phi, then x does not have phi"
+
+is not perspicuous, since it has the same surface structure as:
+
+(S3) "given no object x and no property phi, if x has phi, then x does not have phi,"
+
+which is false. Formally true sentences are instances of informally true universal generalizations. So no sentence capable of expressing such generalizations is logically perfect.
+
+This point has important and often overlooked consequences. Making a valid deductive inference involves recognizing an entailment. Your deductively inferring Q from P involves your recognizing that P entails Q. The only way to know that some formal entailment is valid is to know that some informal entailment is valid. You know that:
+
+(S4) "Jerry is in Richmond,"
+
+entails that
+
+(S5) "it's not the case Jerry is not in Richmond"
+
+And that's why, if you accept S4, you also accept S5.
+
+But how do you know that S4 entails S5? Is it on the basis of your knowledge that all instances of S1 are true? No. How could you possibly know that all of S ' s instances were true unless you could
+
+1
+
+recognize the
+
+validity of specific inferences that it licenses (such as the inference from S4 to S5)? If you couldn't recognize that S4 entailed S5, then you obviously wouldn't have any idea why all of S1's instances were correct.
+
+This is not, at least not merely, a psychological point. It's a psychological corollary of an epistemological point, which, in its turn, is a corollary of a logical point. The reason why every instance of S1 is true-the reason, in other words, why S2 is true-is that and each of infinitely many specific inferences, of which the inference from S4 entails S5 is but a single instance, is valid. There are, quite literally, infinitely many informally valid inferences for each formally valid one. So Wittgenstein's allegation that all entailments are formal entailment is not feasible.
+
+Hempel on the limits of strict empiricism
+
+Carl Hempel (1905-1997) provided the following rigorous proof of the falsity of strict empiricism97:`
+    },
+    {
+      id: "section-20",
+      title: "Section 20",
+      content: `(HA98) If x's length is one unit, and y's length is 2 units, then there is no length L such that
+
+L goes an integral number of times into both x's length and y's length.
+
+Measurement is comparison with respect to some standard. To compare x's length with y's-in other words, to establish their comparative lengths-it is necessary to find some third body z that is taken as a standard99; and the relative lengths of x and y are determined by finding out how many z-length segments each of x and y can be divided into. (If one object can be divided into exactly twice as many z-length segments as some other, then the first is twice as long as the second.) Supposing that x's length is one unit and y's length is 2 units, it follows that there is no body z such that both x and y can be divided, without remainder, into z-length segments.100 It follows that, if an object's length is given by an irrational number, that fact cannot be known directly on the basis of measurement. It therefore follows that there is no strictly observation-based way to know that y's length equals x's multiplied by 2. In general, for any two objects x and y, there is no strictly observation-based way of establishing that x's length (or mass, etc.) is incommensurable with y's. (Two magnitudes M1 and M2 are incommensurable if there is no magnitude M3 that goes an integral number of times into both M1 and M2.)
+
+The branch of mathematics known as "calculus" is integral to modern physics. Calculus is the study of continuously changing quantities. In order to describe physical phenomena in a way that makes it possible to use the powerful techniques of the calculus to describe them, it must be assumed that they change continuously and, therefore, that the degree to which a given phenomenon has a given property may sometimes be given by an irrational number.101 Thus, it must be assumed that, at certain junctures, the velocities, lengths, masses, etc., of objects are sometimes given by irrational numbers. But there cannot, as we've seen, be strictly observational grounds for believing that a given object's length is 2 meters (or that its mass is 2 lbs, etc.).102 Since the calculus can't be applied to observable phenomena unless it's assumed that things' weights, velocities, etc., can at least sometimes assume values given by irrational numbers, it follows that modern physics integrally depends on an assumption for which there cannot be possibly a strictly observational basis. This means that strict empiricism is inconsistent with the obvious fact that modern physics is a source of knowledge.
+
+The sub-disciplines composing philosophy
+
+The main branches of analytic philosophy are: the philosophy of mind, the philosophy of language, the theory of knowledge (also known as "epistemology"), philosophical logic, metaphysics, the philosophy of science, ethics, political philosophy, legal philosophy, the philosophy of religion, and formal logic.
+
+It should be kept in mind that these sub-disciplines overlap a great deal. So, for example, the question "do we think in words?" belongs to the philosophy of mind and to the philosophy of language.
+
+The philosophy of mind
+
+This discipline studies the concepts in terms of which the mind is to be understood. Among the questions it tries to answer are:
+
+Must one know a language in order to think? Or, on the contrary, is the ability to think a prerequisite to learning and operating with a language?
+
+Given that knowing a language seems to enhance some kinds of thinking, how does it do so?
+
+What are beliefs, and what is the difference between believing that Smith is tall and wondering whether he is tall?
+
+How is perception related to thought?
+
+Can perceptual content (i.e., what our eyes, ears, etc., tell us) be put into words? Or is there a fundamental difference between the kind of information that our sense-perceptions bear, on the one hand, and the kind of information that can be encoded in sentences, on the other?
+
+To what extent is self-knowledge possible? What factors limit our ability to know ourselves? How is mind related to brain? Are they one? If not, what is the relationship between the two? Can there be unconscious mental activity?
+
+The philosophy of language
+
+This discipline studies the nature of linguistic meaning. Among the questions it tries to answer are:
+
+What does it mean to say that "Smith" refers to Smith? What, in general, does it mean to say of an expression E that it picks out some object O?
+
+How do the meanings of a sentence's parts relate to the meaning of the sentence as a whole?
+
+Do expressions like "some person," "all people," and "no people" function in the same way as proper names (e.g., "Smith," "Jones")-that is, do they pick out objects? Or do they function in some other way? If so, what is that other way?
+
+To what extent can the nature of linguistic meaning in general be understood in terms of the relationship that proper names bear to their referents (the things they refer to)?
+
+How is it that statements about non-existent things can be meaningful?
+
+How is the meaning of a sentence related to the thoughts of those who utter that sentence? Do the thought and the meaning coincide? Or is the relationship more indirect? If so, what exactly is that relationship?
+
+How well does the grammatical structure of a sentence reveal what it actually says? Does grammar distort meaning or, on the contrary, is grammar a good guide to logical form?
+
+Are the semantic rules of a language (e.g., the rule that, in English, "snow" refers to a certain crystalline substance) known to speakers of that language? Or are such rules merely idealized descriptions of the behavior of those speakers?
+
+Assuming, as some authors do, that there is an innately known language-like code in which we think, to what extent does that code resemble the languages (e.g., English, Spanish) that we learn?
+
+How "transparent" is meaning? To what extent do users of a language know what sentences of
+
+that language mean?
+
+What does it say of a sentence S that its literal meaning is P? What exactly is "literal" meaning? How is it different from communicated meaning? Is literal meaning merely an idealized description of communicated meaning, or is it something else entirely?
+
+Epistemology
+
+This discipline studies the nature and extent of knowledge. Among the questions it tries to answer are: What is knowledge? What separates those beliefs that are knowledge from those that are not?
+
+What can be known and what cannot be know? (Can it be known what cannot be known? Or is it incoherent to give an affirmative answer to this question?)
+
+Can we know about the future, the past, the possible but not actual, the impossible?
+
+Can we know about the external world, or is knowledge limited to our own mental states? Can there be knowledge of things that are not in space or time (e.g., numbers) and, if so, how?
+
+Are there any self-evident or self-justifying beliefs? Or must all justified beliefs be justified by beliefs other than themselves?
+
+What is the structure of the totality of our knowledge? Are there some pieces of knowledge from which all the rest are derived or are all pieces of knowledge interdependent?
+
+Is there a fundamental difference between knowledge of spatiotemporal fact (e.g., knowledge that there is a dog over there) and knowledge of purely conceptual truths (e.g., that there are laws only where there is government)? Or is the one kind of knowledge to be reduced to, or modeled on, the other?
+
+Philosophical logic
+
+This discipline studies bearing-relations holding among sentences and propositions (sentence- meanings). Among the questions it tries to answer are:
+
+What is it for one statement to entail another? (P "entails" Q if there is no way that Q can be false if P is true.) Are there different kinds of entailment? If so, are some more central to reasoning than others?`
+    },
+    {
+      id: "section-21",
+      title: "Section 21",
+      content: `Are inferences concerning the non-existent (e.g., "if Zeus is tall, then at least one god is tall") to be modeled on inferences concerning the existent (e.g. , "if Bush is tall, then at least one president is tall")? Are the same principles involved? Or is the non-existent logically sui generis?
+
+To what extent can reasoning be "mechanized"? In other words, to what extent is it possible to
+
+produce rules that can be applied without any thought that will do the work of a rational being?
+
+How are statements about what might have been, but is not, to be understood? Are they similar, logically, to statements about what is? Or do they have an altogether different logical form?
+
+Are all statements either true or false? Or are some "indeterminate"-that is, is there a "gray zone"? And are there "degrees" of truth?
+
+Metaphysics
+
+This discipline studies the nature of possibility and necessity, of causal relations between objects. It also studies the nature of identity and the conditions that something must meet in order to exist. Among the questions it tries to answer are:
+
+Under what circumstances are two distinct objects (e.g., my heart and my liver) both parts of some one thing?
+
+What is it for an inanimate object to endure in time?
+
+What is it for an animate object (e.g., a person) to endure in time?
+
+Is there a sense in which fictional objects (e.g., Fred Flintstone) exist? Or is there no need to assume the existence of such things to account for the facts of experience?
+
+What is it for something to be possible but not actual? What is it for something to be actual not necessary? What is it for something to be necessary?
+
+Are necessity and possibility properties of objects (e.g., rocks, trees, people) or of statements? Are there things that are not in space or time?
+
+Must things have causal properties in order to exist?
+
+The philosophy of science
+
+This discipline studies the logical structure of scientific endeavor and of its results. Among the questions it tries to answer are:
+
+What is the difference between statements that are scientific and those that are not? What are explanations? What is it to explain an event?
+
+Is there a sharp distinction between theoretical and non-theoretical claims? Or, as some claim, are
+
+all statements (even basic ones; e.g., "that's a rock") "theory-infected"?
+
+Given two rival theories, how is it to be determined which, if either, is the more accurate one? And supposing that one of them is the more accurate one, does it follow that it is the better one? In other words, is accuracy the only virtue a theory can have or, if not the only such virtue, then the most important one? Are theories to be evaluated (judged correct and, what may or may not be different, judged good) entirely in terms of their degree of agreement with the experimental data? Or are other factors (e.g., simplicity, comprehensiveness) involved?
+
+What is the nature of measurement? Are there any reasons, other than reasons of convenience, for taking certain objects or events as standards? To use Hempel's (1952) example, is one wrong to take the Dalai Lama's heartbeat as a periodic process, or is it simply inconvenient to do so?
+
+What is the nature of probability? What does it mean to say that there is a 50% chance that the coin will come up heads? Is probability just "a measure of ignorance," as Laplace (1749-1827) said? Or is it an objective fact about the world?
+
+Do theoretical entities (e.g., protons, unconscious urges) exist in the same way as non-theoretical entities? Or are theoretical entities merely devices that we use to make sense of non-theoretical entities? Are statements about "protons" just abbreviated statements about meter readings and other macroscopic phenomena?
+
+Is there a fundamental difference between explanations in the physical sciences and explanation in the psychological sciences?
+
+Under what circumstances is a hypothesis (a tentative theory) to be rejected? Is a single disconfirmatory result enough? If not, what else is needed?
+
+Must all theories be "deterministic"? (In other words, must they posit a rigid causal order?) (Einstein said "yes." Peirce (1839-1914) said "no.") Others, e.g., Ernest Nagel (1901-1985), say that the question is ill-formed, the reason being that whether a system is deterministic or not depends on how it is described. Determinism is a logical property of statements, in Nagel's view, not of the events they describe.103 A consequence is that a given domain may be deterministic with respect to one method of describing it, but indeterministic with respect to some other method of describing it. Thus, the sub-atomic realm, Nagel says, is indeterministic with respect to the concepts in terms of which we describe the macroscopic realm; but it doesn't follow, Nagel plausibly alleges, that it is indeterministic tout court.)
+
+Should science attempt to state how the world actually is? (Karl Popper says "yes.") Is that even possible? (Kant says "no.") Or should science confine itself to producing theories that are consistent with the data, while leaving it open whether those models are actually correct or not? (Bas van Fraassen says "yes."104) (A "model" is a description of a hypothetical structure that, if existent, would account for the relevant data.)
+
+Ethics
+
+This discipline studies the nature of good and bad, right and wrong. Among the questions it tries to answer are:
+
+What is it for an act to be good and what is it for an act to be bad?
+
+Are there absolute standards of goodness and badness, or do such standards vary from culture to culture?
+
+Are there in fact such things as right and wrong?
+
+Are any of our beliefs about the rightness and wrongness of things correct? Or are all our ethical beliefs illusions of some kind?
+
+How are ethical statements (e.g., "killing is wrong") related to non-ethical, purely "descriptive" statements (e.g., "killing tends to undermine social order")?
+
+To what extent can one have ethical obligations towards oneself?
+
+Does one have ethical obligations towards others, or should one be concerned only for oneself?
+
+To what extent, if any, is it in one's interest to act morally?
+
+Political philosophy
+
+This discipline studies the nature of law and government. It tries to identify the conditions under which laws and other political institutions are legitimate. Among the questions it tries to answer are:
+
+What is a law?
+
+What is the difference between a law and, for example, a gunman's threat?
+
+What is a government? What is the difference between a government and, for example, the Mafia? How are legal rights related to ethical rights?
+
+Can there be legal systems that are entirely evil, or must something embody at least a minimum of morality to qualify as a legal system?
+
+Under what circumstances, if any, is one ethically entitled to break the law?
+
+Under what circumstances, if any, does a government have the right to thwart the interests of its subjects?
+
+What is the most just form of government?
+
+Which kinds of freedoms ought a government to protect?
+
+The philosophy of religion
+
+This discipline studies the nature and existence of God and the conditions under which religious belief is justified. Among the questions it tries to answer are:
+
+If there is a God, why do bad things happen?
+
+Given that God, being invulnerable, cannot know what it is like to be vulnerable, how can God know everything?
+
+If God knows everything, including what we will do, how can we have free will? If God is responsible for everything, how we can be justly punished for what we do?
+
+Does God have a gender? Does it make sense to say that God is a male as opposed to a female? Is there a God? If so, how is that to be established?
+
+Is religious knowledge acquired in the same way as non-religious knowledge, or are different cognitive vehicles involved? And, once acquired, is religious knowledge (supposing such a thing to exist) to be justified in the same way as non-religious knowledge, or are different standards involved?`
+    },
+    {
+      id: "section-22",
+      title: "Section 22",
+      content: `What is the relationship between religion and morality? Can there be valid moral codes in a Godless world?
+
+Can a genuinely religious person believe that God herself is bound by ethical principles? Or, in holding that God is so bound, is one undermining God's authority and, therefore, abjuring a religious outlook?
+
+Is acceptance of some kind of religion necessary for a meaningful life?
+
+If there is an after-life of never-ending bliss, wouldn't we get bored? Does fulfillment involve adversity? Isn't struggle what gives life meaning?
+
+Formal logic (a.k.a. mathematical logic, a.k.a. symbolic logic)
+
+(What follows is very compressed and should probably be skipped on a first reading.) This discipline studies formal truth. The concept of "formal truth" is discussed in Chapter 7 and a precise definition of it is given in Chapter 18. But here's the basic idea.
+
+S2 formally follows from S1 if the sentence ‹if S1, then S2› is formally true. A sentence is formally true if every sentence of the same form is true. A sentence has the same form as a given sentence if there is some open-sentence of which both sentences are instances. An open sentence is a sentence- like expression that contains a free variable and is thus neither true nor false. Synonyms of "open- sentence" are "statement-form" and "sentence-schema."105 An open-sentence is formed by taking an actual sentence and replacing one of the expressions in it with a variable. "Two is even" is an actual sentence. If the "two" is replaced with a variable, the result is ‹x is even›, which is an open sentence.
+
+An instance of a sentence-form is what results when the variables in that sentence-form are replaced with constants. Thus, "two is even" and "five is even" are instances of ‹x is even.› To interpret an open-sentence is to replace the variables in it with constants, and an interpretation of an open-sentence is an assignment of constants to the variables in it. Consider the open-sentence ‹x has property phi.› An interpretation of that open-sentence is simply a proposal to the effect that the variables in it be replaced with constants. Thus, if I propose that the expressions "two" and "even" replace the first and second variables in that open-sentence, I am proposing an interpretation of it. Since the corresponding sentence ("two is even") is correct, that interpretation validates that open- sentence. In general, an interpretation of an open-sentence validates it if the corresponding sentence is correct.
+
+Not every interpretation of ‹x has property phi› validates it. For example, the interpretation of it that generates "two is odd" fails to do so.
+
+If a given open-sentence is validated by every interpretation of it, then each instance of it is formally correct. This coincides with our earlier definition of "formally correct." If every interpretation of a given open-sentence is correct, that open-sentence is said to be "true under all its interpretations." It must be kept in mind that this is just a figure of speech, since open-sentences are not, in fact, true.
+
+Statement-forms fall into three categories: (i) those whose instances are sometimes, but not always, correct (e.g., ‹x is even›); (ii) those whose instances are always false (e.g., ‹x is even but not divisible by two ›): and (iii) those whose instances are always correct (e.g., ‹x is identical with x›. ) An open-sentence falls into (i), (ii), or (iii) depending on whether it is (i) true under some, but not all, of its interpretations; (ii) true under none of its interpretations; or (iii*) true under all of its interpretations.
+
+Formal logic tries to formalize informal analytic truth, so far as that's possible to do so, and to say when it isn't possible, so far as it isn't. An analytic truth is one whose negation is incoherent, and an analytic truth is informal if it has the same form as some false statement. Thus, "triangles have three sides" is analytic, since "triangles don't have three sides is incoherent," and it's informal, since it has the same form as "squares have three sides." To formalize an informal analytic truth T is to identify an open-sentence S such that every instance of S is true and such that one of S's instances is equivalent with T.
+
+Consider the sentence:
+
+Bill is self-identical.
+
+is an analytic truth, since its negation is
+
+Bill is not self-identical, which is incoherent.
+
+But (1) isn't formally correct, since it has the same form as:
+
+Bill is green,
+
+which is false, given that Bill is a non-green person. (1) and (3) are both instances of the form sentence-form:
+
+Bill has phi,
+
+Since some of (4)'s instances are false, (1), though analytically true, is not formally so. But (1) is
+
+equivalent with a formal truth, namely:
+
+Bill is identical with Bill.
+
+is an instance of the form:
+
+x is identical with x.
+
+The reason that (5) is formally true is that it's an instance of (6) and no instances of (6) are false. We just formalized an informal analytic truth and, therefore, did on a very small scale what mathematical logicians do on a very big scale.
+
+What we believe to be bona fide statements sometimes turn out to be statement-forms; and statement-forms that we believe to have only true instances sometimes turn out to have false ones. 106 Both of these deeply important facts first became apparent when, in the middle of the 19th century, Euclid's axiomatization of geometry was re-examined. Euclid showed that a great many geometrical truths follow from a small set of assumptions. These assumptions were:
+
+Any two points can be connected by a straight line-segment.
+
+Any line-segment is a part of some line.
+
+Given any point and given any line-segment starting from that point, there is a circle whose radius is the length of that line-segment.
+
+All right-angles are equal to each other.
+
+Given a line L1 and a point P not on L1, there is exactly one line L2 that passes through P and
+
+doesn't intersect with L1
+
+(5) is known as the "parallel postulate."
+
+We'll use the expression "(1)-(5)" to refer to the conjunction of (1) and (2) and (3), etc. Thus, (1)-
+
+(5) is a single open-sentence, and "(1)-(5)" is thus a singular, not a plural, noun. One would think that (1)-(5) is correct. But this turned out not to be so. It turned out that (1)-(5) is a statement-form, not a statement proper, and that (1)-(5) therefore isn't true or false. It also turned out that some of its instances are false. Let us now describe one such instance.
+
+Let S be some sphere. Given an arbitrary point on S's surface, there is a path leading from that point back to that same point that cuts S into two symmetrical halves. If by a "line" we mean such a path, and we make the corresponding changes to the otherwise unchanged meanings of (1)-(4), the propositions thereby assigned to (1)-(4) are true, but the proposition assigned to (5) is false. For, if "space" and "line" are so defined, a line has zero parallels, as opposed to one.
+
+According to many, this shows that the parallel postulate isn't true of every possible space. This isn't what it shows. The parallel postulate isn't true or false of anything. It's a statement-form, not a statement, and statement-forms aren't true or false of anything. The right conclusion to draw is that there are possible spaces that are (partly) described by sentences that are negations of instances of the parallel postulate.
+
+If "space" and "line" are defined in the conventional, Euclidean way, the sum of the interior angles of a triangle is 180. But if "space" and "line" are defined in the way just proposed, that sum may be anything greater than 180° and less than 360°. The larger the triangle, the greater the sum.`
+    },
+    {
+      id: "section-23",
+      title: "Section 23",
+      content: `In (1)-(5), the words "line" and 'space' are functioning as variables, not as constants. This is an immediate consequence of the just-seen fact that, depending on what specific meanings are assigned to those words, (1)-(5) may come out either true or false. "But a 'space' isn't the surface of a sphere," one might protest. "And a 'line' isn't a pathway of the sort just described. So all you've shown is that by misinterpreting (1)-(5), you can generate some interesting results. But that means that you haven't really shown anything." Not true. In saying that "space" and "line" don't have these non-Euclidean meanings, one is making assumptions as to the nature of space that it is the very purpose of (1)-(5) to establish. In presupposing that ‹x is a space› entails that x isn't the surface of a sphere, one is in effect presupposing that triangles have interior angles adding up to 180°-one is, indeed, presupposing a great many of the principles that (1)-(5) are supposed to establish. So one cannot, without invalidating one's attempt to ground geometry in (1)-(5), assume that "line" and "space" are not to be defined in this way.
+
+In (1)-(5), the words "line" and "space" are functioning as variables, not as constants. We've seen that (1)-(5) isn't true for all values of those variables. That is, some instances of that open-sentence are false. That is, that open-sentence isn't true under all its interpretations. Formal logicians aspire to identify open-sentences that are true under all their interpretations, since it is only to the extent that they can do this that they can formalize analytic truth, which is their main objective. In the course of this search, they inevitably come across many open-sentences, such as (1)-(5), that they had hoped were true under all their interpretations but turned out not to be. Given an open-sentence S of this kind, they try to say, as precisely as possible, what it is that all those interpretations of S that validate it have in common with one another that they don't have in common with any interpretation that fails to validate S. In other words, they try to come up with a general characterization of "truth under S."
+
+There are some classes of true statements that one would expect to be formalizable but turn out not to be. The class of arithmetical statements ("1 + 2 = 3," "2 × 9 = 18," etc.) is an example. In other words, arithmetical truth cannot be formalized.
+
+First of all, arithmetical statements, as they are ordinarily expressed, are not formally true. "2 + 2
+
+= 4" has the same form as "2 + 2 = 5." They both have the form "x + x = y." Since "2 + 2 = 5" is false, and has the same form as "2 + 2 = 4," the latter, though true, isn't formally so.
+
+Formalizing arithmetic would involve finding some open-sentence S such that, for some interpretation of S, every true arithmetical statement is a formal consequence of that interpretation and such that no false arithmetical statement is such a consequence.
+
+It turned out that this is not possible. This means that any formal characterization of arithmetic is either inconsistent (i.e., it entails a contradiction), or incomplete (i.e., there is some arithmetical truth that is not a consequence of it). (The reasons for this are outlined in Chapter 7.) Given a body of truths that might appear to be capable of being formalized, mathematical logicians wish prove whether or not it is so; and, supposing that it can be formalized, they wish to find a model for it.`
     }
   ]
 };
+
+export function getFullDocumentContent(): string {
+  return bookContent.sections.map(section => `${section.title}\n\n${section.content}`).join('\n\n');
+}
