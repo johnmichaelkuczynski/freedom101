@@ -9,8 +9,8 @@ export interface BookContent {
 }
 
 export const bookContent: BookContent = {
-  title: "Analytic Philosophy as Logical Analysis",
-  author: "Zhi Systems",
+  title: "The Analysis of Analysis",
+  author: "J.-M. Kuczynski",
   sections: [
     {
       id: "section-1",

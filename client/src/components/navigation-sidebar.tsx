@@ -1,47 +1,43 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { bookContent as paperContent } from "@shared/book-content";
 
-// Create a table of contents based on the Human Freedom philosophy course content
+// Create a table of contents based on "The Analysis of Analysis" content
 const createTableOfContents = () => {
   const tableOfContents: Array<{ id: string; title: string; level: number }> = [
-    // Core Philosophical Concepts
-    { id: "lecture-1", title: "Lecture 1: Determinism", level: 0 },
-    { id: "lecture-2", title: "Lecture 2: Predictability", level: 0 },
-    { id: "lecture-3", title: "Lecture 3: Compatibilism", level: 0 },
-    { id: "lecture-4", title: "Lecture 4: Incompatibilism", level: 0 },
+    // Introduction to Analytic Philosophy
+    { id: "section-1", title: "Philosophy as Categorical Analysis", level: 0 },
+    { id: "section-2", title: "Frege's Logical Form Principle", level: 0 },
+    { id: "section-3", title: "Grammatical vs. Logical Structure", level: 0 },
+    { id: "section-4", title: "Ontological Conservatism", level: 0 },
     
-    // Moral Responsibility
-    { id: "lecture-5", title: "Lecture 5: Determinism and Moral Responsibility", level: 0 },
-    { id: "lecture-6", title: "Lecture 6: Predictability and Moral Responsibility", level: 0 },
-    { id: "lecture-7", title: "Lecture 7: Free Will and Causal Necessity", level: 0 },
+    // Intentionality and Representation
+    { id: "section-5", title: "Brentano and Intentionality", level: 0 },
+    { id: "section-6", title: "Epistemological Problems", level: 0 },
+    { id: "section-7", title: "Propositions vs. Sentences", level: 0 },
+    { id: "section-8", title: "The Picture Theory", level: 0 },
     
-    // Free Will Analysis
-    { id: "lecture-8", title: "Lecture 8: The Coherence of Free Will", level: 0 },
-    { id: "lecture-9", title: "Lecture 9: Alternative Conceptions of Free Will", level: 0 },
+    // Language and Meaning
+    { id: "section-9", title: "Wittgenstein's Early Philosophy", level: 0 },
+    { id: "section-10", title: "Logical Atomism", level: 0 },
+    { id: "section-11", title: "Elementary Propositions", level: 0 },
+    { id: "section-12", title: "Truth Functions", level: 0 },
     
-    // Experimental Philosophy
-    { id: "lecture-10", title: "Lecture 10: The Libet Experiment - Description and Data", level: 0 },
-    { id: "lecture-11", title: "Lecture 11: The Libet Experiment - Analysis", level: 0 },
-    { id: "lecture-12", title: "Lecture 12: Neuroscience and Free Will", level: 0 },
+    // Formal Logic and Mathematics
+    { id: "section-13", title: "Formal Systems", level: 0 },
+    { id: "section-14", title: "Consistency and Completeness", level: 0 },
+    { id: "section-15", title: "Gödel's Theorems", level: 0 },
+    { id: "section-16", title: "Mathematical Logic", level: 0 },
     
-    // Frankfurt Cases
-    { id: "lecture-13", title: "Lecture 13: Frankfurt's Analysis of Freedom", level: 0 },
-    { id: "lecture-14", title: "Lecture 14: Problems with Frankfurt's Analysis", level: 0 },
+    // Advanced Topics
+    { id: "section-17", title: "Semantic Theory", level: 0 },
+    { id: "section-18", title: "Empiricism and Pictures", level: 0 },
+    { id: "section-19", title: "Formal Entailment", level: 0 },
+    { id: "section-20", title: "Geometric Axioms", level: 0 },
     
-    // Nature of Freedom
-    { id: "lecture-15", title: "Lecture 15: The Actual Nature of Human Freedom", level: 0 },
-    { id: "lecture-16", title: "Lecture 16: The Nature of Human Values", level: 0 },
-    
-    // Mental Health and Freedom
-    { id: "lecture-17", title: "Lecture 17: Ego-dystonic vs Ego-syntonic Mental Illness", level: 0 },
-    { id: "lecture-18", title: "Lecture 18: Rationalization and Freedom", level: 0 },
-    
-    // Philosophical Movements
-    { id: "lecture-19", title: "Lecture 19: Existentialism - Strengths and Weaknesses", level: 0 },
-    { id: "lecture-20", title: "Lecture 20: From Freedom to Agency", level: 0 },
-    
-    // Reference Materials
-    { id: "glossary", title: "Comprehensive Glossary", level: 0 }
+    // Metaphysical Questions
+    { id: "section-21", title: "Logic of Non-existence", level: 0 },
+    { id: "section-22", title: "Religion and Morality", level: 0 },
+    { id: "section-23", title: "Geometry and Space", level: 0 }
   ];
   
   return tableOfContents;
@@ -62,27 +58,29 @@ export default function NavigationSidebar() {
     // If not found, try to find the content by searching text
     if (!element) {
       const titleMap: { [key: string]: string } = {
-        "lecture-1": "Determinism is the doctrine that nothing is uncaused - that all events follow necessarily",
-        "lecture-2": "Predictability is closely related to, but distinct from, determinism. A system can be deterministic",
-        "lecture-3": "Compatibilism holds that free will and determinism can coexist - that our actions can be both determined and free",
-        "lecture-4": "Incompatibilism is the view that free will and determinism cannot coexist",
-        "lecture-5": "If determinism is true and all our actions are inevitable consequences of prior causes",
-        "lecture-6": "If our actions are predictable, does this undermine moral responsibility",
-        "lecture-7": "If God (or a supercomputer) can predict all of our actions with complete certainty",
-        "lecture-8": "The concept of free will appears to contain an inherent paradox",
-        "lecture-9": "All selves are minds, but not all minds are selves",
-        "lecture-10": "In the early 1980s, neuroscientist Benjamin Libet conducted an experiment",
-        "lecture-11": "The results of Libet's experiment pose a unique challenge to compatibilism",
-        "lecture-12": "According to G.E. Moore and others, freedom requires alternative possibilities",
-        "lecture-13": "According to Harry Frankfurt, freedom is not about having alternative possibilities",
-        "lecture-14": "While Frankfurt's analysis of freedom in terms of second-order desires represents",
-        "lecture-15": "Freedom, properly understood, is not about having alternative possibilities",
-        "lecture-16": "To understand human values, we must first grasp several fundamental points",
-        "lecture-17": "The relationship between mental illness and freedom raises complex questions",
-        "lecture-18": "Rationalization represents one of the most insidious threats",
-        "lecture-19": "Existentialism offers a distinctive approach to human freedom",
-        "lecture-20": "Having examined various conceptions of freedom",
-        "glossary": "Determinism: The doctrine that nothing is uncaused"
+        "section-1": "Philosophy as the analysis of the categories in terms of which understand the world",
+        "section-2": "(FL) When people have an obviously correct belief that seems to have an absurd consequence",
+        "section-3": "What all this shows is that \"someone\" isn't in the same category as \"John\" and \"Ethel.\"",
+        "section-4": "As a general rule, analytic philosophers do not try to solve philosophical problems by \"ontologizing\"",
+        "section-5": "Your visual perception of yesterday, unlike your visual perception of today, encoded a true existence-claim",
+        "section-6": "Here's an example from epistemology. You couldn't see the book in front of you",
+        "section-7": "Even though Frege's work inspired many to identify philosophy with sentence-analysis",
+        "section-8": "According to the picture-theory, to understand a proposition is to know what would be the case",
+        "section-9": "The TLP holds that there is a class of propositions-elementary propositions",
+        "section-10": "According to the TLP, every proposition that isn't elementary is a truth-function",
+        "section-11": "Consider the sentence-type: \"x is red.\" Obviously, depending on the value assigned to \"x,\"",
+        "section-12": "But the truth-functional analysis of logical connectives doesn't give us the whole story",
+        "section-13": "Let's consider what it is for a statement to be formally valid",
+        "section-14": "But what does it mean to say that a formal system is consistent or complete?",
+        "section-15": "In 1931, Kurt Gödel proved that any formal system capable of expressing arithmetic",
+        "section-16": "The fact that D1 is a picture of a smiling person may obviously make it easier",
+        "section-17": "L. The fact that D1 is a picture of a smiling person may obviously make it easier for people",
+        "section-18": "But there couldn't possibly be any strictly perceptual way of knowing that those conversions",
+        "section-19": "One of the main contentions of the TLP is that all entailment is formal entailment",
+        "section-20": "(HA98) If x's length is one unit, and y's length is 2 units, then there is no length L",
+        "section-21": "Are inferences concerning the non-existent (e.g., \"if Zeus is tall, then at least one god is tall\")",
+        "section-22": "What is the relationship between religion and morality? Can there be valid moral codes",
+        "section-23": "In (1)-(5), the words \"line\" and 'space' are functioning as variables, not as constants"
       };
       
       const searchText = titleMap[id];
