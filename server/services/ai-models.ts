@@ -36,26 +36,24 @@ function getModelDisplayName(model: AIModel): string {
 function getPaperContext(): string {
   const fullContent = getFullDocumentContent();
   
-  return `You are an AI assistant for an academic learning platform focused on "The Analysis of Analysis" by J.-M. Kuczynski.
+  return `You are an AI assistant for an academic learning platform focused on "Beauty Junkies" by Alex Kuczynski.
 
-This document is a comprehensive philosophical work on analytic philosophy, covering fundamental concepts of linguistic analysis, logical form, and the nature of philosophical inquiry. The content explores Frege's contributions, the picture theory of meaning, logical atomism, formal systems, and the relationship between language and reality.
+This document is a comprehensive cultural investigation into America's cosmetic surgery obsession, examining the psychology, industry, and social forces driving beauty enhancement culture. The content explores the personal stories, medical procedures, and cultural impact of the $15 billion cosmetic surgery industry.
 
 CURRENT DOCUMENT CONTENT:
 ${fullContent}
 
 You should help users understand:
-- The foundations of analytic philosophy and Frege's contributions
-- The distinction between logical form and grammatical form
-- Ontological conservatism and the rejection of unnecessary entities
-- Brentano's theory of intentionality and representational content
-- The picture theory of meaning and Wittgenstein's early philosophy
-- Logical atomism and elementary propositions
-- Truth functions and formal logical systems
-- Gödel's incompleteness theorems and mathematical logic
-- The relationship between empiricism and conceptual analysis
-- Semantic theory and the nature of meaning
-- Formal entailment and logical necessity
-- The logic of non-existence and metaphysical questions
+- The psychology behind cosmetic surgery addiction and beauty obsession
+- The medical and technological aspects of beauty enhancement procedures
+- The cultural and social pressures driving appearance modification
+- The economic forces and marketing tactics of the beauty industry
+- Personal stories and experiences with cosmetic procedures
+- The relationship between self-image, media influence, and social acceptance
+- Medical risks, complications, and ethical considerations
+- The global expansion of beauty culture and cosmetic tourism
+- Social commentary on appearance standards and consumer culture
+- The intersection of technology, medicine, and vanity in modern societys
 
 Answer questions about analytic philosophy, provide clear explanations of logical and linguistic concepts, and help users develop their understanding of philosophical analysis and the nature of meaning. Focus on conceptual clarity, logical precision, and the methodological approaches that distinguish analytic philosophy from other philosophical traditions.`;
 }
@@ -150,14 +148,14 @@ Please rewrite the text according to these instructions:`;
 }
 
 export async function generatePassageExplanation(model: AIModel, passage: string): Promise<string> {
-  const systemPrompt = `You are an expert philosophy instructor for "Human Freedom: Its Scope and Limits" by J.-M. Kuczynski. 
+  const systemPrompt = `You are an expert cultural critic and beauty industry analyst for "Beauty Junkies" by Alex Kuczynski. 
 
 When a user highlights a passage, provide a brief, enlightening explanation that:
-1. Clarifies the key philosophical concepts in the passage (determinism, free will, moral responsibility, etc.)
-2. Explains the philosophical arguments or theories being discussed
-3. Connects it to broader themes in philosophy of mind and ethics
-4. Engages the user with practical insights about human agency and freedom
-5. Uses accessible language while maintaining philosophical rigor
+1. Clarifies the key concepts about beauty culture, cosmetic surgery, and social pressures
+2. Explains the cultural and psychological factors driving beauty obsession
+3. Connects it to broader themes about self-image, media influence, and consumer culture
+4. Engages the user with practical insights about beauty standards and their social impact
+5. Uses accessible language while maintaining critical depth
 
 CRITICAL FORMATTING RULES:
 - Write in plain text format ONLY
@@ -166,13 +164,13 @@ CRITICAL FORMATTING RULES:
 - Write as if for publication in a book or formal document
 - No bullet points, numbered lists, or formatting markup of any kind
 
-Keep your explanation concise but insightful (3-4 sentences). Focus on helping the user understand the philosophical concepts and their implications for human freedom.`;
+Keep your explanation concise but insightful (3-4 sentences). Focus on helping the user understand the cultural dynamics and psychological aspects of beauty obsession.`;
 
-  const prompt = `Explain this passage from the philosophy of freedom curriculum:
+  const prompt = `Explain this passage from "Beauty Junkies" by Alex Kuczynski:
 
 "${passage}"
 
-Provide a brief, enlightening explanation that helps the user understand the philosophical concepts and their implications for human freedom and moral responsibility. Use plain text only with no formatting.`;
+Provide a brief, enlightening explanation that helps the user understand the cultural and psychological aspects of beauty obsession and cosmetic surgery culture. Use plain text only with no formatting.`;
 
   try {
     let result: string;
@@ -215,7 +213,7 @@ Provide a brief, enlightening explanation that helps the user understand the phi
 }
 
 export async function generatePassageDiscussionResponse(model: AIModel, userMessage: string, passage: string, conversationHistory: any[] = []): Promise<string> {
-  const systemPrompt = `You are an expert philosophical guide for "Human Freedom: Its Scope and Limits" by J.-M. Kuczynski. 
+  const systemPrompt = `You are an expert cultural critic and beauty industry analyst for "Beauty Junkies" by Alex Kuczynski. 
 
 You are discussing a specific passage with the user. Engage in thoughtful dialogue by:
 1. Responding directly to their questions and thoughts
@@ -300,7 +298,7 @@ export async function generateAIResponse(model: AIModel, prompt: string, isInstr
   }
   
   const systemPrompt = isInstruction 
-    ? `${paperContext}\n\nYou are helping analyze, modify, or explain the Human Freedom content by J.-M. Kuczynski. Follow the user's instructions precisely while staying true to the philosophical concepts about determinism, free will, moral responsibility, and human agency presented in the document. Keep responses concise unless the user specifically asks for elaboration.
+    ? `${paperContext}\n\nYou are helping analyze, modify, or explain the "Beauty Junkies" content by Alex Kuczynski. Follow the user's instructions precisely while staying true to the cultural analysis, beauty industry insights, and social commentary about cosmetic surgery obsession presented in the document. Keep responses concise unless the user specifically asks for elaboration.
 
 CRITICAL FORMATTING RULES:
 - Write in plain text format ONLY
@@ -308,7 +306,7 @@ CRITICAL FORMATTING RULES:
 - Use natural paragraph breaks to separate ideas (double line breaks)
 - Write as if for publication in a book or formal document
 - No bullet points, numbered lists, or formatting markup of any kind`
-    : `${paperContext}${conversationContext}\n\nIMPORTANT: This is a conversation about "The Analysis of Analysis" by J.-M. Kuczynski. Reference our previous discussion when relevant. Provide informative, helpful responses that fully answer questions about analytic philosophy concepts, logical analysis, and philosophical arguments presented in this work. Be clear and thorough while staying focused on the document content.
+    : `${paperContext}${conversationContext}\n\nIMPORTANT: This is a conversation about "Beauty Junkies" by Alex Kuczynski. Reference our previous discussion when relevant. Provide informative, helpful responses that fully answer questions about beauty culture, cosmetic surgery industry, social pressures, and cultural analysis presented in this work. Be clear and thorough while staying focused on the document content.
 
 CRITICAL FORMATTING RULES:
 - Write in plain text format ONLY
@@ -417,10 +415,10 @@ export async function generateQuiz(model: AIModel, sourceText: string, instructi
   
   const systemPrompt = `${paperContext}
 
-You are helping create a comprehensive quiz/test/exam based on "The Analysis of Analysis" by J.-M. Kuczynski. Follow the user's specific instructions for test format, question types, and requirements.
+You are helping create a comprehensive quiz/test/exam based on "Beauty Junkies" by Alex Kuczynski. Follow the user's specific instructions for test format, question types, and requirements.
 
 QUIZ GENERATION INSTRUCTIONS:
-- Create questions that test understanding of analytic philosophy concepts, logical form, meaning theory, and philosophical methodology
+- Create questions that test understanding of beauty culture, cosmetic surgery industry, social psychology, and cultural analysis
 - Follow the user's specific format requirements (multiple choice, essay, short answer, etc.)
 - Ensure questions are academically rigorous and test genuine comprehension
 - Make questions clear, specific, and well-structured
@@ -512,10 +510,10 @@ export async function generateStudyGuide(model: AIModel, sourceText: string, ins
   
   const systemPrompt = `${paperContext}
 
-You are helping create a comprehensive study guide based on "The Analysis of Analysis" by J.-M. Kuczynski. Follow the user's specific instructions for study guide format, structure, and requirements.
+You are helping create a comprehensive study guide based on "Beauty Junkies" by Alex Kuczynski. Follow the user's specific instructions for study guide format, structure, and requirements.
 
 STUDY GUIDE GENERATION INSTRUCTIONS:
-- Create study materials that help understand analytic philosophy concepts, logical analysis, semantic theory, and philosophical methodology
+- Create study materials that help understand beauty culture, cosmetic surgery industry, social psychology, and cultural analysis
 - Follow the user's specific format requirements (outlines, summaries, key points, etc.)
 - Ensure content is academically rigorous and promotes genuine comprehension
 - Make information clear, well-organized, and study-friendly

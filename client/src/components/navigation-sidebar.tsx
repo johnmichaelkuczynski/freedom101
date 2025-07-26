@@ -1,43 +1,94 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { bookContent as paperContent } from "@shared/book-content";
 
-// Create a table of contents based on "The Analysis of Analysis" content
+// Create a table of contents based on "Beauty Junkies" content
 const createTableOfContents = () => {
   const tableOfContents: Array<{ id: string; title: string; level: number }> = [
-    // Introduction to Analytic Philosophy
-    { id: "section-1", title: "Philosophy as Categorical Analysis", level: 0 },
-    { id: "section-2", title: "Frege's Logical Form Principle", level: 0 },
-    { id: "section-3", title: "Grammatical vs. Logical Structure", level: 0 },
-    { id: "section-4", title: "Ontological Conservatism", level: 0 },
+    // Part I: Introduction to Beauty Culture
+    { id: "section-1", title: "Chapter 1: The Cosmetic Surgery Experience", level: 0 },
+    { id: "section-2", title: "Chapter 2: Beauty Industry Statistics", level: 0 },
+    { id: "section-3", title: "Chapter 3: Makeover Culture", level: 0 },
+    { id: "section-4", title: "Chapter 4: Television and Beauty", level: 0 },
+    { id: "section-5", title: "Chapter 5: Enhancement Philosophy", level: 0 },
+    { id: "section-6", title: "Chapter 6: Global Beauty Markets", level: 0 },
+    { id: "section-7", title: "Chapter 7: Product Obsession", level: 0 },
+    { id: "section-8", title: "Chapter 8: Cosmetic Surgery Statistics", level: 0 },
+    { id: "section-9", title: "Chapter 9: Beauty Addiction Psychology", level: 0 },
+    { id: "section-10", title: "Chapter 10: Cultural Beauty Standards", level: 0 },
     
-    // Intentionality and Representation
-    { id: "section-5", title: "Brentano and Intentionality", level: 0 },
-    { id: "section-6", title: "Epistemological Problems", level: 0 },
-    { id: "section-7", title: "Propositions vs. Sentences", level: 0 },
-    { id: "section-8", title: "The Picture Theory", level: 0 },
+    // Part II: The Beauty Industry
+    { id: "section-11", title: "Chapter 11: Industry Growth", level: 0 },
+    { id: "section-12", title: "Chapter 12: Magazine Culture", level: 0 },
+    { id: "section-13", title: "Chapter 13: Celebrity Influence", level: 0 },
+    { id: "section-14", title: "Chapter 14: Youth Obsession", level: 0 },
+    { id: "section-15", title: "Chapter 15: Beauty Procedures", level: 0 },
+    { id: "section-16", title: "Chapter 16: Medical Tourism", level: 0 },
+    { id: "section-17", title: "Chapter 17: Botox Culture", level: 0 },
+    { id: "section-18", title: "Chapter 18: Surgery Risks", level: 0 },
+    { id: "section-19", title: "Chapter 19: Beauty Myths", level: 0 },
+    { id: "section-20", title: "Chapter 20: Social Pressure", level: 0 },
     
-    // Language and Meaning
-    { id: "section-9", title: "Wittgenstein's Early Philosophy", level: 0 },
-    { id: "section-10", title: "Logical Atomism", level: 0 },
-    { id: "section-11", title: "Elementary Propositions", level: 0 },
-    { id: "section-12", title: "Truth Functions", level: 0 },
+    // Part III: Personal Stories
+    { id: "section-21", title: "Chapter 21: Patient Experiences", level: 0 },
+    { id: "section-22", title: "Chapter 22: Transformation Stories", level: 0 },
+    { id: "section-23", title: "Chapter 23: Complications", level: 0 },
+    { id: "section-24", title: "Chapter 24: Recovery Process", level: 0 },
+    { id: "section-25", title: "Chapter 25: Beauty Regimens", level: 0 },
+    { id: "section-26", title: "Chapter 26: Lifestyle Changes", level: 0 },
+    { id: "section-27", title: "Chapter 27: Self-Image", level: 0 },
+    { id: "section-28", title: "Chapter 28: Social Acceptance", level: 0 },
+    { id: "section-29", title: "Chapter 29: Beauty Routines", level: 0 },
+    { id: "section-30", title: "Chapter 30: Physical Standards", level: 0 },
     
-    // Formal Logic and Mathematics
-    { id: "section-13", title: "Formal Systems", level: 0 },
-    { id: "section-14", title: "Consistency and Completeness", level: 0 },
-    { id: "section-15", title: "Gödel's Theorems", level: 0 },
-    { id: "section-16", title: "Mathematical Logic", level: 0 },
+    // Part IV: Psychology of Beauty
+    { id: "section-31", title: "Chapter 31: Beauty Psychology", level: 0 },
+    { id: "section-32", title: "Chapter 32: Self-Esteem Issues", level: 0 },
+    { id: "section-33", title: "Chapter 33: Body Image", level: 0 },
+    { id: "section-34", title: "Chapter 34: Social Comparison", level: 0 },
+    { id: "section-35", title: "Chapter 35: Media Influence", level: 0 },
+    { id: "section-36", title: "Chapter 36: Beauty Standards", level: 0 },
+    { id: "section-37", title: "Chapter 37: Cultural Pressures", level: 0 },
+    { id: "section-38", title: "Chapter 38: Age and Beauty", level: 0 },
+    { id: "section-39", title: "Chapter 39: Beauty Competitions", level: 0 },
+    { id: "section-40", title: "Chapter 40: Fashion Industry", level: 0 },
     
-    // Advanced Topics
-    { id: "section-17", title: "Semantic Theory", level: 0 },
-    { id: "section-18", title: "Empiricism and Pictures", level: 0 },
-    { id: "section-19", title: "Formal Entailment", level: 0 },
-    { id: "section-20", title: "Geometric Axioms", level: 0 },
+    // Part V: Medical Aspects
+    { id: "section-41", title: "Chapter 41: Surgical Procedures", level: 0 },
+    { id: "section-42", title: "Chapter 42: Non-Surgical Options", level: 0 },
+    { id: "section-43", title: "Chapter 43: Medical Ethics", level: 0 },
+    { id: "section-44", title: "Chapter 44: Safety Concerns", level: 0 },
+    { id: "section-45", title: "Chapter 45: Recovery Stories", level: 0 },
+    { id: "section-46", title: "Chapter 46: Success Stories", level: 0 },
+    { id: "section-47", title: "Chapter 47: Failed Procedures", level: 0 },
+    { id: "section-48", title: "Chapter 48: Medical Advances", level: 0 },
+    { id: "section-49", title: "Chapter 49: Treatment Options", level: 0 },
+    { id: "section-50", title: "Chapter 50: Healthcare Costs", level: 0 },
     
-    // Metaphysical Questions
-    { id: "section-21", title: "Logic of Non-existence", level: 0 },
-    { id: "section-22", title: "Religion and Morality", level: 0 },
-    { id: "section-23", title: "Geometry and Space", level: 0 }
+    // Part VI: Global Perspectives
+    { id: "section-51", title: "Chapter 51: International Beauty", level: 0 },
+    { id: "section-52", title: "Chapter 52: Cultural Differences", level: 0 },
+    { id: "section-53", title: "Chapter 53: Global Markets", level: 0 },
+    { id: "section-54", title: "Chapter 54: Beauty Tourism", level: 0 },
+    { id: "section-55", title: "Chapter 55: Regional Trends", level: 0 },
+    { id: "section-56", title: "Chapter 56: Social Media Impact", level: 0 },
+    { id: "section-57", title: "Chapter 57: Technology and Beauty", level: 0 },
+    { id: "section-58", title: "Chapter 58: Future Trends", level: 0 },
+    { id: "section-59", title: "Chapter 59: Emerging Markets", level: 0 },
+    { id: "section-60", title: "Chapter 60: Beauty Innovation", level: 0 },
+    
+    // Part VII: Conclusion
+    { id: "section-61", title: "Chapter 61: Personal Reflections", level: 0 },
+    { id: "section-62", title: "Chapter 62: Industry Analysis", level: 0 },
+    { id: "section-63", title: "Chapter 63: Social Commentary", level: 0 },
+    { id: "section-64", title: "Chapter 64: Future Predictions", level: 0 },
+    { id: "section-65", title: "Chapter 65: Beauty Evolution", level: 0 },
+    { id: "section-66", title: "Chapter 66: Cultural Impact", level: 0 },
+    { id: "section-67", title: "Chapter 67: Final Thoughts", level: 0 },
+    { id: "section-68", title: "Chapter 68: Beauty Wisdom", level: 0 },
+    { id: "section-69", title: "Chapter 69: Life Lessons", level: 0 },
+    { id: "section-70", title: "Chapter 70: Moving Forward", level: 0 },
+    { id: "section-71", title: "Chapter 71: Personal Growth", level: 0 },
+    { id: "section-72", title: "Chapter 72: Acceptance and Understanding", level: 0 }
   ];
   
   return tableOfContents;
@@ -58,29 +109,36 @@ export default function NavigationSidebar() {
     // If not found, try to find the content by searching text
     if (!element) {
       const titleMap: { [key: string]: string } = {
-        "section-1": "Philosophy as the analysis of the categories in terms of which understand the world",
-        "section-2": "(FL) When people have an obviously correct belief that seems to have an absurd consequence",
-        "section-3": "What all this shows is that \"someone\" isn't in the same category as \"John\" and \"Ethel.\"",
-        "section-4": "As a general rule, analytic philosophers do not try to solve philosophical problems by \"ontologizing\"",
-        "section-5": "Your visual perception of yesterday, unlike your visual perception of today, encoded a true existence-claim",
-        "section-6": "Here's an example from epistemology. You couldn't see the book in front of you",
-        "section-7": "Even though Frege's work inspired many to identify philosophy with sentence-analysis",
-        "section-8": "According to the picture-theory, to understand a proposition is to know what would be the case",
-        "section-9": "The TLP holds that there is a class of propositions-elementary propositions",
-        "section-10": "According to the TLP, every proposition that isn't elementary is a truth-function",
-        "section-11": "Consider the sentence-type: \"x is red.\" Obviously, depending on the value assigned to \"x,\"",
-        "section-12": "But the truth-functional analysis of logical connectives doesn't give us the whole story",
-        "section-13": "Let's consider what it is for a statement to be formally valid",
-        "section-14": "But what does it mean to say that a formal system is consistent or complete?",
-        "section-15": "In 1931, Kurt Gödel proved that any formal system capable of expressing arithmetic",
-        "section-16": "The fact that D1 is a picture of a smiling person may obviously make it easier",
-        "section-17": "L. The fact that D1 is a picture of a smiling person may obviously make it easier for people",
-        "section-18": "But there couldn't possibly be any strictly perceptual way of knowing that those conversions",
-        "section-19": "One of the main contentions of the TLP is that all entailment is formal entailment",
-        "section-20": "(HA98) If x's length is one unit, and y's length is 2 units, then there is no length L",
-        "section-21": "Are inferences concerning the non-existent (e.g., \"if Zeus is tall, then at least one god is tall\")",
-        "section-22": "What is the relationship between religion and morality? Can there be valid moral codes",
-        "section-23": "In (1)-(5), the words \"line\" and 'space' are functioning as variables, not as constants"
+        "section-1": "A friend of mine, a New York entertainment executive in her fifties, does not look her age",
+        "section-2": "As a culture we are increasingly concerned with and insecure about looking good",
+        "section-3": "In this country, 11.9 million cosmetic procedures were performed in 2004",
+        "section-4": "It's a plastic surgery odyssey that I had never imagined undertaking",
+        "section-5": "Five days later I was back at Zenaida's office",
+        "section-6": "Plastic surgery today is fueled by a technology that advances faster than its ethics",
+        "section-7": "Television is the heroin of the beauty industry",
+        "section-8": "Beauty, in the twenty-first century, is largely defined by the mass media",
+        "section-9": "The relationship between patient and plastic surgeon is a complicated one",
+        "section-10": "The business model of the cosmetic surgery industry is similar to that of the fashion",
+        "section-11": "I know a lot of women-intelligent, accomplished women",
+        "section-12": "The relationship between image and reality is complex",
+        "section-13": "There's something about television that makes the plastic surgery phenomenon",
+        "section-14": "In April of 2004, I underwent my first cosmetic procedure",
+        "section-15": "Five months after the lip injection, I went to see Dr. Gerstner",
+        "section-16": "In December 2004, I had the Fraxel laser procedure",
+        "section-17": "My second Restylane injection was done by a different doctor",
+        "section-18": "The funny thing about all the procedures I had, looking back",
+        "section-19": "A few weeks after the Restylane injection, I decided to try Botox",
+        "section-20": "In January 2005, I returned to see Dr. Gerstner",
+        "section-21": "The beauty industry preys on women's dissatisfaction",
+        "section-22": "I know a woman who has spent more than $100,000 on cosmetic surgery",
+        "section-23": "The most disturbing aspect of the beauty industry",
+        "section-24": "For many women, cosmetic surgery becomes an addiction",
+        "section-25": "The psychological profile of the cosmetic surgery patient",
+        "section-26": "Body dysmorphic disorder affects an estimated 1 to 2 percent",
+        "section-27": "The most successful plastic surgeons are skilled not just in surgery",
+        "section-28": "Marketing in the cosmetic surgery industry has become increasingly sophisticated",
+        "section-29": "The beauty industry has created a culture of perpetual dissatisfaction",
+        "section-30": "The financial cost of cosmetic surgery addiction can be staggering"
       };
       
       const searchText = titleMap[id];
